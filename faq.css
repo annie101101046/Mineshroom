@@ -1,0 +1,430 @@
+body {
+    background-image: url("image/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.note {
+    width: 400px;
+}
+
+.note img {
+    width: 100%;
+}
+
+.coin_img {
+    width: 200px;
+}
+
+.coin_img img {
+    width: 100%;
+}
+
+.coin_mush {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: monospace;
+    display: flex;
+    flex-direction: row;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ETH_place {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.GG_amount {
+    font-size: 20px;
+}
+
+.ETH_img {
+    width: 20px;
+}
+
+.ETH_img img {
+    width: 100%;
+}
+
+.ETH_amount img {
+    width: 100%;
+}
+
+.ask_me {
+    background-color: #89f4bc;
+    color: white;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.buy {
+    background-color: #FF789B;
+    color: white;
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
+.pink_button {
+    background-color: #FF789B;
+    color: white;
+    box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    border-radius: 20px;
+    padding: 3px 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.card_content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin-right: -100px;
+}
+
+.card_mush {
+    background-color: #1A1760;
+    border-radius: 40px;
+    width: 200px;
+    height: 350px;
+    margin: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.card_mush img {
+    width: 100%;
+    margin-top: 10%;
+}
+
+.coin_mush {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.coin_mush img {
+    width: 100%;
+}
+
+.babyface {
+    width: 400px;
+    position: fixed;
+    top: 400px;
+    right: 100px;
+}
+
+.babyface img {
+    width: 100%;
+}
+
+footer {
+    width: 80vw;
+    margin-left: 4%;
+    position: absolute;
+    bottom: 1px;
+    font-size: 12px;
+    font-family: monospace;
+    color: #8080807d;
+}
+
+.fixedHeader {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transform: translateZ(0);
+    height: 40px;
+    background-color: #FF789B;
+    box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+}
+
+.fixed_logo {
+    width: 40px;
+    margin-left: 5px;
+    position: fixed;
+}
+
+.fixed_logo img {
+    width: 100%;
+}
+
+.fixedLogoText {
+    width: 150px;
+    top: -55%;
+    left: 40px;
+    position: fixed;
+}
+
+.fixedLogoText img {
+    width: 100%;
+}
+
+
+.card_logo {
+    margin-left: 20px;
+    width: 40px;
+}
+
+.card_logo img {
+    width: 100%;
+}
+
+
+.logo {
+    cursor: pointer;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+header {
+    padding: 20px;
+}
+
+.FbButton {
+    display: flex;
+    position: absolute;
+    right: 1vw;
+    bottom: 1vh;
+}
+
+.footer-nav a {
+    margin-right: 10px;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: monospace;
+}
+
+
+.card {
+    margin-block-start: 20px;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    background-image: url(image/faq.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    border-radius: 15px;
+    transition: box-shadow .1s ease, transform .1s ease;
+    box-shadow: 0 0 0 0.1px #d4d4d5, 0 0.1px 0.1px 0 rgba(34, 36, 38, .12), 0 0.1px 0.2px 0 rgba(34, 36, 38, .15);
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: inherit;
+}
+
+.header-img {
+    height: 30px;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    margin-inline-start: 15%;
+    margin-block-start: 10%;
+}
+
+.checkmark,
+.crossmark {
+    font-size: 20px;
+    color: gray;
+    line-height: 2em;
+    font-family: monospace;
+    text-align: center;
+}
+
+.crossmark {
+    align-self: center;
+}
+
+.header {
+    font-family: monospace;
+    font-size: 50px;
+}
+
+.header>img {
+    width: 100%;
+
+}
+
+.login {
+    background-color: #FF789B;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: monospace;
+    border-radius: 20px;
+    border: 0px;
+}
+
+
+
+@keyframes check {
+    0% {
+        height: 0;
+        width: 0;
+    }
+
+    33.3333% {
+        width: 40px;
+        height: 0;
+    }
+}
+
+
+.checkmark.active {
+    width: 130px;
+    height: 160px;
+    padding: 50px 60px 0 0;
+    margin-bottom: -60px;
+}
+
+.checkmark.active:after {
+    transform: scaleX(-1) rotate(135deg);
+    transform-origin: left top;
+    border-right: 30px solid #24b663;
+    border-top: 30px solid #24b663;
+    content: '';
+    display: block;
+    height: 80px;
+    width: 40px;
+    animation: check .8s;
+}
+
+@keyframes failed-left {
+    0% {
+        height: 0;
+    }
+
+    45% {
+        height: 28px;
+    }
+}
+
+@keyframes failed-right {
+    0% {
+        height: 0;
+    }
+
+    55% {
+        height: 0;
+    }
+
+    100% {
+        height: 28px;
+    }
+}
+
+.crossmark.active {
+    width: 110px;
+    height: 110px;
+    position: relative;
+    margin: -20px -50px 20px 0;
+}
+
+.crossmark.active::before,
+.crossmark.active::after {
+    background: #c53b00;
+    content: '';
+    display: block;
+    height: 130px;
+    position: absolute;
+    transform-origin: 10px 50px;
+    width: 20px;
+}
+
+.crossmark.active::before {
+    animation: failed-left .8s ease;
+    transform: translate(7px, 9px) rotate(-45deg);
+}
+
+.crossmark.active::after {
+    animation: failed-right .8s ease;
+    transform: translate(26px, 7px) rotate(45deg);
+}
+
+.meta {
+    display: none;
+    margin-top: 40px;
+    color: rgba(0, 0, 0, .68);
+    font-size: 22px;
+}
+
+.meta.active {
+    display: block;
+}
+
+.description {
+    color: rgba(0, 0, 0, .4);
+
+
+
+    font-size: 16px;
+}
