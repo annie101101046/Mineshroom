@@ -6,6 +6,45 @@ body {
     margin: 0;
 }
 
+.score {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: fit-content;
+    position: absolute;
+    font-family: monospace;
+    font-size: 24px;
+    font-weight: bolder;
+    top: 50px;
+    right: 20px;
+}
+
+.score_img {
+    width: 50px;
+}
+
+.score_img img {
+    width: 100%;
+}
+
+.banker_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.ET {
+    color: #89f4bc;
+    font-size: 24px;
+}
+
 footer {
     margin-left: 4%;
     position: absolute;
@@ -15,41 +54,61 @@ footer {
     color: #8080807d;
 }
 
-.start_container {
-    margin-top: 100px;
+.Allcompete {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.start_be {
-    margin-right: 10px;
+.bankerInfo {
+    position: absolute;
+    z-index: 1;
+    top: 6%;
+    left: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: monospace;
-    text-align: center;
-}
-
-input {
-    font-family: monospace;
-    text-align: center;
-}
-
-.start_be button {
-    background-color: palevioletred;
     color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    cursor: pointer;
+}
+
+.BankerImg {
+    width: 150px;
+    margin-top: -10px;
+}
+
+.BankerImg img {
+    width: 100%;
+}
+
+.banker {
+    width: 600px;
+    position: relative;
+}
+
+.banker img {
+    width: 100%;
+}
+
+.yourTeam {
+    font-size: 24px;
+    top: -20px;
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+}
+
+.comp {
+    width: 350px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: monospace;
-    border: none;
-    margin-top: 10px;
+    color: wheat;
+}
+
+.comp img {
+    width: 100%;
 }
 
 .inputA {
@@ -62,21 +121,6 @@ input {
     opacity: 0.2;
     width: 60%;
 
-}
-
-.info_but {
-    background-color: palevioletred;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-family: monospace;
-    border-radius: 20px;
-    border: none;
 }
 
 .reg {
@@ -98,37 +142,19 @@ input {
     right: 45%;
 }
 
-.playsec {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-}
-
-.playerImg {
-    width: 30px;
-}
-
-.playerImg img {
-    width: 100%;
-}
-
 .info_text {
     font-size: 18px;
     font-family: monospace;
+    line-height: 40px;
     letter-spacing: 5px;
     color: WHITE;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-block-start: -30px;
 
 }
 
 .prof_face {
     position: absolute;
     z-index: 200;
-    top: 8%;
+    top: 15%;
     left: 25%;
     width: 200px;
 }
@@ -142,7 +168,7 @@ input {
     z-index: 100;
     position: absolute;
     left: 35%;
-    top: 80px;
+    top: 120px;
 }
 
 .img_circle img {

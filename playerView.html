@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>MineShroom</title>
+    <title>BankerPage</title>
     <meta name="description" content="DApp Game">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="loginSuccess.css">
+    <link rel="stylesheet" href="player.css">
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -71,65 +71,65 @@
                         </nav>
                     </div>
                     <div class="content">
-                        <div class="img_circle">
-                            <img src="image/registerCircle.png" />
-                            <div class="prof_face">
-                                <img src="image/profile_face.png" />
+                        <div class="comp_container">
+                            <div class="Allcompete">
+                                <div class="comp">
+                                    <img src="image/competitionPage_board.png">
+                                    <div class="score">2,700
+                                        <div class="score_img">
+                                            <img src="image/mushroom.png"> </div>
+                                    </div>
+                                </div>
+                                <div class="comp">
+                                    <div class="yourTeam">Your Team</div>
+                                    <img src="image/competitionPage_board.png">
+                                    <div class="score">3,700
+                                        <div class="score_img">
+                                            <img src="image/mushroom.png"> </div>
+                                    </div>
+                                </div>
+                                <div class="comp">
+                                    <img src="image/competitionPage_board.png">
+                                    <div class="score">5,700
+                                        <div class="score_img">
+                                            <img src="image/mushroom.png"> </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="info_text">
-                                <h3>Player Gugu</h3>
-                                <div class="playsec">
-                                    <div class="playerImg"><img src="image/ETH.png"> </div>
-                                    <div>$100ETH</div>
-                                    <button class="info_but">Withdraw / Deposit</button>
+                            <div class="banker_section">
+                                <div>The game has started for <span class="ET">3,000 </span>blocks
                                 </div>
-                                <div class="playsec">
-                                    <div class="playerImg"> <img src="image/coin.png"></div>
-                                    <div>$1,000 GUGU</div>
-                                    <button class="info_but">Buy More</button>
-                                </div>
-                                <div class="start_container">
-                                    <div class="start_be">Banker
-                                        <div> <input type="text" maxlength="10" placeholder="At least 0.5 ETH" value="">
+                                <div class="banker">
+                                    <img src="image/competitionPage.png">
+                                    <div class="bankerInfo">
+                                        <div>
+                                            <h1>TeamWork</h1>
                                         </div>
-                                        <button id="bankerStart">START</button>
+                                        <div class="BankerImg">
+                                            <img src="image/banker.png">
+                                        </div>
+                                        <div>You Put <span class="ET"> 30 ETH</span> in this round</div>
                                     </div>
-                                    <div class="start_be">Player
-                                        <button id="playerStart">START</button>
-                                    </div>
-
                                 </div>
+                                <div>Players put <span class="ET"> 30 ETH </span>now</div>
                             </div>
                         </div>
                     </div>
-                    <div class="log_container">
-                        <img src="image/registerProfile.png" />
-
-                    </div>
-                </div>
-                <footer>
-                    <div class="footer-wrapper">
-                        <div class="footer-nav-links">
-                            <nav class="footer-nav">
-                                <a href="#"><img scr=""></a>
-                                <a href="#"><img src=""></a>
-                                <a href="#"><img src=""></a>
-                                <a href="#"><img src=""></a>
-                            </nav>
+                    <footer>
+                        <div class="footer-wrapper">
+                            <div class="copyrights">&copy; 2019 CryptoMushroom All rights reserved.</div>
+                            <div class="footer-nav-links">
+                                <nav class="footer-nav">
+                                    <a href="#"><img scr=""></a>
+                                    <a href="#"><img src=""></a>
+                                    <a href="#"><img src=""></a>
+                                    <a href="#"><img src=""></a>
+                                </nav>
+                            </div>
                         </div>
-                    </div>
-                </footer>
+                    </footer>
             </main>
     </div>
 </body>
-<script>
-    document.getElementById("bankerStart").onclick = function () {
-        location.href = "bankerView.html";
-    };
-
-    document.getElementById("playerStart").onclick = function () {
-        location.href = "playerView.html";
-    };
-</script>
 
 </html>
