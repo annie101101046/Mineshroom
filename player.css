@@ -19,6 +19,33 @@ body {
     right: 20px;
 }
 
+.speedup {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.speedup button {
+    background-color: #89f4bc;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 10px 2px;
+    cursor: pointer;
+    font-family: monospace;
+    border-radius: 20px;
+    border: 0px;
+
+}
+
+.extend {
+    margin-left: 20px;
+}
+
 .score_img {
     width: 50px;
 }
@@ -38,6 +65,14 @@ body {
     font-family: monospace;
     font-size: 14px;
     font-weight: bolder;
+    color: white;
+}
+
+.green {
+    color: #89f4bc;
+    font-size: 14px;
+    font-weight: bold;
+
 }
 
 .ET {
@@ -54,16 +89,32 @@ footer {
     color: #8080807d;
 }
 
+.speedItem {
+    width: 60px;
+}
+
+.speedItem img {
+    width: 100%;
+}
+
+.items {
+    border: white 1px solid;
+    width: fit-content;
+    height: inherit;
+    margin-top: 60px;
+    padding: 15px;
+}
+
 .Allcompete {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .bankerInfo {
     position: absolute;
     z-index: 1;
     top: 6%;
-    left: 30%;
+    left: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,13 +122,42 @@ footer {
     color: white;
 }
 
+.gugucoin {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+}
+
+.gugu {
+    width: 50px;
+}
+
+.gugu img {
+    width: 100%;
+}
+
+.playeID {
+    margin-bottom: 10px;
+}
+
+.teamFo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
 .BankerImg {
-    width: 150px;
+    width: 120px;
     margin-top: -10px;
 }
 
 .BankerImg img {
     width: 100%;
+}
+
+.teamwork {
+    display: flex;
 }
 
 .banker {
@@ -97,13 +177,37 @@ footer {
     position: absolute;
 }
 
+.itemset {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    line-height: 1.4em;
+}
+
+.itemset button {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: monospace;
+    border-radius: 20px;
+    border: 0px;
+}
+
 .comp {
-    width: 350px;
+    width: -webkit-fill-available;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: monospace;
+    justify-content: center;
     color: wheat;
 }
 
@@ -173,6 +277,13 @@ footer {
 
 .img_circle img {
     width: 100%;
+}
+
+.have {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
