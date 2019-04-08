@@ -74,7 +74,7 @@
             <h1 class="header">Mine as you <br>Shroom</h1>
             <div class="checkmark">Try your first DApp Game now</div>
             <div class="crossmark">
-              <button class="login">Login</button>
+              <button class="login" id="log">Get Started</button>
             </div>
           </div>
           <footer>
@@ -93,5 +93,12 @@
       </main>
   </div>
 </body>
+<script>
+  document.getElementById("log").onclick = function () {
+    location.href = "login.html";
+  };
+</script>
+
+</script>
 
 </html>
