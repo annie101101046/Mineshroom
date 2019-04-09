@@ -1,7 +1,46 @@
+.sidenav {
+    height: -webkit-fill-available;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: pink;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-top: 40px;
+}
+
+.sidenav a {
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bolder;
+    color: white;
+    padding: 8px 19px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+.sidenav a:hover {
+    color: #FF789B;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 body {
     background-image: url("image/background.png");
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     margin: 0;
 }
@@ -68,15 +107,16 @@ body {
 .ask_me {
     background-color: #89f4bc;
     color: white;
-    border-radius: 20px;
+    border-radius: 2px;
     padding: 3px 12px;
     font-family: monospace;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     cursor: pointer;
-    position: absolute;
-    right: 27%;
-    bottom: 8%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
     transition: all .5s;
 }
 
@@ -202,7 +242,6 @@ footer {
 .card_logo {
     margin-left: 20px;
     width: 40px;
-    opacity: 0;
 }
 
 .card_logo img {
@@ -268,9 +307,8 @@ header {
 
 
 .card {
-    margin-block-start: 50px;
-    height: 80vh;
-    width: 80vw;
+    height: 100vh;
+    width: 100vw;
     background-image: url(image/faq.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -442,4 +480,35 @@ header {
 
 
     font-size: 16px;
+}
+
+@media only screen and (max-width: 578px) {
+
+    .card {
+        margin-top: 40%;
+        height: 40vh;
+        width: 100vw;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .card_logo {
+        margin-left: 0;
+    }
+
+    .card-header {
+        justify-content: flex-start;
+    }
+
+    .ask_me {
+        right: 40vw;
+        bottom: 20%;
+    }
+
 }

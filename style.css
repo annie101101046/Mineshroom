@@ -13,6 +13,7 @@
 }
 
 .sidenav a {
+  font-size: 18px;
   font-family: monospace;
   font-weight: bolder;
   color: white;
@@ -360,9 +361,7 @@ header {
 
   .sidenav {}
 
-  .sidenav a {
-    font-size: 18px;
-  }
+  .sidenav a {}
 
   .container {
     height: -webkit-fill-available;
@@ -381,7 +380,8 @@ header {
     flex-direction: column;
     position: absolute;
     align-items: baseline;
-    top: 400px;
+    top: 55%;
+    left: 20%;
   }
 
   .checkmark,
