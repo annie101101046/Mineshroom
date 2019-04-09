@@ -55,10 +55,22 @@
       <div class="logo">
         <img src="" alt="logo of MineShroom" />
       </div>
+
+      <!-- phone only -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="shroomMall.html">ShroomMall</a>
+        <a href="MushroomCoin.html">MushroomCoin</a>
+        <a href="FAQ.html">FAQ</a>
+      </div>
+
+
+
       <main>
         <div class="card">
           <div class="card-header">
-            <div class="card_logo">
+            <div class="card_logo" onclick="openNav()">
               <img src="image/logo.png" alt="logo of MineShroom" />
             </div>
             <nav class="main-nav">
@@ -97,8 +109,16 @@
   document.getElementById("log").onclick = function () {
     location.href = "login.html";
   };
+
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
 </script>
 
-</script>
+
 
 </html>

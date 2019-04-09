@@ -1,3 +1,43 @@
+.sidenav {
+  height: -webkit-fill-available;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: pink;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top: 40px;
+}
+
+.sidenav a {
+  font-family: monospace;
+  font-weight: bolder;
+  color: white;
+  padding: 8px 19px 8px 32px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+  line-height: 2em;
+  cursor: pointer;
+}
+
+.sidenav a:hover {
+  color: #FF789B;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
 body {
   background-image: url("image/background.png");
   background-position: center;
@@ -71,6 +111,7 @@ footer {
 
 .card_logo img {
   width: 100%;
+  cursor: pointer;
 }
 
 
@@ -313,4 +354,54 @@ header {
 
 
   font-size: 16px;
+}
+
+@media only screen and (max-width: 575px) {
+
+  .sidenav {}
+
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  .container {
+    height: -webkit-fill-available;
+  }
+
+  .header {
+    font-size: 28px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: baseline;
+    top: 400px;
+  }
+
+  .checkmark,
+  .crossmark {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .login {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bolder;
+  }
+
+
+  footer {
+    left: 10%;
+    bottom: 1%;
+    font-size: 9px;
+  }
+
+
 }
