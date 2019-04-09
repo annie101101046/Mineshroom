@@ -137,6 +137,7 @@ footer {
   font-size: 12px;
   font-family: monospace;
   color: #8080807d;
+  bottom: -50px;
 }
 
 .fixedHeader {
@@ -245,8 +246,8 @@ header {
 
 .card {
   margin-block-start: 20px;
-  height: -webkit-fill-available;
-  width: -webkit-fill-available;
+  height: 100%;
+  width: 100%;
   background-image: url(image/bg_front.png);
   background-position: center;
   background-repeat: no-repeat;
