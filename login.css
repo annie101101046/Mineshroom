@@ -6,6 +6,17 @@ body {
     margin: 0;
 }
 
+.circle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 234, 234, 0.283)),
+        to(rgba(242, 45, 101, 0.18)), color-stop(.5, rgb(209, 181, 209)));
+}
+
 footer {
     bottom: -50px;
     position: absolute;
@@ -28,21 +39,18 @@ footer {
 
 .reg {
     background-color: #FF789B;
+    width: fit-content;
     color: white;
+    align-self: center;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 18px;
-    margin: 4px 2px;
+    margin: 20px 2px;
     cursor: pointer;
     font-family: monospace;
     border-radius: 20px;
     border: 0px;
-    position: absolute;
-    z-index: 200;
-    bottom: 20%;
-    right: 45%;
     transition: all 0.5s;
 }
 
@@ -51,19 +59,18 @@ footer {
 }
 
 .info_text {
+    display: flex;
+    flex-direction: column;
     font-size: 18px;
     font-family: monospace;
-    line-height: 40px;
+    line-height: 50px;
     letter-spacing: 5px;
     color: WHITE;
 
 }
 
 .prof_face {
-    position: absolute;
-    z-index: 200;
-    top: 15%;
-    left: 25%;
+    margin: 0 auto;
     width: 200px;
 }
 
@@ -73,10 +80,8 @@ footer {
 
 .img_circle {
     width: 400px;
-    z-index: 100;
-    position: absolute;
-    left: 35%;
-    top: 120px;
+    margin-top: 50px;
+    margin: 0 auto;
 }
 
 .img_circle img {
@@ -85,7 +90,7 @@ footer {
 
 
 .log_container {
-    width: 800px;
+    width: -webkit-fill-available;
     margin: 0 auto;
 }
 
@@ -202,7 +207,7 @@ header {
     background-size: cover;
     margin: 5vw;
     height: 100vh;
-    width: 100vw;
+    width: -webkit-fill-available;
     position: relative;
     border-radius: 15px;
     transition: box-shadow .1s ease, transform .1s ease;
@@ -369,4 +374,12 @@ header {
 
 
     font-size: 16px;
+}
+
+
+@media only screen and (max-width: 553px) {
+    .main-nav {
+        display: none;
+    }
+
 }
