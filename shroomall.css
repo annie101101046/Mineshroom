@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+.container {
+  height: -webkit-fill-available;
+}
+
 .coin_img {
   width: 200px;
 }
@@ -77,6 +81,7 @@ body {
   flex-wrap: wrap;
   max-width: 800px;
   margin-right: -100px;
+  margin-top: 4px;
 }
 
 .card_mush {
@@ -251,7 +256,6 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  margin-top: 20px;
   width: inherit;
 }
 

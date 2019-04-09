@@ -6,8 +6,12 @@ body {
     margin: 0;
 }
 
+.container {
+    height: -webkit-fill-available;
+}
+
 .note {
-    width: 400px;
+    width: 40vw;
 }
 
 .note img {
@@ -238,9 +242,10 @@ header {
 
 
 .card {
-    margin-block-start: 20px;
-    height: -webkit-fill-available;
-    width: -webkit-fill-available;
+
+    margin-block-start: 50px;
+    height: 80vh;
+    width: 80vw;
     background-image: url(image/coincoin_page.png);
     background-position: center;
     background-repeat: no-repeat;
