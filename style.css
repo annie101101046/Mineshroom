@@ -203,6 +203,11 @@ header {
   font-family: monospace;
   border-radius: 20px;
   border: 0px;
+  transition: all .5s;
+}
+
+.login:hover {
+  opacity: 0.7;
 }
 
 

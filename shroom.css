@@ -189,9 +189,9 @@ body {
 
 footer {
     width: 80vw;
-    margin-left: 4%;
     position: absolute;
-    bottom: 1px;
+    left: 8%;
+    bottom: -50px;
     font-size: 12px;
     font-family: monospace;
     color: #8080807d;
