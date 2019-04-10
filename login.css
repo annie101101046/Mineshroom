@@ -45,7 +45,7 @@ footer {
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
     margin: 20px 2px;
     cursor: pointer;
     font-family: monospace;
@@ -230,7 +230,13 @@ header {
 
 .content {
     display: flex;
+    align-self: center;
+    margin: 0 auto;
+    margin-top: 5%;
     flex-direction: column;
+    background-color: pink;
+    padding: 50px;
+    width: 50%;
 }
 
 .checkmark,
