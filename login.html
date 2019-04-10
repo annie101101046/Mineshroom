@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="login.css">
+    <script src="0.2.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -52,6 +53,34 @@
     </div>
     <div class="container">
         <header>
+            <style type="text/css">
+                .box_1zpaLs {}
+
+                .input_1zpaLs {
+                    margin: 10px;
+                    width: 500px;
+                    font-size: 20px;
+                }
+
+                .button_1zpaLs {
+                    margin-top: 10px;
+                    font-size: 20px;
+                    width: 180px;
+                    background-color: #4CAF50;
+                    color: white;
+                }
+
+                .result_1zpaLs {
+                    margin: 10px;
+                }
+
+                img {
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    padding: 5px;
+                    width: 150px;
+                }
+            </style>
             <div class="logo">
                 <img src="" alt="logo of MineShroom" />
             </div>
@@ -78,6 +107,13 @@
                                 </div>
                             </div>
                             <div class="info_text">
+                                <div id="app" class="box_1zpaLs">
+                                    "Main Network"
+                                    <br>
+                                    <input type="text" value placeholder="Wallet Adrress" class="input_1zpaLs">
+                                    <button class="button_1zpaLs">confirm</button>
+                                    <div></div>
+                                </div>
                                 <div>NAME:<input class="inputA"> </input> </div>
                                 <div>REFER: <input class="inputB"> </input> </div>
                                 <button class="reg" id="register">REGISTER</button>
