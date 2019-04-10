@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="login.css">
-    <!-- <script src="02.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
     <script>
@@ -77,12 +76,12 @@
                                 </div>
                             </div>
                             <div class="info_text">
-                                <button class="reg" id="register">REGISTER</button>
+                                <button class="reg" id="register">Welcome</button>
                             </div>
                         </div>
                     </div>
                     <div class="log_container">
-                        <img>
+                        <div id="a"></div>
                     </div>
                 </div>
                 <footer>
@@ -350,23 +349,43 @@
         window.dexon.enable().then(e => {
             console.log(e);
             web3 = new Web3(window.dexon);
+            console.log(web3);
             //在這裡以下做事才有用ㄚ web3 連到了
             web3.eth.net.getId().then(e => {
                 console.log(e);
+                //拿 DXN 數量
+                web3.eth.getBalance(window.dexon.defaultAccount).then(e => {
+                    console.log(e);
+                    let myContract = new web3.eth.Contract(abi,
+                        "0x407293a966e96245277f05531b753fad9d18593b");
+                    console.log(myContract);
+                    //拿菇幣數量
+                    myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {
+                        console.log(e);
+                    })
+                })
             })
-            console.log("g")
-            let myContract = new web3.eth.Contract(abi, "0x407293a966e96245277f05531b753fad9d18593b");
-            console.log(web3.dexon);
-            //myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {console.log(e)})
-            myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
-                console.log(e);
-                if (!e) {
-                    let response = myContract.methods.registerUser().send({
-                        from: window.dexon.defaultAccount,
-                        to: "0x407293a966e96245277f05531b753fad9d18593b"
-                    });
-                }
-            })
+            document.getElementById("register").onclick = function () {
+                let myContract = new web3.eth.Contract(abi, "0x407293a966e96245277f05531b753fad9d18593b");
+                console.log(myContract);
+                //myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {console.log(e)})
+
+                myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {
+                    console.log(e);
+                })
+
+                myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+                    console.log(e);
+                    if (!e) {
+                        let response = myContract.methods.registerUser().send({
+                            from: window.dexon.defaultAccount,
+                            to: "0x407293a966e96245277f05531b753fad9d18593b"
+                        });
+                    } else {
+                        location.href = "loginSuccess.html";
+                    }
+                })
+            };
         })
     } else {
         window.open('https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj',

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="loginSuccess.css">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
     <script>
         // Initialize Firebase
@@ -74,15 +75,15 @@
                                 <img src="image/profile_face.png" />
                             </div>
                             <div class="info_text">
-                                <h3>Player Gugu</h3>
+                                <div id="ply"></div>
                                 <div class="playsec">
                                     <div class="playerImg"><img src="image/ETH.png"> </div>
-                                    <div>$100 DXN</div>
+                                    <div id="DXNcoin"></div>
                                     <button class="info_but">Withdraw / Deposit</button>
                                 </div>
                                 <div class="playsec">
                                     <div class="playerImg"> <img src="image/coin.png"></div>
-                                    <div>$1,000 GUGU</div>
+                                    <div id="Gucoin"></div>
                                     <button class="info_but">Buy More</button>
                                 </div>
                                 <div class="start_container">
@@ -120,6 +121,282 @@
     </div>
 </body>
 <script>
+    abi = [{
+            "constant": true,
+            "inputs": [{
+                "name": "_user",
+                "type": "address"
+            }],
+            "name": "getGuCoin",
+            "outputs": [{
+                "name": "",
+                "type": "uint256"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "_addr",
+                "type": "address"
+            }],
+            "name": "isRegister",
+            "outputs": [{
+                "name": "",
+                "type": "bool"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "mushroom_eth_rate",
+            "outputs": [{
+                "name": "",
+                "type": "uint256"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "buyGuCoin",
+            "outputs": [],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "game_index",
+                "type": "uint256"
+            }],
+            "name": "getGameInfo",
+            "outputs": [{
+                    "name": "",
+                    "type": "string"
+                },
+                {
+                    "name": "",
+                    "type": "address[]"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint8"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "registerUser",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "newGame",
+            "outputs": [{
+                "name": "",
+                "type": "uint256"
+            }],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "_addr",
+                "type": "address"
+            }],
+            "name": "getBankerGame",
+            "outputs": [{
+                    "name": "",
+                    "type": "bool"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                    "name": "game_index",
+                    "type": "uint256"
+                },
+                {
+                    "name": "team_index",
+                    "type": "uint8"
+                }
+            ],
+            "name": "gameWithTeam",
+            "outputs": [{
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "address[]"
+                },
+                {
+                    "name": "",
+                    "type": "uint8[]"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "owner",
+            "outputs": [{
+                "name": "",
+                "type": "address"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [{
+                    "name": "_addr",
+                    "type": "address"
+                },
+                {
+                    "name": "game_index",
+                    "type": "uint256"
+                },
+                {
+                    "name": "item_ind",
+                    "type": "uint8"
+                }
+            ],
+            "name": "buyItem",
+            "outputs": [],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "_addr",
+                "type": "address"
+            }],
+            "name": "getPlayerGame",
+            "outputs": [{
+                    "name": "",
+                    "type": "bool"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "getAllUsers",
+            "outputs": [{
+                "name": "",
+                "type": "address[]"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [{
+                "name": "game_id",
+                "type": "uint256"
+            }],
+            "name": "joinGame",
+            "outputs": [{
+                "name": "",
+                "type": "bool"
+            }],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        }
+    ]
+
+    if (window.dexon && window.dexon.enable) {
+        window.dexon.enable().then(e => {
+            console.log(e[0]);
+            let p = document.getElementById("ply");
+            ply.innerHTML = 'Player:' + e;
+            web3 = new Web3(window.dexon);
+            console.log(web3);
+            //在這裡以下做事才有用ㄚ web3 連到了
+            web3.eth.net.getId().then(e => {
+                console.log(e);
+                //拿 DXN 數量
+                web3.eth.getBalance(window.dexon.defaultAccount).then(e => {
+                    console.log(e);
+                    var balance = web3.utils.fromWei(web3.utils.toBN(e));
+                    console.log(balance);
+                    let v = document.getElementById("DXNcoin");
+                    v.innerHTML = balance;
+                    let myContract = new web3.eth.Contract(abi,
+                        "0x407293a966e96245277f05531b753fad9d18593b");
+                    console.log(myContract);
+                    //拿菇幣數量
+                    myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {
+                        console.log(e);
+                        let k = document.getElementById("Gucoin");
+                        k.innerHTML = e;
+                    })
+                })
+            })
+        })
+    }
+
     document.getElementById("bankerStart").onclick = function () {
         location.href = "bankerView.html";
     };
