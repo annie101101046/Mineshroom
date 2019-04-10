@@ -105,51 +105,8 @@
 </body>
 <script>
   document.getElementById("log").onclick = function () {
-    // if (typeof web3 !== 'undefined') {
-    //   // Use Mist/MetaMask's provider
-    //   web3 = new Web3(web3.currentProvider);
-    // } else {
-    alert('Build your first DEXON Wallet!')
-    window.open("https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj", "_blank");
     location.href = "login.html";
-    //   // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-    //   web3 = new Web3(new Web3.providers.HttpProvider("https://testnet-rpc.dexon.org"));
-    // }
   };
-
-  // //check if is locked
-  // function isLocked() {
-  //   web3.eth.getAccounts(function (err, accounts) {
-  //     if (err != null) {
-  //       console.log(err)
-  //     } else if (accounts.length === 0) {
-  //       console.log('MetaMask is locked')
-  //     } else {
-  //       console.log('MetaMask is unlocked')
-  //     }
-  //   });
-  // }
-
-  // //check the balance
-  // function checkBalance() {
-  //   tokenInst.balanceOf(
-  //     web3.eth.accounts[0],
-  //     function (error, result) {
-  //       if (!error && result) {
-  //         var balance = result.c[0];
-  //         if (balance < balanceNeeded * (100000000)) {
-  //           console.log('MetaMask shows insufficient balance')
-  //           return false;
-  //         }
-  //         console.log('MetaMask shows sufficient balance')
-  //         // Include here your transaction function here
-  //       } else {
-  //         console.error(error);
-  //       }
-  //       return false;
-  //     });
-  // }
-
 
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
