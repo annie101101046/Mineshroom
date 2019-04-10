@@ -107,15 +107,16 @@
 </body>
 <script>
   document.getElementById("log").onclick = function () {
-    if (typeof web3 !== 'undefined') {
-      // Use Mist/MetaMask's provider
-      web3 = new Web3(web3.currentProvider);
-    } else {
-      alert('Build your first DEXON Wallet!')
-      window.open("https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj", "_blank");
-      // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
-      web3 = new Web3(new Web3.providers.HttpProvider("https://testnet-rpc.dexon.org"));
-    }
+    // if (typeof web3 !== 'undefined') {
+    //   // Use Mist/MetaMask's provider
+    //   web3 = new Web3(web3.currentProvider);
+    // } else {
+    alert('Build your first DEXON Wallet!')
+    window.open("https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj", "_blank");
+    location.href = "login.html";
+    //   // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
+    //   web3 = new Web3(new Web3.providers.HttpProvider("https://testnet-rpc.dexon.org"));
+    // }
   };
 
   // //check if is locked
