@@ -1,3 +1,42 @@
+.sidenav {
+    height: -webkit-fill-available;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: pink;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-top: 40px;
+}
+
+.sidenav a {
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bolder;
+    color: white;
+    padding: 8px 19px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+.sidenav a:hover {
+    color: #FF789B;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 body {
     background-color: #FF789B;
     background-position: center;
@@ -135,7 +174,7 @@ input {
 }
 
 .info_text {
-    font-size: 18px;
+    font-size: 12px;
     font-family: monospace;
     color: WHITE;
     display: flex;
@@ -178,7 +217,7 @@ input {
 }
 
 .fixedHeader {
-    width: 100vw;
+    width: -webkit-fill-available;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -227,13 +266,7 @@ input {
     cursor: pointer;
 }
 
-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+
 
 header {
     padding: 20px;
@@ -287,10 +320,9 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 5vw;
-    height: 100vh;
-    width: 100vw;
+    width: -webkit-fill-available;
+    margin-top: 50px;
     padding: 10px;
-    margin-left: 25%;
     position: relative;
     border-radius: 15px;
     transition: box-shadow .1s ease, transform .1s ease;
@@ -316,7 +348,6 @@ header {
     flex-direction: column;
     align-content: center;
     align-items: center;
-    margin-top: 10%;
 }
 
 .checkmark,
@@ -460,4 +491,40 @@ header {
 
 
     font-size: 16px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .main-nav {
+        display: none;
+    }
+
+    .img_circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .prof_face {
+        width: 100px;
+    }
+
+    .info_text,
+    .info_but {
+        font-size: 9px;
+    }
+
+    .start_be {
+        margin-right: 20px;
+
+    }
+
+    #bankerStart,
+    #playerStart {
+        font-size: 9px;
+    }
+
+    .card {
+        margin-top: 25%;
+    }
+
 }

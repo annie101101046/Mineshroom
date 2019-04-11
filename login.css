@@ -1,3 +1,42 @@
+.sidenav {
+    height: -webkit-fill-available;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: pink;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-top: 40px;
+}
+
+.sidenav a {
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bolder;
+    color: white;
+    padding: 8px 19px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+.sidenav a:hover {
+    color: #FF789B;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 body {
     background-color: #FF789B;
     background-position: center;
@@ -235,9 +274,15 @@ header {
     flex-direction: column;
     border-radius: 20px;
     padding: 50px;
-    width: 50%;
     background-color: rgba(255, 176, 202, 0.4);
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 234, 234, 0.23)), to(rgba(242, 45, 101, 0.5)), color-stop(.5, rgb(209, 181, 209)));
+}
+
+.img_circle {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 .checkmark,
@@ -401,6 +446,12 @@ header {
         display: none;
     }
 
+    .content {
+        margin-top: 30%;
+
+    }
+
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -418,10 +469,7 @@ header {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 20px;
         margin-top: 10%;
-        height: -webkit-fill-available;
-        width: -webkit-fill-available;
         position: relative;
         border-radius: 15px;
         transition: box-shadow .1s ease, transform .1s ease;

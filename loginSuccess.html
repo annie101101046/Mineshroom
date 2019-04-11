@@ -53,10 +53,18 @@
     </div>
     <div class="container">
         <header>
+            <!-- phone only -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="shroomMall.html">ShroomMall</a>
+                <a href="MushroomCoin.html">MushroomCoin</a>
+                <a href="FAQ.html">FAQ</a>
+            </div>
             <main>
                 <div class="card">
                     <div class="card-header">
-                        <div class="card_logo">
+                        <div class="card_logo" onclick="openNav()">
                             <img src="image/logo.png" alt="logo of MineShroom" />
                         </div>
                         <nav class="main-nav">
@@ -84,7 +92,7 @@
                             <div class="playsec">
                                 <div class="playerImg"> <img src="image/coin.png"></div>
                                 <div id="Gucoin"></div>
-                                <button class="info_but">Buy More</button>
+                                <button class="info_but" id="buyGu">Buy More</button>
                             </div>
                             <div class="start_container">
                                 <div class="start_be">Banker
@@ -402,10 +410,37 @@
                             let k = document.getElementById("Gucoin");
                             k.innerHTML = e;
                         })
+
+                    //點按鈕買菇菇幣
+                    document.getElementById("buyGu").onclick = function BuyGu() {
+                        myContract.methods.mushroom_eth_rate().call()
+                            .then(e => {
+                                console.log(e);
+                            })
+                        const amount = prompt('buy');
+                        myContract.methods.buyGuCoin().send({
+                            from: window.dexon.defaultAccount,
+                            value: web3.utils.toWei(amount),
+                        }).then(data => {
+                            console.log('event', data);
+                            //拿菇幣數量
+                            myContract.methods.getGuCoin(window.dexon
+                                    .defaultAccount).call()
+                                .then(e => {
+                                    console.log(e);
+                                    let k = document.getElementById("Gucoin");
+                                    k.innerHTML = e;
+                                })
+                        })
+                    };
                 })
             })
         })
     }
+
+    document.getElementById("register").onclick = function () {
+        location.href = "loginSuccess.html";
+    };
 
     document.getElementById("bankerStart").onclick = function () {
         location.href = "bankerView.html";
@@ -414,6 +449,14 @@
     document.getElementById("playerStart").onclick = function () {
         location.href = "playerView.html";
     };
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
 </script>
 
 </html>

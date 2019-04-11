@@ -53,10 +53,21 @@
     </div>
     <div class="container">
         <header>
+            <!-- phone only -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="shroomMall.html">ShroomMall</a>
+                <a href="MushroomCoin.html">MushroomCoin</a>
+                <a href="FAQ.html">FAQ</a>
+            </div>
+
+
+
             <main>
                 <div class="card">
                     <div class="card-header">
-                        <div class="card_logo">
+                        <div class="card_logo" onclick="openNav()">
                             <img src="image/logo.png" alt="logo of MineShroom" />
                         </div>
                         <nav class="main-nav">
@@ -76,7 +87,7 @@
                                 </div>
                             </div>
                             <div class="info_text">
-                                <button class="reg" id="register">Welcome</button>
+                                <button class="reg" id="register">Welcome!</button>
                             </div>
                         </div>
                     </div>
@@ -395,6 +406,14 @@
     document.getElementById("register").onclick = function () {
         location.href = "loginSuccess.html";
     };
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
 </script>
 
 </html>
