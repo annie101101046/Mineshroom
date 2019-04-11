@@ -1,3 +1,98 @@
+footer {
+    display: none;
+}
+
+
+.ggr {
+    font-size: 16px;
+    color: #89f4bc;
+}
+
+.wordding {
+    font-size: 14px;
+    color: white;
+    line-height: 1.5em;
+    margin-top: 5%;
+}
+
+.grandmaplace {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.5em;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.askgg {
+    font-size: 22px;
+    position: absolute;
+    bottom: 40px;
+    left: -260px;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+.gr {
+    font-size: 35px;
+    color: #89f4bc;
+}
+
+.grface {
+    width: 200px;
+    position: relative;
+    top: 50px;
+    right: 100px;
+}
+
+.grface img {
+    width: 100%;
+
+}
+
+.top-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+}
+
+.realtext {
+    font-size: 24px;
+    font-weight: bolder;
+    color: #89f4bc;
+    line-height: 1.4em;
+}
+
+.Yo {
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    height: fit-content;
+    border-block-end: 1px solid;
+}
+
+.mush {
+    width: 100px;
+}
+
+.mush img {
+    width: 100%;
+}
+
+.faqImg {
+    width: 200px;
+}
+
+.faqImg img {
+    width: 100%;
+}
+
+
+
 .sidenav {
     height: -webkit-fill-available;
     width: 0;
@@ -38,11 +133,11 @@
 }
 
 body {
-    background-image: url("image/background.png");
+    background-color: #FF789B;
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .container {
@@ -113,10 +208,9 @@ body {
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     right: 0;
     bottom: 0;
-    z-index: 1000;
     transition: all .5s;
 }
 
@@ -307,10 +401,11 @@ header {
 
 
 .card {
+    background-color: #FF789B;
+    font-family: monospace;
     margin-top: 30px;
     height: 100vh;
     width: 100vw;
-    background-image: url(image/faq.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -334,9 +429,10 @@ header {
 }
 
 .content {
+    align-items: center;
     display: flex;
-    margin-inline-start: 15%;
-    margin-block-start: 10%;
+    flex-direction: column;
+    margin-top: 50px;
 }
 
 .checkmark,
@@ -482,12 +578,68 @@ header {
     font-size: 16px;
 }
 
+
+
 @media only screen and (max-width: 578px) {
 
-    .card {
-        margin-top: 40%;
-        height: 40vh;
-        width: 100vw;
+    .content {
+        padding: 20px;
+    }
+
+    .Yo {
+        font-size: xx-large;
+    }
+
+    .gr {
+        font-size: 20px;
+    }
+
+    .grface {
+        width: 150px;
+        position: relative;
+        top: 50px;
+        right: 100px;
+    }
+
+    .realtext {
+        font-size: 14px;
+    }
+
+    .askgg {
+        font-size: 14px;
+        position: absolute;
+        left: -200px;
+        bottom: 10px;
+        line-height: 1.3em;
+        text-align: center;
+    }
+
+    .ask_me {
+        background-color: #89f4bc;
+        color: white;
+        border-radius: 2px;
+        padding: 3px 12px;
+        font-family: monospace;
+        font-size: 14px;
+        font-weight: 400;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transition: all .5s;
+    }
+
+    .grandmaplace {
+        display: flex;
+        flex-direction: row;
+        line-height: 1.5em;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: fit-content;
     }
 
     footer {
@@ -506,9 +658,7 @@ header {
         justify-content: flex-start;
     }
 
-    .ask_me {
-        right: 40vw;
-        bottom: 20%;
-    }
+
+
 
 }

@@ -58,9 +58,7 @@ body {
     padding: 30px;
     content: '';
     font-family: monospace;
-    position: absolute;
     background: linear-gradient(60deg, white, rgb(255, 211, 242), rgb(252, 237, 241));
-    z-index: 1;
     animation: animatedgradient 3s ease alternate infinite;
     background-size: 300% 300%;
     box-shadow: 5px 5px #FF789B;
@@ -374,7 +372,9 @@ header {
 .content {
     display: flex;
     margin-inline-start: 15%;
-    margin-block-start: 10%;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
 }
 
 .checkmark,
@@ -522,6 +522,19 @@ header {
 
 
 @media only screen and (max-width: 648px) {
+
+    .GG_amount {
+        font-size: 12px;
+    }
+
+    .note h1 {
+        font-size: 12px;
+    }
+
+    .note p {
+        font-size: 10px;
+    }
+
     .main-nav {
         display: none;
     }
@@ -545,6 +558,7 @@ header {
 
     .coin_intro {
         margin-top: 20%;
+        margin-right: 10%;
     }
 
     .note {
