@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="banker.css">
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
     <script>
         // Initialize Firebase
         var config = {
@@ -71,22 +72,50 @@
                         <div class="comp_container">
                             <div class="Allcompete">
                                 <div class="comp">
+                                    <div class="mushAdd">
+                                    </div>
+                                    <div class="mushAdd2">
+                                    </div>
+                                    <div class="mushAdd3">
+                                    </div>
+                                    <div class="mushAdd4">
+                                    </div>
+                                    <div class="mushAdd5">
+                                    </div>
+                                    <div class="mushAdd6">
+                                    </div>
+                                    <div class="mushAdd7">
+                                    </div>
+                                    <div class="mushAdd8">
+                                    </div>
+
+
                                     <img src="image/competitionPage_board.png">
-                                    <div class="score">2,700
+                                    <div class="score">
+                                        <div id="team1"></div>
+                                        <div class="score_img">
+                                            <img src="image/mushroom.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comp">
+                                    <div class="mushAdd">
+                                    </div>
+                                    <div class="mushAdd2">
+                                    </div>
+                                    <img src="image/competitionPage_board.png">
+                                    <div class="score" id="team2">
                                         <div class="score_img">
                                             <img src="image/mushroom.png"> </div>
                                     </div>
                                 </div>
                                 <div class="comp">
-                                    <img src="image/competitionPage_board.png">
-                                    <div class="score">3,700
-                                        <div class="score_img">
-                                            <img src="image/mushroom.png"> </div>
+                                    <div class="mushAdd">
                                     </div>
-                                </div>
-                                <div class="comp">
+                                    <div class="mushAdd2">
+                                    </div>
                                     <img src="image/competitionPage_board.png">
-                                    <div class="score">5,700
+                                    <div class="score" id="team3">
                                         <div class="score_img">
                                             <img src="image/mushroom.png"> </div>
                                     </div>
@@ -127,5 +156,375 @@
             </main>
     </div>
 </body>
+<script>
+    window.onload = function crazymushroom() {
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".mushAdd").appendChild(image);
+            }, i * 300);
+        }
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".mushAdd2").appendChild(image);
+            }, i * 800);
+        }
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".mushAdd3").appendChild(image);
+            }, i * 1000);
+        }
+
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".mushAdd4").appendChild(image);
+            }, i * 1200);
+        }
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".mushAdd5").appendChild(image);
+            }, i * 1400);
+        }
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".mushAdd6").appendChild(image);
+            }, i * 1600);
+        }
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".mushAdd7").appendChild(image);
+            }, i * 1800);
+        }
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".mushAdd8").appendChild(image);
+            }, i * 1800);
+        }
+
+        var timeleft = 0;
+        var downloadTimer = setInterval(function () {
+            var a = document.getElementById("team1");
+            a.innerHTML = timeleft;
+            timeleft += 1;
+            if (timeleft >= 0) {
+                setInterval(downloadTimer);
+            }
+
+            if (timeleft > 110)
+                clearInterval(downloadTimer);
+        }, 100);
+    }
+
+
+
+
+    abi = [{
+            "constant": true,
+            "inputs": [{
+                "name": "_user",
+                "type": "address"
+            }],
+            "name": "getGuCoin",
+            "outputs": [{
+                "name": "",
+                "type": "uint256"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "_addr",
+                "type": "address"
+            }],
+            "name": "isRegister",
+            "outputs": [{
+                "name": "",
+                "type": "bool"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "mushroom_eth_rate",
+            "outputs": [{
+                "name": "",
+                "type": "uint256"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "buyGuCoin",
+            "outputs": [],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "game_index",
+                "type": "uint256"
+            }],
+            "name": "getGameInfo",
+            "outputs": [{
+                    "name": "",
+                    "type": "string"
+                },
+                {
+                    "name": "",
+                    "type": "address[]"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint8"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "registerUser",
+            "outputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "newGame",
+            "outputs": [{
+                "name": "",
+                "type": "uint256"
+            }],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "_addr",
+                "type": "address"
+            }],
+            "name": "getBankerGame",
+            "outputs": [{
+                    "name": "",
+                    "type": "bool"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                    "name": "game_index",
+                    "type": "uint256"
+                },
+                {
+                    "name": "team_index",
+                    "type": "uint8"
+                }
+            ],
+            "name": "gameWithTeam",
+            "outputs": [{
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "address[]"
+                },
+                {
+                    "name": "",
+                    "type": "uint8[]"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "owner",
+            "outputs": [{
+                "name": "",
+                "type": "address"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [{
+                    "name": "_addr",
+                    "type": "address"
+                },
+                {
+                    "name": "game_index",
+                    "type": "uint256"
+                },
+                {
+                    "name": "item_ind",
+                    "type": "uint8"
+                }
+            ],
+            "name": "buyItem",
+            "outputs": [],
+            "payable": true,
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "_addr",
+                "type": "address"
+            }],
+            "name": "getPlayerGame",
+            "outputs": [{
+                    "name": "",
+                    "type": "bool"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "getAllUsers",
+            "outputs": [{
+                "name": "",
+                "type": "address[]"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": false,
+            "inputs": [{
+                "name": "game_id",
+                "type": "uint256"
+            }],
+            "name": "joinGame",
+            "outputs": [{
+                "name": "",
+                "type": "bool"
+            }],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        }
+    ]
+
+    if (window.dexon && window.dexon.enable) {
+        window.dexon.enable().then(e => {
+            console.log(e[0]);
+            web3 = new Web3(window.dexon);
+            console.log(web3);
+            //在這裡以下做事才有用ㄚ web3 連到了
+            let myContract = new web3.eth.Contract(abi,
+                "0x407293a966e96245277f05531b753fad9d18593b");
+            console.log(myContract);
+            myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+                console.log(e);
+                if (!e) {
+                    location.href = "login.html";
+                }
+
+                //拿菇幣數量
+                myContract.methods.getGuCoin(window.dexon
+                        .defaultAccount).call()
+                    .then(e => {
+                        console.log(e);
+                        let nowGugu = 0;
+                        //看菇菇有沒有增加
+                        function checkGuGu() {
+                            if (e > nowGugu) {
+                                let diff = e - nowGugu;
+                                nowGugu = e;
+                                return diff;
+                            }
+                            console.log(checkGuGu());
+                            let a = checkGuGu();
+                            if (a > 0) {
+
+                            }
+                        }
+
+                    })
+            })
+        })
+    }
+</script>
 
 </html>

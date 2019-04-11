@@ -6,6 +6,76 @@ body {
     margin: 0;
 }
 
+.mushAdd {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+.mushAdd2 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 80px;
+}
+
+.mushAdd3 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 110px;
+}
+
+.mushAdd4 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 140px;
+}
+
+.mushAdd5 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 170px;
+}
+
+.mushAdd6 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 200px;
+}
+
+.mushAdd7 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 230px;
+}
+
+.mushAdd8 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 260px;
+}
+
+.mushAdd9 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 290px;
+}
+
+.mushAdd10 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 320px;
+}
+
 .score {
     display: flex;
     align-content: center;
