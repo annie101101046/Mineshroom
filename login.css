@@ -234,9 +234,11 @@ header {
     margin: 0 auto;
     margin-top: 5%;
     flex-direction: column;
-    background-color: pink;
+    border-radius: 20px;
     padding: 50px;
     width: 50%;
+    background-color: rgba(255, 176, 202, 0.4);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(240, 234, 234, 0.23)), to(rgba(242, 45, 101, 0.5)), color-stop(.5, rgb(209, 181, 209)));
 }
 
 .checkmark,
