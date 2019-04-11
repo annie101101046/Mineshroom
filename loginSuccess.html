@@ -52,6 +52,8 @@
         </div>
     </div>
     <div class="container">
+
+
         <header>
             <!-- phone only -->
             <div id="mySidenav" class="sidenav">
@@ -76,7 +78,11 @@
                             </ul>
                         </nav>
                     </div>
+                    <div class="loadingIMG" id="loadimg">
+                        <img src="image/waiting.png">
+                    </div>
                     <div class="content">
+
                         <div class="img_circle">
                             <div class="prof_face">
                                 <img src="image/profile_face.png" />
@@ -438,9 +444,23 @@
         })
     }
 
+    function loadingpage() {
+        var a = document.getElementById("loadimg");
+        a.style.display = "block";
+    }
+
     document.getElementById("bankerStart").onclick = function () {
-        location.href = "bankerView.html";
+
+        setTimeout(function () {
+            loadingpage();
+        }, 500);
+
+        setTimeout(function () {
+            location.href = "bankerView.html";
+        }, 5000);
+
     };
+
 
     document.getElementById("playerStart").onclick = function () {
         location.href = "playerView.html";

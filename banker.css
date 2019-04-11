@@ -178,6 +178,7 @@ footer {
 .comp {
     width: 350px;
     position: relative;
+    color: wheat;
 }
 
 .comp img {

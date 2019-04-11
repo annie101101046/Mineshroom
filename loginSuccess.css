@@ -1,3 +1,23 @@
+#loadimg {
+    display: none;
+    transition: all 0.5s;
+}
+
+
+.loadingIMG {
+    display: none;
+    width: fit-content;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: fit-content;
+    transition: 0.5s;
+}
+
+.loadingIMG img {
+    width: 100%;
+}
+
 .sidenav {
     height: -webkit-fill-available;
     width: 0;
