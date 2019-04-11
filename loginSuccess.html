@@ -463,7 +463,13 @@
 
 
     document.getElementById("playerStart").onclick = function () {
-        location.href = "playerView.html";
+        setTimeout(function () {
+            loadingpage();
+        }, 500);
+
+        setTimeout(function () {
+            location.href = "playerView.html";
+        }, 5000);
     };
 
     function openNav() {
