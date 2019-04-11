@@ -88,8 +88,6 @@
                                     </div>
                                     <div class="mushAdd8">
                                     </div>
-
-
                                     <img src="image/competitionPage_board.png">
                                     <div class="score">
                                         <div id="team1"></div>
@@ -99,23 +97,25 @@
                                     </div>
                                 </div>
                                 <div class="comp">
-                                    <div class="mushAdd">
+                                    <div class="musAdd">
                                     </div>
-                                    <div class="mushAdd2">
+                                    <div class="musAdd2">
                                     </div>
                                     <img src="image/competitionPage_board.png">
-                                    <div class="score" id="team2">
+                                    <div class="score">
+                                        <div id="team2"></div>
                                         <div class="score_img">
                                             <img src="image/mushroom.png"> </div>
                                     </div>
                                 </div>
                                 <div class="comp">
-                                    <div class="mushAdd">
+                                    <div class="mushhAdd">
                                     </div>
-                                    <div class="mushAdd2">
+                                    <div class="mushhAdd2">
                                     </div>
                                     <img src="image/competitionPage_board.png">
-                                    <div class="score" id="team3">
+                                    <div class="score">
+                                        <div id="team3"></div>
                                         <div class="score_img">
                                             <img src="image/mushroom.png"> </div>
                                     </div>
@@ -224,6 +224,31 @@
             }, i * 1800);
         }
 
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".musAdd").appendChild(image);
+            }, i * 200);
+        }
+
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".musAdd2").appendChild(image);
+            }, i * 200);
+        }
+
+        for (var i = 0; i < 7; i++) {
+            setTimeout(function () {
+                var image = document.createElement("img");
+                image.setAttribute("src", "image/crazymushroom.gif");
+                document.querySelector(".mushhAdd").appendChild(image);
+            }, i * 200);
+        }
+
         var timeleft = 0;
         var downloadTimer = setInterval(function () {
             var a = document.getElementById("team1");
@@ -236,6 +261,30 @@
             if (timeleft > 110)
                 clearInterval(downloadTimer);
         }, 100);
+
+        var downloadTimer2 = setInterval(function () {
+            var a = document.getElementById("team2");
+            a.innerHTML = timeleft;
+            timeleft += 1;
+            if (timeleft >= 0) {
+                setInterval(downloadTimer2);
+            }
+
+            if (timeleft > 13)
+                clearInterval(downloadTimer2);
+        }, 200);
+
+        var downloadTimer3 = setInterval(function () {
+            var a = document.getElementById("team3");
+            a.innerHTML = timeleft;
+            timeleft += 1;
+            if (timeleft >= 0) {
+                setInterval(downloadTimer3);
+            }
+
+            if (timeleft = 14)
+                clearInterval(downloadTimer3);
+        }, 500);
     }
 
 

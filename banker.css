@@ -20,6 +20,34 @@ body {
     left: 80px;
 }
 
+.musAdd {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+.mushhAdd {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+
+.musAdd2 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 80px;
+}
+
+.mushhAdd2 {
+    width: 50px;
+    position: absolute;
+    top: 120px;
+    left: 80px;
+}
+
 .mushAdd3 {
     width: 50px;
     position: absolute;
@@ -62,19 +90,6 @@ body {
     left: 260px;
 }
 
-.mushAdd9 {
-    width: 50px;
-    position: absolute;
-    top: 120px;
-    left: 290px;
-}
-
-.mushAdd10 {
-    width: 50px;
-    position: absolute;
-    top: 120px;
-    left: 320px;
-}
 
 .score {
     display: flex;
