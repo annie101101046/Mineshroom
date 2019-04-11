@@ -69,6 +69,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 2em;
 }
 
 .ETH_place {
@@ -102,6 +103,7 @@ body {
   border-radius: 20px;
   padding: 3px 10px;
   transition: all .5s;
+  margin-top: 4px;
 }
 
 .buy:hover {
@@ -124,13 +126,14 @@ body {
 }
 
 .card_content {
-  width: 100%;
+  width: fit-content;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
   max-width: 800px;
-  margin-right: -100px;
-  margin-top: 4px;
+  height: -webkit-fill-available;
 }
 
 .card_mush {
@@ -308,7 +311,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: inherit;
 }
 
@@ -321,7 +324,7 @@ header {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: -webkit-fill-available;
+  height: fit-content;
 }
 
 .checkmark,
@@ -467,10 +470,29 @@ header {
   font-size: 16px;
 }
 
+@media only screen and (max-width: 920px) {
+  footer {
+    display: none;
+  }
+
+
+  .card_mush {
+    width: 150px;
+    height: 250px;
+  }
+
+  .card_content {
+    margin-top: 5%;
+    margin-bottom: 15%;
+  }
+
+}
+
 @media only screen and (max-width: 845px) {
   footer {
     display: none;
   }
+
 }
 
 
@@ -508,6 +530,7 @@ header {
     margin-bottom: 20px;
     margin-right: 0;
     width: fit-content;
+    height: -webkit-fill-available;
   }
 
   .coin_mush {
@@ -538,7 +561,7 @@ header {
   }
 
   .card_mush {
-    border-radius: 0px;
+    border-radius: 20px;
     width: 85px;
     height: 140px;
     margin-top: 0;
@@ -546,6 +569,10 @@ header {
 
   .pink_button {
     padding: 3px 10px;
+  }
+
+  .amount {
+    line-height: 1.2em;
   }
 
   footer {

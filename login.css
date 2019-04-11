@@ -79,7 +79,6 @@ footer {
 }
 
 .img_circle {
-    width: 400px;
     margin-top: 50px;
     margin: 0 auto;
 }
@@ -384,10 +383,49 @@ header {
     font-size: 16px;
 }
 
+@media only screen and (max-width: 920px) {
+
+    .circle {
+        height: 200px;
+        width: 200px;
+    }
+
+    .prof_face {
+        width: 150px;
+    }
+}
+
 
 @media only screen and (max-width: 553px) {
     .main-nav {
         display: none;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .circle {
+        height: 150px;
+        width: 150px;
+    }
+
+    .prof_face {
+        width: 100px;
+    }
+
+    .card {
+        background-color: rgba(255, 176, 202, 0.4);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+        margin-top: 10%;
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+        position: relative;
+        border-radius: 15px;
+        transition: box-shadow .1s ease, transform .1s ease;
+        box-shadow: 0 0 0 0.1px #d4d4d5, 0 0.1px 0.1px 0 rgba(34, 36, 38, .12), 0 0.1px 0.2px 0 rgba(34, 36, 38, .15);
     }
 
 }
