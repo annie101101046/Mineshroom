@@ -227,8 +227,10 @@ footer {
 
 
 .card_logo {
+  cursor: pointer;
   margin-left: 20px;
   width: 40px;
+  margin-top: 10px;
 }
 
 .card_logo img {
@@ -496,6 +498,16 @@ header {
 
 }
 
+@media only screen and (max-width: 496px) {
+  .main-nav {
+    display: none;
+  }
+
+  .babyface {
+    width: 200px;
+  }
+
+}
 
 @media only screen and (max-width: 450px) {
 

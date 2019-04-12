@@ -99,7 +99,7 @@
                                 <button class="buy" id="buymore">Buy More</button>
                             </div>
                         </div>
-                        <footer>
+                        <!-- <footer>
                             <div class="footer-wrapper">
                                 <div class="copyrights">&copy; 2019 CryptoMushroom All rights reserved.</div>
                                 <div class="footer-nav-links">
@@ -111,7 +111,7 @@
                                     </nav>
                                 </div>
                             </div>
-                        </footer>
+                        </footer> -->
             </main>
     </div>
 </body>
@@ -425,6 +425,7 @@
                     console.log(balance);
                     let v = document.getElementById("DXNamount");
                     v.innerHTML = balance + 'DXN';
+
                     let myContract = new web3.eth.Contract(abi,
                         "0x407293a966e96245277f05531b753fad9d18593b");
                     console.log(myContract);
@@ -456,7 +457,19 @@
                                     let k = document.getElementById("Gucoin");
                                     k.innerHTML = e;
                                 })
+                            //拿 DXN 數量
+                            web3.eth.getBalance(window.dexon.defaultAccount).then(
+                                e => {
+                                    console.log(e);
+                                    var balance = web3.utils.fromWei(web3.utils
+                                        .toBN(e));
+                                    console.log(balance);
+                                    let v = document.getElementById("DXNcoin");
+                                    v.innerHTML = balance;
+
+                                })
                         })
+                        location.reload();
                     };
                 })
             })

@@ -437,7 +437,20 @@
                                     let k = document.getElementById("Gucoin");
                                     k.innerHTML = e;
                                 })
+
+                            //拿 DXN 數量
+                            web3.eth.getBalance(window.dexon.defaultAccount).then(
+                                e => {
+                                    console.log(e);
+                                    var balance = web3.utils.fromWei(web3.utils
+                                        .toBN(e));
+                                    console.log(balance);
+                                    let v = document.getElementById("DXNcoin");
+                                    v.innerHTML = balance;
+
+                                })
                         })
+                        location.reload();
                     };
                 })
             })
