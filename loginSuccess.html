@@ -102,8 +102,8 @@
                             </div>
                             <div class="start_container">
                                 <div class="start_be">Banker
-                                    <div> <input type="text" maxlength="10" placeholder="At least 100 USD" value="">
-                                    </div>
+                                    <!-- <div> <input type="text" maxlength="10" placeholder="At least 100 USD" value=""> -->
+                                    <!-- </div> -->
                                     <button id="bankerStart">START</button>
                                 </div>
                                 <div class="start_be">Player
@@ -134,48 +134,6 @@
 </body>
 <script>
     abi = [{
-            "constant": true,
-            "inputs": [{
-                "name": "_user",
-                "type": "address"
-            }],
-            "name": "getGuCoin",
-            "outputs": [{
-                "name": "",
-                "type": "uint256"
-            }],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [{
-                "name": "_addr",
-                "type": "address"
-            }],
-            "name": "isRegister",
-            "outputs": [{
-                "name": "",
-                "type": "bool"
-            }],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "mushroom_eth_rate",
-            "outputs": [{
-                "name": "",
-                "type": "uint256"
-            }],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function"
-        },
-        {
             "constant": false,
             "inputs": [],
             "name": "buyGuCoin",
@@ -185,46 +143,37 @@
             "type": "function"
         },
         {
-            "constant": true,
+            "constant": false,
             "inputs": [{
-                "name": "game_index",
-                "type": "uint256"
-            }],
-            "name": "getGameInfo",
-            "outputs": [{
-                    "name": "",
-                    "type": "string"
+                    "name": "_addr",
+                    "type": "address"
                 },
                 {
-                    "name": "",
-                    "type": "address[]"
-                },
-                {
-                    "name": "",
+                    "name": "game_index",
                     "type": "uint256"
                 },
                 {
-                    "name": "",
-                    "type": "uint256"
-                },
-                {
-                    "name": "",
-                    "type": "uint256"
-                },
-                {
-                    "name": "",
+                    "name": "item_ind",
                     "type": "uint8"
                 }
             ],
-            "payable": false,
-            "stateMutability": "view",
+            "name": "buyItem",
+            "outputs": [],
+            "payable": true,
+            "stateMutability": "payable",
             "type": "function"
         },
         {
             "constant": false,
-            "inputs": [],
-            "name": "registerUser",
-            "outputs": [],
+            "inputs": [{
+                "name": "game_id",
+                "type": "uint256"
+            }],
+            "name": "joinGame",
+            "outputs": [{
+                "name": "",
+                "type": "bool"
+            }],
             "payable": false,
             "stateMutability": "nonpayable",
             "type": "function"
@@ -242,24 +191,19 @@
             "type": "function"
         },
         {
-            "constant": true,
-            "inputs": [{
-                "name": "_addr",
-                "type": "address"
-            }],
-            "name": "getBankerGame",
-            "outputs": [{
-                    "name": "",
-                    "type": "bool"
-                },
-                {
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
+            "constant": false,
+            "inputs": [],
+            "name": "registerUser",
+            "outputs": [],
             "payable": false,
-            "stateMutability": "view",
+            "stateMutability": "nonpayable",
             "type": "function"
+        },
+        {
+            "inputs": [],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor"
         },
         {
             "constant": true,
@@ -293,34 +237,88 @@
         {
             "constant": true,
             "inputs": [],
-            "name": "owner",
+            "name": "getAllUsers",
             "outputs": [{
                 "name": "",
-                "type": "address"
+                "type": "address[]"
             }],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
         },
         {
-            "constant": false,
+            "constant": true,
             "inputs": [{
-                    "name": "_addr",
-                    "type": "address"
+                "name": "_addr",
+                "type": "address"
+            }],
+            "name": "getBankerGame",
+            "outputs": [{
+                    "name": "",
+                    "type": "bool"
                 },
                 {
-                    "name": "game_index",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "game_index",
+                "type": "uint256"
+            }],
+            "name": "getGameInfo",
+            "outputs": [{
+                    "name": "",
+                    "type": "string"
+                },
+                {
+                    "name": "",
+                    "type": "address[]"
+                },
+                {
+                    "name": "",
                     "type": "uint256"
                 },
                 {
-                    "name": "item_ind",
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
+                    "type": "uint256"
+                },
+                {
+                    "name": "",
                     "type": "uint8"
+                },
+                {
+                    "name": "",
+                    "type": "address"
                 }
             ],
-            "name": "buyItem",
-            "outputs": [],
-            "payable": true,
-            "stateMutability": "payable",
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
+            "inputs": [{
+                "name": "_user",
+                "type": "address"
+            }],
+            "name": "getGuCoin",
+            "outputs": [{
+                "name": "",
+                "type": "uint256"
+            }],
+            "payable": false,
+            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -345,39 +343,44 @@
         },
         {
             "constant": true,
-            "inputs": [],
-            "name": "getAllUsers",
+            "inputs": [{
+                "name": "_addr",
+                "type": "address"
+            }],
+            "name": "isRegister",
             "outputs": [{
                 "name": "",
-                "type": "address[]"
+                "type": "bool"
             }],
             "payable": false,
             "stateMutability": "view",
             "type": "function"
         },
         {
-            "constant": false,
-            "inputs": [{
-                "name": "game_id",
-                "type": "uint256"
-            }],
-            "name": "joinGame",
+            "constant": true,
+            "inputs": [],
+            "name": "mushroom_eth_rate",
             "outputs": [{
                 "name": "",
-                "type": "bool"
+                "type": "uint256"
             }],
             "payable": false,
-            "stateMutability": "nonpayable",
+            "stateMutability": "view",
             "type": "function"
         },
         {
+            "constant": true,
             "inputs": [],
+            "name": "owner",
+            "outputs": [{
+                "name": "",
+                "type": "address"
+            }],
             "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "constructor"
+            "stateMutability": "view",
+            "type": "function"
         }
     ]
-
 
     if (window.dexon && window.dexon.enable) {
         window.dexon.enable().then(e => {
@@ -386,7 +389,7 @@
             console.log(web3);
             //在這裡以下做事才有用ㄚ web3 連到了
             let myContract = new web3.eth.Contract(abi,
-                "0xc54cbe5339c7737bb3889f6ae8bc933bc49383f7");
+                "0x191404bc8185e5b55e145d4b1685bf7e88ff0b64");
             console.log(myContract);
             myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
                 console.log(e);
@@ -407,7 +410,7 @@
                     let v = document.getElementById("DXNcoin");
                     v.innerHTML = balance;
                     let myContract = new web3.eth.Contract(abi,
-                        "0xc54cbe5339c7737bb3889f6ae8bc933bc49383f7");
+                        "0x191404bc8185e5b55e145d4b1685bf7e88ff0b64");
                     console.log(myContract);
                     //拿菇幣數量
                     myContract.methods.getGuCoin(window.dexon.defaultAccount).call()
@@ -449,8 +452,8 @@
                                     v.innerHTML = balance;
 
                                 })
+                            location.reload();
                         })
-                        location.reload();
                     };
 
                     //判斷進註冊頁還是開局等待頁
@@ -458,25 +461,51 @@
                     //在開局的等待頁判斷遊戲是否開始
 
                     //banker 送錢、開局
-                    // document.getElementById("bankerStart").onclick = function () {
+                    document.getElementById("bankerStart").onclick = function () {
 
-                    //     let a = prompt('value');
+                        let a = prompt('value');
 
-                    //     myContract.methods.newGame().send({
-                    //         from: window.dexon.defaultAccount,
-                    //         value: web3.utils.toWei(a)
-                    //     }).then(() => {
-                    //         //去拿 gameID
-                    //         myContract.methods.getPlayerGame(window.dexon
-                    //             .defaultAccount).call().then((data) => {
-                    //             console.log(data);
-                    //             loadingpage();
-                    //         })
-                    //     })
-                    // };
+                        myContract.methods.newGame().send({
+                            from: window.dexon.defaultAccount,
+                            value: web3.utils.toWei(a)
+                        }).then(() => {
+                            //去拿 gameID
+                            myContract.methods.getBankerGame(window.dexon
+                                .defaultAccount).call().then((data) => {
+                                console.log(data);
+                                if (a) {
+                                    loadingpage();
+                                } else {
+                                    location.href = "loginSuccess.html";
+                                }
+                                // location.href = "bankerView.html";
+                            })
+                        })
+                    };
 
                     //玩家
-
+                    document.getElementById("playerStart").onclick = function () {
+                        //去拿 gameID
+                        myContract.methods.getBankerGame(window.dexon
+                            .defaultAccount).call().then((data) => {
+                            console.log(data[1]);
+                            let a = data[1];
+                            return a;
+                            // location.href = "bankerView.html";
+                        }).then((a) => {
+                            console.log(a);
+                            myContract.methods.joinGame(a).send({
+                                from: window.dexon.defaultAccount
+                            }).then((e) => {
+                                console.log(e);
+                                if (e) {
+                                    loadingpage();
+                                } else {
+                                    location.href = "loginSuccess.html";
+                                }
+                            })
+                        })
+                    };
                 })
             })
         })
@@ -487,28 +516,28 @@
         a.style.display = "block";
     }
 
-    document.getElementById("bankerStart").onclick = function () {
+    // document.getElementById("bankerStart").onclick = function () {
 
-        setTimeout(function () {
-            loadingpage();
-        }, 500);
+    // setTimeout(function () {
+    //     loadingpage();
+    // }, 500);
 
-        setTimeout(function () {
-            location.href = "bankerView.html";
-        }, 5000);
+    //     setTimeout(function () {
+    //         location.href = "bankerView.html";
+    //     }, 5000);
 
-    };
+    // };
 
 
-    document.getElementById("playerStart").onclick = function () {
-        setTimeout(function () {
-            loadingpage();
-        }, 500);
+    // document.getElementById("playerStart").onclick = function () {
+    //     setTimeout(function () {
+    //         loadingpage();
+    //     }, 500);
 
-        setTimeout(function () {
-            location.href = "playerView.html";
-        }, 5000);
-    };
+    //     setTimeout(function () {
+    //         location.href = "playerView.html";
+    //     }, 5000);
+    // };
 
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
