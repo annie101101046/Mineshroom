@@ -474,11 +474,7 @@
                                 .defaultAccount).call().then((data) => {
                                 console.log(data);
                                 if (a) {
-                                    location.href = "waiting.html";
-                                    setTimeout(function () {
-                                        location.href =
-                                            "bankerView.html";
-                                    }, 5000);
+                                    location.href = "bankerwaiting.html";
                                 } else {
                                     location.href = "loginSuccess.html";
                                 }
@@ -503,12 +499,7 @@
                             }).then((e) => {
                                 console.log(e);
                                 if (e) {
-                                    location.href = "waiting.html";
-                                    setTimeout(function () {
-                                        location.href =
-                                            "playerView.html";
-                                    }, 5000);
-
+                                    location.href = "plyerwaiting.html";
                                 } else {
                                     location.href = "loginSuccess.html";
                                 }
