@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>waiting</title>
+    <meta name="description" content="DApp Game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="waiting.css">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBTYgsJ6zlA_F7MLqo93pCG-BCKjdUSXL8",
+            authDomain: "test-f0398.firebaseapp.com",
+            databaseURL: "https://test-f0398.firebaseio.com",
+            projectId: "test-f0398",
+            storageBucket: "test-f0398.appspot.com",
+            messagingSenderId: "1052724752382"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBTYgsJ6zlA_F7MLqo93pCG-BCKjdUSXL8",
+            authDomain: "test-f0398.firebaseapp.com",
+            databaseURL: "https://test-f0398.firebaseio.com",
+            projectId: "test-f0398",
+            storageBucket: "test-f0398.appspot.com",
+            messagingSenderId: "1052724752382"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+    <div class="fixedHeader">
+        <div class="fixed_logo">
+            <img src="image/logo.png" alt="logo of MineShroom" />
+        </div>
+        <div class="fixedLogoText">
+            <img src="image/cryptoMushroomLogo.png" alt="text of MineShroom" />
+        </div>
+        <div class="fixed_amount">
+            <div class="eth">
+            </div>
+            <div class="Mushroom_balance">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+
+
+            <!-- phone only -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="shroomMall.html">ShroomMall</a>
+                <a href="MushroomCoin.html">MushroomCoin</a>
+                <a href="FAQ.html">FAQ</a>
+            </div>
+
+
+
+            <main>
+                <div class="card">
+                    <div class="content">
+                        <h1 class="header">Mushroom War <br>will start soon...</h1>
+                    </div>
+
+                    <!-- <div class="card-header">
+                        <div class="card_logo" onclick="openNav()">
+                            <img src="image/logo.png" alt="logo of MineShroom" />
+                        </div> -->
+                    <!-- <nav class="main-nav">
+                            <ul>
+                                <li class="Home"><a href="index.html">Home</a></li>
+                                <li class="ShroomMall"><a href="shroomMall.html">ShroomMall</a></li>
+                                <li class="MushroomCoin"><a href="MushroomCoin.html">MushroomCoin</a></li>
+                                <li class="FAQ"><a href="FAQ.html">FAQ</a></li>
+                            </ul>
+                        </nav> -->
+                </div>
+                <div class="grandmaImg">
+                    <img src="image/grandmaLeaf.png">
+                </div>
+                <!-- <footer>
+                        <div class="footer-wrapper">
+                            <div class="copyrights">&copy; 2019 CryptoMushroom All rights reserved.</div>
+                            <div class="footer-nav-links">
+                                <nav class="footer-nav">
+                                    <a href="#"><img scr=""></a>
+                                    <a href="#"><img src=""></a>
+                                    <a href="#"><img src=""></a>
+                                    <a href="#"><img src=""></a>
+                                </nav>
+                            </div>
+                        </div>
+                    </footer> -->
+            </main>
+    </div>
+</body>
+<script>
+    if (window.dexon && window.dexon.enable) {
+        window.dexon.enable().then(e => {
+            console.log(e);
+            web3 = new Web3(window.dexon);
+            //在這裡以下做事才有用ㄚ web3 連到了
+            web3.eth.net.getId().then(e => {
+                console.log(e);
+            })
+        })
+    } else {
+        window.open('https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj',
+            '_blank');
+    }
+
+    document.getElementById("log").onclick = function () {
+        location.href = "login.html";
+    };
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+
+
+</html>

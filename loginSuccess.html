@@ -474,7 +474,7 @@
                                 .defaultAccount).call().then((data) => {
                                 console.log(data);
                                 if (a) {
-                                    loadingpage();
+                                    location.href = "waiting.html";
                                 } else {
                                     location.href = "loginSuccess.html";
                                 }
@@ -499,7 +499,7 @@
                             }).then((e) => {
                                 console.log(e);
                                 if (e) {
-                                    loadingpage();
+                                    location.href = "waiting.html";
                                 } else {
                                     location.href = "loginSuccess.html";
                                 }
