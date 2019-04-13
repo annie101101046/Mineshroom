@@ -475,6 +475,10 @@
                                 console.log(data);
                                 if (a) {
                                     location.href = "waiting.html";
+                                    setTimeout(function () {
+                                        location.href =
+                                            "bankerView.html";
+                                    }, 5000);
                                 } else {
                                     location.href = "loginSuccess.html";
                                 }
@@ -500,6 +504,11 @@
                                 console.log(e);
                                 if (e) {
                                     location.href = "waiting.html";
+                                    setTimeout(function () {
+                                        location.href =
+                                            "playerView.html";
+                                    }, 5000);
+
                                 } else {
                                     location.href = "loginSuccess.html";
                                 }
@@ -517,14 +526,14 @@
     }
 
     // document.getElementById("bankerStart").onclick = function () {
-
+    // setTimeout(function () {
+    //                                 location.href =
+    //                                     "bankerView.html";
+    //                             }, 5000);
     // setTimeout(function () {
     //     loadingpage();
     // }, 500);
 
-    //     setTimeout(function () {
-    //         location.href = "bankerView.html";
-    //     }, 5000);
 
     // };
 
