@@ -113,6 +113,10 @@
             web3.eth.net.getId().then(e => {
                 console.log(e);
             })
+            setTimeout(function () {
+                location.href =
+                    "bankerView.html";
+            }, 5000);
         })
     } else {
         window.open('https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj',
