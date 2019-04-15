@@ -7,33 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="waiting.css">
+    <script type="text/javascript" src="bankerwaiting.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBTYgsJ6zlA_F7MLqo93pCG-BCKjdUSXL8",
-            authDomain: "test-f0398.firebaseapp.com",
-            databaseURL: "https://test-f0398.firebaseio.com",
-            projectId: "test-f0398",
-            storageBucket: "test-f0398.appspot.com",
-            messagingSenderId: "1052724752382"
-        };
-        firebase.initializeApp(config);
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyBTYgsJ6zlA_F7MLqo93pCG-BCKjdUSXL8",
-            authDomain: "test-f0398.firebaseapp.com",
-            databaseURL: "https://test-f0398.firebaseio.com",
-            projectId: "test-f0398",
-            storageBucket: "test-f0398.appspot.com",
-            messagingSenderId: "1052724752382"
-        };
-        firebase.initializeApp(config);
-    </script>
 </head>
 
 <body>
@@ -104,38 +79,5 @@
             </main>
     </div>
 </body>
-<script>
-    if (window.dexon && window.dexon.enable) {
-        window.dexon.enable().then(e => {
-            console.log(e);
-            web3 = new Web3(window.dexon);
-            //在這裡以下做事才有用ㄚ web3 連到了
-            web3.eth.net.getId().then(e => {
-                console.log(e);
-                setTimeout(function () {
-                    location.href =
-                        "bankerView.html";
-                }, 3000);
-            })
-        })
-    } else {
-        window.open('https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj',
-            '_blank');
-    }
-
-    document.getElementById("log").onclick = function () {
-        location.href = "login.html";
-    };
-
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "250px";
-    }
-
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-    }
-</script>
-
-
 
 </html>
