@@ -272,7 +272,6 @@ if (window.dexon && window.dexon.enable) {
                 }
             }).then((a) => {
                 console.log(a);
-
                 if (a[0] === "started") {
                     location.href = "bankerView.html";
                 } else if (a[0] === "pending") {
@@ -280,7 +279,6 @@ if (window.dexon && window.dexon.enable) {
                 } else {
                     location.href = "shroomAgain.html";
                 }
-
             })
         })
     })
