@@ -271,14 +271,13 @@ if (window.dexon && window.dexon.enable) {
                 }
             }).then((a) => {
                 console.log(a);
-                //這邊怪怪的...我拿到的 info 不對ㄅ
-                if (a) {
-                    //a 的狀況應該是我開局了，玩家也加入了我才跳轉
-                    // location.href = "bankerView.html";
+                if (a[0] === "started") {
+                    location.href = "bankerView.html";
+                } else if (a[0] === "pending") {
+
                 } else {
-                    // location.href = "shroomAgain.html";
+                    location.href = "shroomAgain.html";
                 }
-                // location.href = "bankerView.html";
             })
         })
     })
