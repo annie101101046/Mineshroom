@@ -264,7 +264,7 @@ if (window.dexon && window.dexon.enable) {
                 console.log(data);
                 console.log(data[1]);
                 let a = data[1];
-                if (a !== "0") {
+                if (data[0] === true) {
                     a = parseInt(a, 10);
                     return myContract.methods.getGameInfo(a).call();
                 } else {
