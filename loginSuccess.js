@@ -353,8 +353,7 @@
                     //玩家
                     document.getElementById("playerStart").onclick = function () {
                         //去拿 gameID
-                        myContract.methods.getBankerGame(window.dexon
-                            .defaultAccount).call().then((data) => {
+                        myContract.methods.getBankerGame("0xF132F2f5b4a6c2edF01433566AE6dcAC1e0Ac61E").call().then((data) => {
                             console.log(data);
                             let a = data[1];
                             if (a !== "0") {
