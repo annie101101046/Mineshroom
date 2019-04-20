@@ -272,7 +272,7 @@ if (window.dexon && window.dexon.enable) {
             }).then((a) => {
                 console.log(a);
                 if (a[0] === "started") {
-                    location.href = "bankerView.html";
+                    location.href = "playerView.html";
                 } else if (a[0] === "pending") {
 
                 } else {
