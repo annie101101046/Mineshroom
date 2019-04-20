@@ -258,7 +258,7 @@
                 web3.eth.getBalance(window.dexon.defaultAccount).then(e => {
                     console.log(e);
                     let myContract = new web3.eth.Contract(abi,
-                        "0x191404bc8185e5b55e145d4b1685bf7e88ff0b64");
+                        "0x18fb41afc64e393ed8a3e3e809e00ba2d3b4ab9c");
                     console.log(myContract);
                     //拿菇幣數量
                     myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {
@@ -267,7 +267,7 @@
                 })
             })
             document.getElementById("register").onclick = function () {
-                let myContract = new web3.eth.Contract(abi, "0x191404bc8185e5b55e145d4b1685bf7e88ff0b64");
+                let myContract = new web3.eth.Contract(abi, "0x18fb41afc64e393ed8a3e3e809e00ba2d3b4ab9c");
                 console.log(myContract);
                 //myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {console.log(e)})
 
@@ -280,7 +280,7 @@
                     if (!e) {
                         let response = myContract.methods.registerUser().send({
                             from: window.dexon.defaultAccount,
-                            to: "0x191404bc8185e5b55e145d4b1685bf7e88ff0b64"
+                            to: "0x18fb41afc64e393ed8a3e3e809e00ba2d3b4ab9c"
                         });
                     } else {
                         location.href = "loginSuccess.html";
