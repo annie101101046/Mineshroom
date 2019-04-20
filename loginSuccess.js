@@ -334,16 +334,18 @@
                             from: window.dexon.defaultAccount,
                             value: web3.utils.toWei(a)
                         }).then(() => {
+
                             //去拿 gameID
                             myContract.methods.getBankerGame(window.dexon
                                 .defaultAccount).call().then((data) => {
                                 console.log(data);
+                                console.log(data[1]);
+                                let a = data[1];
                                 if (a) {
                                     location.href = "bankerwaiting.html";
                                 } else {
                                     location.href = "loginSuccess.html";
                                 }
-                                // location.href = "bankerView.html";
                             })
                         })
                     };
@@ -353,28 +355,31 @@
                         //去拿 gameID
                         myContract.methods.getBankerGame(window.dexon
                             .defaultAccount).call().then((data) => {
-                            console.log(data[1]);
+                            console.log(data);
                             let a = data[1];
-                            return a;
-                            // location.href = "bankerView.html";
+                            if (a !== "0") {
+                                a = parseInt(a, 10);
+                                return myContract.methods.joinGame(a).send({
+                                    from: window.dexon.defaultAccount
+                                })
+                            } else {
+                                location.href = "loginSuccess.html";
+                            }
                         }).then((a) => {
                             console.log(a);
-                            myContract.methods.joinGame(a).send({
-                                from: window.dexon.defaultAccount
-                            }).then((e) => {
-                                console.log(e);
-                                if (e) {
-                                    location.href = "playerwaiting.html";
-                                } else {
-                                    location.href = "loginSuccess.html";
-                                }
-                            })
+                            if (a) {
+                                location.href = "playerwaiting.html";
+                            } else {
+                                location.href = "shroomAgain.html";
+                            }
                         })
                     };
                 })
             })
         })
     }
+
+
 
     function loadingpage() {
         var a = document.getElementById("loadimg");
