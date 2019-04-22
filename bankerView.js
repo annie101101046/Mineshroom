@@ -1,132 +1,132 @@
-    window.onload = function crazymushroom() {
+    // window.onload = function crazymushroom() {
 
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".mushAdd").appendChild(image);
-            }, i * 300);
-        }
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".mushAdd").appendChild(image);
+    //         }, i * 300);
+    //     }
 
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".mushAdd2").appendChild(image);
-            }, i * 800);
-        }
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".mushAdd2").appendChild(image);
+    //         }, i * 800);
+    //     }
 
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".mushAdd3").appendChild(image);
-            }, i * 1000);
-        }
-
-
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".mushAdd4").appendChild(image);
-            }, i * 1200);
-        }
-
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".mushAdd5").appendChild(image);
-            }, i * 1400);
-        }
-
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".mushAdd6").appendChild(image);
-            }, i * 1600);
-        }
-
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".mushAdd7").appendChild(image);
-            }, i * 1800);
-        }
-
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".mushAdd8").appendChild(image);
-            }, i * 1800);
-        }
-
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".musAdd").appendChild(image);
-            }, i * 200);
-        }
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".mushAdd3").appendChild(image);
+    //         }, i * 1000);
+    //     }
 
 
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".musAdd2").appendChild(image);
-            }, i * 200);
-        }
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".mushAdd4").appendChild(image);
+    //         }, i * 1200);
+    //     }
 
-        for (var i = 0; i < 7; i++) {
-            setTimeout(function () {
-                var image = document.createElement("img");
-                image.setAttribute("src", "image/crazymushroom.gif");
-                document.querySelector(".mushhAdd").appendChild(image);
-            }, i * 200);
-        }
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".mushAdd5").appendChild(image);
+    //         }, i * 1400);
+    //     }
 
-        var timeleft = 0;
-        var downloadTimer = setInterval(function () {
-            var a = document.getElementById("team1");
-            a.innerHTML = timeleft;
-            timeleft += 1;
-            if (timeleft >= 0) {
-                setInterval(downloadTimer);
-            }
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".mushAdd6").appendChild(image);
+    //         }, i * 1600);
+    //     }
 
-            if (timeleft > 110)
-                clearInterval(downloadTimer);
-        }, 100);
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".mushAdd7").appendChild(image);
+    //         }, i * 1800);
+    //     }
 
-        var downloadTimer2 = setInterval(function () {
-            var a = document.getElementById("team2");
-            a.innerHTML = timeleft;
-            timeleft += 1;
-            if (timeleft >= 0) {
-                setInterval(downloadTimer2);
-            }
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".mushAdd8").appendChild(image);
+    //         }, i * 1800);
+    //     }
 
-            if (timeleft > 13)
-                clearInterval(downloadTimer2);
-        }, 200);
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".musAdd").appendChild(image);
+    //         }, i * 200);
+    //     }
 
-        var downloadTimer3 = setInterval(function () {
-            var a = document.getElementById("team3");
-            a.innerHTML = timeleft;
-            timeleft += 1;
-            if (timeleft >= 0) {
-                setInterval(downloadTimer3);
-            }
 
-            if (timeleft = 14)
-                clearInterval(downloadTimer3);
-        }, 500);
-    }
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".musAdd2").appendChild(image);
+    //         }, i * 200);
+    //     }
+
+    //     for (var i = 0; i < 7; i++) {
+    //         setTimeout(function () {
+    //             var image = document.createElement("img");
+    //             image.setAttribute("src", "image/crazymushroom.gif");
+    //             document.querySelector(".mushhAdd").appendChild(image);
+    //         }, i * 200);
+    //     }
+
+    //     var timeleft = 0;
+    //     var downloadTimer = setInterval(function () {
+    //         var a = document.getElementById("team1");
+    //         a.innerHTML = timeleft;
+    //         timeleft += 1;
+    //         if (timeleft >= 0) {
+    //             setInterval(downloadTimer);
+    //         }
+
+    //         if (timeleft > 110)
+    //             clearInterval(downloadTimer);
+    //     }, 100);
+
+    //     var downloadTimer2 = setInterval(function () {
+    //         var a = document.getElementById("team2");
+    //         a.innerHTML = timeleft;
+    //         timeleft += 1;
+    //         if (timeleft >= 0) {
+    //             setInterval(downloadTimer2);
+    //         }
+
+    //         if (timeleft > 13)
+    //             clearInterval(downloadTimer2);
+    //     }, 200);
+
+    //     var downloadTimer3 = setInterval(function () {
+    //         var a = document.getElementById("team3");
+    //         a.innerHTML = timeleft;
+    //         timeleft += 1;
+    //         if (timeleft >= 0) {
+    //             setInterval(downloadTimer3);
+    //         }
+
+    //         if (timeleft = 14)
+    //             clearInterval(downloadTimer3);
+    //     }, 500);
+    // }
 
 
 
@@ -380,6 +380,9 @@
         }
     ]
 
+    let addMushroom1 = 0;
+    let addMushroom2 = 0;
+
     if (window.dexon && window.dexon.enable) {
         window.dexon.enable().then(e => {
             console.log(e[0]);
@@ -389,6 +392,42 @@
             let myContract = new web3.eth.Contract(abi,
                 "0x18fb41afc64e393ed8a3e3e809e00ba2d3b4ab9c");
             console.log(myContract);
+            //去拿 gameID，拿到後就跳轉
+            myContract.methods.getBankerGame(window.dexon
+                .defaultAccount).call().then((data) => {
+                console.log(data);
+                console.log(data[1]);
+                let a = data[1];
+                a = parseInt(a, 10);
+                if (data[0] === true) {
+                    let downloadTimer = setInterval(function () {
+                        myContract.methods.gameWithTeam(a, 0).call().then(e => {
+                            let team1 = document.getElementById("team1");
+                            let numberM = parseInt(e[0], 10);
+                            team1.innerHTML = numberM;
+                            let addM = numberM / 100;
+                            for (; addMushroom1 < addM; addMushroom1++) {
+                                let image = document.createElement("img");
+                                image.setAttribute("src", "image/crazymushroom.gif");
+                                document.querySelector("#mushAdd").appendChild(image);
+                            }
+                        })
+                    }, 100);
+                    let downloadTimer2 = setInterval(function () {
+                        myContract.methods.gameWithTeam(a, 1).call().then(e => {
+                            let team2 = document.getElementById("team2");
+                            let numberM = parseInt(e[0], 10);
+                            team2.innerHTML = numberM;
+                            let addM = numberM / 100;
+                            for (; addMushroom2 < addM; addMushroom2++) {
+                                let image = document.createElement("img");
+                                image.setAttribute("src", "image/crazymushroom.gif");
+                                document.querySelector("#mushAdd2").appendChild(image);
+                            }
+                        })
+                    }, 100);
+                }
+            })
             myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
                 console.log(e);
                 if (!e) {
