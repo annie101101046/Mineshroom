@@ -272,7 +272,9 @@ if (window.dexon && window.dexon.enable) {
             if (gameid === undefined) {
                 return;
             }
-            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 0).call().then(e => {
+            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 0).send({
+                from: window.dexon.defaultAccount,
+            }).then(e => {
                 console.log("success!");
             })
         }

@@ -141,6 +141,18 @@ abi = [{
     },
     {
         "constant": true,
+        "inputs": [],
+        "name": "getGameId",
+        "outputs": [{
+            "name": "",
+            "type": "uint256[]"
+        }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
         "inputs": [{
             "name": "game_index",
             "type": "uint256"
@@ -361,7 +373,7 @@ if (window.dexon && window.dexon.enable) {
                 //玩家
                 document.getElementById("playerStart").onclick = function () {
                     //去拿 gameID
-                    myContract.methods.getBankerGame("0xF132F2f5b4a6c2edF01433566AE6dcAC1e0Ac61E").call().then((data) => {
+                    myContract.methods.getGameId().call().then((data) => {
                         console.log(data);
                         let a = data[1];
                         if (a !== "0") {
