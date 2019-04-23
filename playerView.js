@@ -258,6 +258,7 @@ abi = [{
 
 let addMushroom1 = 0;
 let addMushroom2 = 0;
+let gameid = undefined;
 
 if (window.dexon && window.dexon.enable) {
     window.dexon.enable().then(e => {
@@ -267,15 +268,24 @@ if (window.dexon && window.dexon.enable) {
         //在這裡以下做事才有用ㄚ web3 連到了
         let myContract = new web3.eth.Contract(abi,
             "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72");
+        document.getElementById("aunt").onclick = function () {
+            if (gameid === undefined) {
+                return;
+            }
+            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 0).call().then(e => {
+                console.log("success!");
+            })
+        }
         console.log(myContract);
         //去拿 gameID，拿到後就跳轉
-        myContract.methods.getBankerGame(window.dexon
+        myContract.methods.getPlayerGame(window.dexon
             .defaultAccount).call().then((data) => {
             console.log(data);
             console.log(data[1]);
             let a = data[1];
             a = parseInt(a, 10);
             if (data[0] === true) {
+                gameid = a;
                 let downloadTimer = setInterval(function () {
                     myContract.methods.gameWithTeam(a, 0).call().then(e => {
                         let team1 = document.getElementById("team1");
@@ -289,6 +299,7 @@ if (window.dexon && window.dexon.enable) {
                         }
                     })
                 }, 100);
+
                 let downloadTimer2 = setInterval(function () {
                     myContract.methods.gameWithTeam(a, 1).call().then(e => {
                         let team2 = document.getElementById("team2");
