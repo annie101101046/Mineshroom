@@ -102,16 +102,16 @@ body {
 
 .banker_section {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     align-content: center;
     font-family: monospace;
     font-size: 14px;
     font-weight: bolder;
     color: white;
-    margin-top: 50px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
 .ET {
@@ -131,6 +131,7 @@ footer {
 .Allcompete {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .bankerInfo {
@@ -139,6 +140,11 @@ footer {
     align-items: center;
     font-family: monospace;
     color: white;
+    padding: 20px 50px;
+    border-radius: 20px;
+    margin: 50px;
+    background-color: #FF789B;
+    box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
 }
 
 .BankerImg {
@@ -163,7 +169,7 @@ footer {
 .comp {
     width: 450px;
     height: 300px;
-    margin-right: 10px;
+    margin: 10px auto;
     position: relative;
     color: white;
     background-color: pink;
@@ -251,7 +257,7 @@ footer {
 }
 
 .fixedHeader {
-    width: 100vw;
+    width: -webkit-fill-available;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -356,7 +362,6 @@ header {
 
 
 .card {
-    background-color: rgba(255, 176, 202, 0.4);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -364,9 +369,7 @@ header {
     height: 100vh;
     width: 100vw;
     position: relative;
-    border-radius: 15px;
     transition: box-shadow .1s ease, transform .1s ease;
-    box-shadow: 0 0 0 0.1px #d4d4d5, 0 0.1px 0.1px 0 rgba(34, 36, 38, .12), 0 0.1px 0.2px 0 rgba(34, 36, 38, .15);
 }
 
 .card-header {
@@ -530,4 +533,77 @@ header {
 
 
     font-size: 16px;
+}
+
+
+@media only screen and (max-width: 360px) {
+
+    .fixedHeader {
+        width: -webkit-fill-available;
+    }
+
+    .card {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 5vw;
+        height: 100vh;
+        padding: 10px;
+        width: fit-content;
+        position: relative;
+        transition: box-shadow .1s ease, transform .1s ease;
+    }
+
+    .Allcompete {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        align-self: center;
+    }
+
+
+    .comp {
+        width: 300px;
+        height: 300px;
+        margin: 10px auto;
+        position: relative;
+        color: white;
+        background-color: pink;
+        opacity: 0.9;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+
+    .banker_section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        font-family: monospace;
+        font-size: 10px;
+        font-weight: bolder;
+        color: white;
+    }
+
+    .bankerInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: monospace;
+        color: white;
+        padding: 10px 50px;
+        border-radius: 20px;
+        margin: 20px;
+        background-color: #FF789B;
+        box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    }
+
+    .ET {
+        color: #89f4bc;
+        font-size: 14px;
+    }
 }
