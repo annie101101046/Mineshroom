@@ -373,17 +373,21 @@ if (window.dexon && window.dexon.enable) {
                 //玩家
                 document.getElementById("playerStart").onclick = function () {
                     //去拿 gameID
-                    myContract.methods.getGameId().call().then((data) => {
+                    myContract.methods.getGameId().call().then(async (data) => {
                         console.log(data);
-                        let a = data[1];
-                        if (a !== "0") {
-                            a = parseInt(a, 10);
-                            return myContract.methods.joinGame(a).send({
-                                from: window.dexon.defaultAccount
-                            })
-                        } else {
-                            location.href = "loginSuccess.html";
+                        for (let i = 0; i < data.length; i++) {
+                            let a = data[i];
+                            if (a !== "0") {
+                                a = parseInt(a, 10);
+                                let idstatus = await myContract.methods.getGameInfo(a);
+                                if (idstatus === "pending") {
+                                    return myContract.methods.joinGame(a).send({
+                                        from: window.dexon.defaultAccount
+                                    })
+                                }
+                            }
                         }
+                        location.href = "loginSuccess.html";
                     }).then((a) => {
                         console.log(a);
                         if (a) {
