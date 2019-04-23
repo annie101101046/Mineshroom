@@ -427,7 +427,9 @@
                             let startAt = e[4];
                             let playtime = blocknumber - parseInt(startAt, 10);
                             //把 playtime 畫出來，然後 500 block 就結束了
-                            // console.log(playtime);
+                            console.log(playtime);
+                            let p = document.getElementById("blockT");
+                            p.innerHTML = playtime;
                         })
                     }, 100);
 
