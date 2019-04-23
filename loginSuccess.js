@@ -379,15 +379,16 @@ if (window.dexon && window.dexon.enable) {
                             let a = data[i];
                             if (a !== "0") {
                                 a = parseInt(a, 10);
-                                let idstatus = await myContract.methods.getGameInfo(a);
-                                if (idstatus === "pending") {
+                                let idstatus = await myContract.methods.getGameInfo(a).call();
+                                console.log(idstatus)
+                                if (idstatus[0] === "pending") {
                                     return myContract.methods.joinGame(a).send({
                                         from: window.dexon.defaultAccount
                                     })
                                 }
                             }
                         }
-                        location.href = "loginSuccess.html";
+                        //location.href = "loginSuccess.html";
                     }).then((a) => {
                         console.log(a);
                         if (a) {
