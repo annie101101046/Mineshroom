@@ -9,9 +9,9 @@ footer {
 }
 
 .wordding {
-    font-size: 14px;
+    font-size: 20px;
     color: white;
-    line-height: 1.5em;
+    line-height: 2em;
     margin-top: 5%;
 }
 
@@ -64,10 +64,11 @@ footer {
     font-size: 24px;
     font-weight: bolder;
     color: #89f4bc;
-    line-height: 1.4em;
+    line-height: 2em;
 }
 
 .Yo {
+    line-height: 1.5em;
     font-size: 40px;
     font-weight: bolder;
     color: white;
@@ -306,15 +307,18 @@ footer {
     top: 0;
     z-index: 1000;
     transform: translateZ(0);
-    height: 40px;
+    height: 50px;
+    align-items: center;
+    justify-items: center;
     background-color: #FF789B;
     box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
 }
 
 .fixed_logo {
-    width: 40px;
+    width: 50px;
     margin-left: 5px;
     position: fixed;
+    cursor: pointer;
 }
 
 .fixed_logo img {
@@ -322,10 +326,11 @@ footer {
 }
 
 .fixedLogoText {
-    width: 150px;
-    top: -55%;
-    left: 40px;
+    width: 200px;
+    margin-top: 2px;
+    left: 45px;
     position: fixed;
+    cursor: pointer;
 }
 
 .fixedLogoText img {
@@ -388,7 +393,7 @@ header {
 .main-nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bolder;
     font-family: monospace;
     transition: all .5s;
@@ -416,6 +421,7 @@ header {
 }
 
 .card-header {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

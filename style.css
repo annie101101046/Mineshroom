@@ -26,7 +26,7 @@
 }
 
 .sidenav a:hover {
-  color: #FF789B;
+  color: rgb(24, 8, 12);
 }
 
 .sidenav .closebtn {
@@ -87,6 +87,7 @@ footer {
   width: 40px;
   margin-left: 5px;
   position: fixed;
+  cursor: pointer;
 }
 
 .fixed_logo img {
@@ -98,6 +99,7 @@ footer {
   top: -55%;
   left: 40px;
   position: fixed;
+  cursor: pointer;
 }
 
 .fixedLogoText img {

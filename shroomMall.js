@@ -286,6 +286,13 @@
         }
     ]
 
+    document.getElementById("LogoText").onclick = function () {
+        location.href = "index.html";
+    }
+
+    document.getElementById("FixedLogo").onclick = function () {
+        location.href = "index.html";
+    }
 
     if (window.dexon && window.dexon.enable) {
         window.dexon.enable().then(e => {

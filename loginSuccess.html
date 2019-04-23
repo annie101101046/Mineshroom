@@ -8,15 +8,15 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="loginSuccess.css">
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
-    <script type="text/javascript" src="loginSuccess.js"></script>
+
 </head>
 
 <body>
     <div class="fixedHeader">
-        <div class="fixed_logo">
+        <div class="fixed_logo" id="FixedLogo">
             <img src="image/logo.png" alt="logo of MineShroom" />
         </div>
-        <div class="fixedLogoText">
+        <div class="fixedLogoText" id="LogoText">
             <img src="image/cryptoMushroomLogo.png" alt="text of MineShroom" />
         </div>
         <div class="fixed_amount">
@@ -38,7 +38,7 @@
             </div>
             <main>
                 <div class="card">
-                    <div class="card-header">
+                    <!-- <div class="card-header">
                         <div class="card_logo" onclick="openNav()">
                             <img src="image/logo.png" alt="logo of MineShroom" />
                         </div>
@@ -50,7 +50,7 @@
                                 <li class="FAQ"><a href="FAQ.html">FAQ</a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                     <div class="loadingIMG" id="loadimg">
                         <img src="image/waiting.png">
                     </div>
@@ -105,5 +105,6 @@
     </main>
     </div>
 </body>
+<script type="text/javascript" src="loginSuccess.js"></script>
 
 </html>

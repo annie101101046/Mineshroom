@@ -205,6 +205,7 @@ footer {
 }
 
 .fixed_logo {
+  cursor: pointer;
   width: 40px;
   margin-left: 5px;
   position: fixed;
@@ -215,6 +216,7 @@ footer {
 }
 
 .fixedLogoText {
+  cursor: pointer;
   width: 150px;
   top: -55%;
   left: 40px;
