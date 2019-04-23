@@ -6,16 +6,12 @@ body {
     margin: 0;
 }
 
-.mushAdd {
+#mushAdd {
     width: 50px;
-    position: absolute;
-    left: 50px;
 }
 
-.mushAdd2 {
+#mushAdd2 {
     width: 50px;
-    position: absolute;
-    left: 80px;
 }
 
 .musAdd {
