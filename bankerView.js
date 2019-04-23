@@ -272,6 +272,18 @@
         },
         {
             "constant": true,
+            "inputs": [],
+            "name": "getGameId",
+            "outputs": [{
+                "name": "",
+                "type": "uint256[]"
+            }],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "constant": true,
             "inputs": [{
                 "name": "game_index",
                 "type": "uint256"
@@ -406,6 +418,19 @@
                 let a = data[1];
                 a = parseInt(a, 10);
                 if (data[0] === true) {
+                    let gameTime = setInterval(function () {
+                        myContract.methods.getGameInfo(a).call().then(async e => {
+                            //return value 是 e
+                            //用了 await 就不用 then 了，把 promise 值直接拿出來
+                            let blocknumber = await web3.eth.getBlockNumber();
+                            //console.log(blocknumber);
+                            let startAt = e[4];
+                            let playtime = blocknumber - parseInt(startAt, 10);
+                            //把 playtime 畫出來，然後 500 block 就結束了
+                            // console.log(playtime);
+                        })
+                    }, 100);
+
                     let downloadTimer = setInterval(function () {
                         myContract.methods.gameWithTeam(a, 0).call().then(e => {
                             let team1 = document.getElementById("team1");
