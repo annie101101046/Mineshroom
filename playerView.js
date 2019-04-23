@@ -286,7 +286,6 @@ if (window.dexon && window.dexon.enable) {
                             let image = document.createElement("img");
                             image.setAttribute("src", "image/crazymushroom.gif");
                             document.querySelector("#mushAdd").appendChild(image);
-                            document.querySelector("#space").appendChild("#mushAdd");
                         }
                     })
                 }, 100);
@@ -300,7 +299,6 @@ if (window.dexon && window.dexon.enable) {
                             let image = document.createElement("img");
                             image.setAttribute("src", "image/crazymushroom.gif");
                             document.querySelector("#mushAdd2").appendChild(image);
-                            document.querySelector("#space2").appendChild("#mushAdd2");
                         }
                     })
                 }, 100);
