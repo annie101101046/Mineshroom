@@ -280,6 +280,14 @@ if (window.dexon && window.dexon.enable) {
         //在這裡以下做事才有用ㄚ web3 連到了
         let myContract = new web3.eth.Contract(abi,
             "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72");
+        //拿菇幣數量
+        myContract.methods.getGuCoin(window.dexon.defaultAccount).call()
+            .then(e => {
+                console.log(e);
+                let k = document.getElementById("gu");
+                k.innerHTML = e;
+            })
+
         document.getElementById("aunt").onclick = function () {
             if (gameid === undefined) {
                 return;
@@ -290,6 +298,53 @@ if (window.dexon && window.dexon.enable) {
                 console.log("success!");
             })
         }
+
+        document.getElementById("grandmaa").onclick = function () {
+            if (gameid === undefined) {
+                return;
+            }
+            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 1).send({
+                from: window.dexon.defaultAccount,
+            }).then(e => {
+                console.log("success!");
+            })
+        }
+
+        document.getElementById("Muscoin").onclick = function BuyGu() {
+            myContract.methods.mushroom_eth_rate().call()
+                .then(e => {
+                    console.log(e);
+                })
+            const amount = prompt('buy');
+            myContract.methods.buyGuCoin().send({
+                from: window.dexon.defaultAccount,
+                value: web3.utils.toWei(amount),
+            }).then(data => {
+                console.log('event', data);
+
+                //拿菇幣數量
+                myContract.methods.getGuCoin(window.dexon
+                        .defaultAccount).call()
+                    .then(e => {
+                        console.log(e);
+                        let k = document.getElementById("gu");
+                        k.innerHTML = e;
+                    })
+
+            })
+        }
+
+        document.getElementById("magiccc").onclick = function () {
+            if (gameid === undefined) {
+                return;
+            }
+            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 2).send({
+                from: window.dexon.defaultAccount,
+            }).then(e => {
+                console.log("success!");
+            })
+        }
+
         console.log(myContract);
         //去拿 gameID，拿到後就跳轉
         myContract.methods.getPlayerGame(window.dexon
@@ -299,6 +354,20 @@ if (window.dexon && window.dexon.enable) {
             let a = data[1];
             a = parseInt(a, 10);
             if (data[0] === true) {
+                let gameTime = setInterval(function () {
+                    myContract.methods.getGameInfo(a).call().then(async e => {
+                        //return value 是 e
+                        //用了 await 就不用 then 了，把 promise 值直接拿出來
+                        let blocknumber = await web3.eth.getBlockNumber();
+                        //console.log(blocknumber);
+                        let startAt = e[4];
+                        let playtime = blocknumber - parseInt(startAt, 10);
+                        //把 playtime 畫出來，然後 500 block 就結束了
+                        console.log(playtime);
+                        let p = document.getElementById("blockT");
+                        p.innerHTML = playtime;
+                    })
+                })
                 gameid = a;
                 let downloadTimer = setInterval(function () {
                     myContract.methods.gameWithTeam(a, 0).call().then(e => {
