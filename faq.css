@@ -9,10 +9,11 @@ footer {
 }
 
 .wordding {
-    font-size: 20px;
+    font-size: 14px;
     color: white;
-    line-height: 2em;
-    margin-top: 5%;
+    line-height: 1.2em;
+    margin-top: 10px;
+    font-weight: lighter;
 }
 
 .grandmaplace {
@@ -61,7 +62,7 @@ footer {
 }
 
 .realtext {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bolder;
     color: #89f4bc;
     line-height: 2em;
