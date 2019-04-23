@@ -265,7 +265,7 @@ if (window.dexon && window.dexon.enable) {
         web3.eth.net.getId().then(e => {
             console.log(e);
             let myContract = new web3.eth.Contract(abi,
-                "0x18fb41afc64e393ed8a3e3e809e00ba2d3b4ab9c");
+                "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72");
             console.log(myContract);
             //去拿 gameID，拿到後就跳轉
             myContract.methods.getBankerGame(window.dexon
