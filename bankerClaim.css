@@ -105,7 +105,7 @@ footer {
 }
 
 .fixedHeader {
-    width: 100vw;
+    width: -webkit-fill-available;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -397,50 +397,19 @@ header {
     font-size: 16px;
 }
 
-@media only screen and (max-width: 575px) {
 
-    .sidenav {}
-
-    .sidenav a {}
+@media only screen and (max-width: 452px) {
 
     .container {
-        height: -webkit-fill-available;
+        /* height: -webkit-fill-available; */
+        margin-left: 100px;
     }
 
     .header {
-        color: #89f4bc;
-        font-size: 28px;
+        font-size: 18px;
     }
 
-    .main-nav {
-        display: none;
+    .hightlight {
+        font-size: 20px;
     }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        align-items: baseline;
-    }
-
-    .checkmark,
-    .crossmark {
-        font-size: 12px;
-        font-weight: bold;
-    }
-
-    .login {
-        padding: 10px 20px;
-        font-size: 14px;
-        font-weight: bolder;
-    }
-
-
-    footer {
-        left: 10%;
-        bottom: 1%;
-        font-size: 9px;
-    }
-
-
 }
