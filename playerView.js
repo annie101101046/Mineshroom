@@ -369,13 +369,15 @@ if (window.dexon && window.dexon.enable) {
                     console.log(e);
                     let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
                     let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
-                    console.log(gam0);
-                    console.log(gam1);
-                    if (gam0[1].includes(window.dexon
+                    let game0 = gam0[1].toLowerCase();
+                    let game1 = gam1[1].toLowerCase();
+
+                    if (game0.includes(window.dexon
                             .defaultAccount)) {
                         let teamText = document.getElementById("yourTeam1");
                         teamText.innerHTML = "Your Score";
-                    } else {
+                    } else if (game1.includes(window.dexon
+                            .defaultAccount)) {
                         let teamText = document.getElementById("yourTeam2");
                         teamText.innerHTML = "Your Score";
                     }
@@ -398,10 +400,12 @@ if (window.dexon && window.dexon.enable) {
                         if (playtime === 501) {
                             alert("Time's up!");
                             //如果我大於他隊 轉到 winnerclaim
-                            let game0 = await myContract.methods.gameWithTeam(a, 0).call();
-                            let game1 = await myContract.methods.gameWithTeam(a, 1).call();
-                            console.log(game0[0]);
-                            console.log(game1[0]);
+                            let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
+                            let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
+                            console.log(gam0[0]);
+                            console.log(gam1[0]);
+                            let game0 = gam0[1].toLowerCase();
+                            let game1 = gam1[1].toLowerCase();
                             if (game0[1].includes(window.dexon
                                     .defaultAccount)) {
                                 if (game0[0] > game1[0]) {
