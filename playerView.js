@@ -406,6 +406,7 @@ if (window.dexon && window.dexon.enable) {
                             console.log(gam1[0]);
                             gam0[1] = gam0[1].map(x => x.toLowerCase());
                             gam1[1] = gam1[1].map(x => x.toLowerCase());
+
                             if (gam0[1].includes(window.dexon
                                     .defaultAccount)) {
                                 if (gam0[0] > gam1[0]) {
@@ -413,18 +414,17 @@ if (window.dexon && window.dexon.enable) {
                                 } else {
                                     location.href = "loserClaim.html";
                                 }
-                            }
-
-                            if (gam1[1].includes(window.dexon
+                            } else if (gam1[1].includes(window.dexon
                                     .defaultAccount)) {
                                 if (gam1[0] > gam0[0]) {
                                     location.href = "winnerClaim.html";
                                 } else {
                                     location.href = "loserClaim.html";
                                 }
+                            } else {
+                                alert = "there's no team here!"
+                                //平手的狀況還要寫，share 獎金... @cliff
                             }
-
-                            //平手的狀況還要寫，share 獎金... @cliff
                         }
                     })
                 })
