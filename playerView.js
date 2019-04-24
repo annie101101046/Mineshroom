@@ -365,6 +365,22 @@ if (window.dexon && window.dexon.enable) {
             let a = data[1];
             a = parseInt(a, 10);
             if (data[0] === true) {
+                let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
+                let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
+                if (gam0[1].includes(window.dexon
+                        .defaultAccount)) {
+                    let teamText = document.getElementById("yourTeam1");
+                    teamText.innerHTML = "Your Score";
+                } else if (gam1[1].includes(window.dexon
+                        .defaultAccount)) {
+                    let teamText = document.getElementById("yourTeam2");
+                    teamText.innerHTML = "Your Score";
+
+                } else {
+                    alert("No team here!");
+                }
+                let game0 = await myContract.methods.gameWithTeam(a, 0).call();
+                let game1 = await myContract.methods.gameWithTeam(a, 1).call();
                 let gameTime = setInterval(function () {
                     myContract.methods.getGameInfo(a).call().then(async e => {
                         //return value 是 e
@@ -407,8 +423,6 @@ if (window.dexon && window.dexon.enable) {
                 gameid = a;
                 let downloadTimer = setInterval(function () {
                     myContract.methods.gameWithTeam(a, 0).call().then(e => {
-                        let teamText = document.getElementById("yourTeam1");
-                        teamText.innerHTML = "Your Score";
                         let team1 = document.getElementById("team1");
                         let numberM = parseInt(e[0], 10);
                         team1.innerHTML = numberM;
@@ -426,8 +440,6 @@ if (window.dexon && window.dexon.enable) {
 
                 let downloadTimer2 = setInterval(function () {
                     myContract.methods.gameWithTeam(a, 1).call().then(e => {
-                        let teamText = document.getElementById("yourTeam2");
-                        teamText.innerHTML = "Your Score";
                         let team2 = document.getElementById("team2");
                         let numberM = parseInt(e[0], 10);
                         team2.innerHTML = numberM;
