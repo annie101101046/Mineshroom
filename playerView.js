@@ -368,6 +368,8 @@ if (window.dexon && window.dexon.enable) {
                 myContract.methods.getGameInfo(a).call().then(async e => {
                     let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
                     let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
+                    console.log(gam0);
+                    console.log(gam1);
                     if (gam0[1].includes(window.dexon
                             .defaultAccount)) {
                         let teamText = document.getElementById("yourTeam1");
