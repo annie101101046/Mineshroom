@@ -410,6 +410,15 @@
             let myContract = new web3.eth.Contract(abi,
                 "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72");
             console.log(myContract);
+            //userID
+            myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+                console.log(e);
+                if (!e) {
+                    location.href = "login.html";
+                }
+            })
+            let p = document.getElementById("playeID");
+            ply.innerHTML = e;
             //去拿 gameID，拿到後就跳轉
             myContract.methods.getBankerGame(window.dexon
                 .defaultAccount).call().then((data) => {

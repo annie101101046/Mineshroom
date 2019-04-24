@@ -280,6 +280,16 @@ if (window.dexon && window.dexon.enable) {
         //在這裡以下做事才有用ㄚ web3 連到了
         let myContract = new web3.eth.Contract(abi,
             "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72");
+
+        //userID
+        myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+            console.log(e);
+            if (!e) {
+                location.href = "login.html";
+            }
+        })
+        let p = document.getElementById("playeID");
+        ply.innerHTML = e;
         //拿菇幣數量
         myContract.methods.getGuCoin(window.dexon.defaultAccount).call()
             .then(e => {
@@ -366,18 +376,13 @@ if (window.dexon && window.dexon.enable) {
                         console.log(playtime);
                         let p = document.getElementById("blockT");
                         p.innerHTML = playtime;
+                        if (playtime === 500) {
+                            alert("Time's up!");
+                        }
                     })
                 })
                 gameid = a;
                 let downloadTimer = setInterval(function () {
-                    myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
-                        console.log(e);
-                        if (!e) {
-                            location.href = "login.html";
-                        }
-                    })
-                    let p = document.getElementById("playeID");
-                    ply.innerHTML = e;
                     myContract.methods.gameWithTeam(a, 0).call().then(e => {
                         let teamText = document.getElementById("yourTeam1");
                         teamText.innerHTML = "Your Score";

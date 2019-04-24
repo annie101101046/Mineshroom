@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+#playeID {
+    margin-bottom: 10px;
+}
+
 #space {
     display: flex;
     flex-wrap: wrap;
