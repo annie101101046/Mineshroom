@@ -370,7 +370,17 @@ if (window.dexon && window.dexon.enable) {
                 })
                 gameid = a;
                 let downloadTimer = setInterval(function () {
+                    myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+                        console.log(e);
+                        if (!e) {
+                            location.href = "login.html";
+                        }
+                    })
+                    let p = document.getElementById("playeID");
+                    ply.innerHTML = e;
                     myContract.methods.gameWithTeam(a, 0).call().then(e => {
+                        let teamText = document.getElementById("yourTeam1");
+                        teamText.innerHTML = "Your Score";
                         let team1 = document.getElementById("team1");
                         let numberM = parseInt(e[0], 10);
                         team1.innerHTML = numberM;
@@ -388,6 +398,8 @@ if (window.dexon && window.dexon.enable) {
 
                 let downloadTimer2 = setInterval(function () {
                     myContract.methods.gameWithTeam(a, 1).call().then(e => {
+                        let teamText = document.getElementById("yourTeam2");
+                        teamText.innerHTML = "Your Score";
                         let team2 = document.getElementById("team2");
                         let numberM = parseInt(e[0], 10);
                         team2.innerHTML = numberM;

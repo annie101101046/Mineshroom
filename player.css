@@ -182,7 +182,7 @@ footer {
     width: 100%;
 }
 
-.playeID {
+#playeID {
     margin-bottom: 10px;
 }
 
@@ -215,13 +215,25 @@ footer {
     width: 100%;
 }
 
-.yourTeam {
+#yourTeam1 {
     font-size: 20px;
     top: -35px;
     font-weight: bolder;
     color: white;
     position: absolute;
 }
+
+#yourTeam2 {
+    font-size: 20px;
+    top: -35px;
+    font-weight: bolder;
+    color: white;
+    position: absolute;
+}
+
+}
+
+
 
 .itemset {
     display: flex;
