@@ -367,19 +367,19 @@ if (window.dexon && window.dexon.enable) {
             if (data[0] === true) {
                 myContract.methods.getGameInfo(a).call().then(async e => {
                     console.log(e);
-                    let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
-                    let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
-                    let game0 = gam0[1].toLowerCase();
-                    let game1 = gam1[1].toLowerCase();
-
-                    if (game0.includes(window.dexon
-                            .defaultAccount)) {
+                    let g0 = await myContract.methods.gameWithTeam(a, 0).call();
+                    let g1 = await myContract.methods.gameWithTeam(a, 1).call();
+                    console.log(g0[1]);
+                    g0[1] = g0[1].map(x => x.toLowerCase());
+                    g1[1] = g1[1].map(x => x.toLowerCase());
+                    if (g0[1].includes(window.dexon.defaultAccount)) {
                         let teamText = document.getElementById("yourTeam1");
                         teamText.innerHTML = "Your Score";
-                    } else if (game1.includes(window.dexon
-                            .defaultAccount)) {
+                    } else if (g1[1].includes(window.dexon.defaultAccount)) {
                         let teamText = document.getElementById("yourTeam2");
                         teamText.innerHTML = "Your Score";
+                    } else {
+                        alert("No team here!");
                     }
                 })
 
@@ -397,27 +397,27 @@ if (window.dexon && window.dexon.enable) {
                         // console.log(playtime);
                         let p = document.getElementById("blockT");
                         p.innerHTML = playtime;
-                        if (playtime === 501) {
+                        if (playtime === 500) {
                             alert("Time's up!");
                             //如果我大於他隊 轉到 winnerclaim
                             let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
                             let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
                             console.log(gam0[0]);
                             console.log(gam1[0]);
-                            let game0 = gam0[1].toLowerCase();
-                            let game1 = gam1[1].toLowerCase();
-                            if (game0[1].includes(window.dexon
+                            gam0[1] = gam0[1].map(x => x.toLowerCase());
+                            gam1[1] = gam1[1].map(x => x.toLowerCase());
+                            if (gam0[1].includes(window.dexon
                                     .defaultAccount)) {
-                                if (game0[0] > game1[0]) {
+                                if (gam0[0] > gam1[0]) {
                                     location.href = "winnerClaim.html";
                                 } else {
                                     location.href = "loserClaim.html";
                                 }
                             }
 
-                            if (game1[1].includes(window.dexon
+                            if (gam1[1].includes(window.dexon
                                     .defaultAccount)) {
-                                if (game1[0] > game0[0]) {
+                                if (gam1[0] > gam0[0]) {
                                     location.href = "winnerClaim.html";
                                 } else {
                                     location.href = "loserClaim.html";
@@ -469,28 +469,28 @@ if (window.dexon && window.dexon.enable) {
             if (!e) {
                 location.href = "login.html";
             }
-
-            //拿菇幣數量
-            myContract.methods.getGuCoin(window.dexon
-                    .defaultAccount).call()
-                .then(e => {
-                    console.log(e);
-                    let nowGugu = 0;
-                    //看菇菇有沒有增加
-                    function checkGuGu() {
-                        if (e > nowGugu) {
-                            let diff = e - nowGugu;
-                            nowGugu = e;
-                            return diff;
-                        }
-                        console.log(checkGuGu());
-                        let a = checkGuGu();
-                        if (a > 0) {
-
-                        }
-                    }
-
-                })
         })
+
+        //拿菇幣數量
+        myContract.methods.getGuCoin(window.dexon
+                .defaultAccount).call()
+            .then(e => {
+                console.log(e);
+                let nowGugu = 0;
+                //看菇菇有沒有增加
+                function checkGuGu() {
+                    if (e > nowGugu) {
+                        let diff = e - nowGugu;
+                        nowGugu = e;
+                        return diff;
+                    }
+                    console.log(checkGuGu());
+                    let a = checkGuGu();
+                    if (a > 0) {
+
+                    }
+                }
+
+            })
     })
 }

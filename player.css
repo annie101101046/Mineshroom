@@ -677,7 +677,7 @@ header {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        margin-top: -100px;
+        margin-top: 10px;
     }
 
     .comp {
