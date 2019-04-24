@@ -365,22 +365,25 @@ if (window.dexon && window.dexon.enable) {
             let a = data[1];
             a = parseInt(a, 10);
             if (data[0] === true) {
-                let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
-                let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
-                if (gam0[1].includes(window.dexon
-                        .defaultAccount)) {
-                    let teamText = document.getElementById("yourTeam1");
-                    teamText.innerHTML = "Your Score";
-                } else if (gam1[1].includes(window.dexon
-                        .defaultAccount)) {
-                    let teamText = document.getElementById("yourTeam2");
-                    teamText.innerHTML = "Your Score";
+                myContract.methods.getGameInfo(a).call().then(async e => {
+                    let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
+                    let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
+                    if (gam0[1].includes(window.dexon
+                            .defaultAccount)) {
+                        let teamText = document.getElementById("yourTeam1");
+                        teamText.innerHTML = "Your Score";
+                    } else if (gam1[1].includes(window.dexon
+                            .defaultAccount)) {
+                        let teamText = document.getElementById("yourTeam2");
+                        teamText.innerHTML = "Your Score";
 
-                } else {
-                    alert("No team here!");
-                }
-                let game0 = await myContract.methods.gameWithTeam(a, 0).call();
-                let game1 = await myContract.methods.gameWithTeam(a, 1).call();
+                    } else {
+                        alert("No team here!");
+                    }
+                })
+
+                // let game0 = await myContract.methods.gameWithTeam(a, 0).call();
+                // let game1 = await myContract.methods.gameWithTeam(a, 1).call();
                 let gameTime = setInterval(function () {
                     myContract.methods.getGameInfo(a).call().then(async e => {
                         //return value 是 e
@@ -398,6 +401,8 @@ if (window.dexon && window.dexon.enable) {
                             //如果我大於他隊 轉到 winnerclaim
                             let game0 = await myContract.methods.gameWithTeam(a, 0).call();
                             let game1 = await myContract.methods.gameWithTeam(a, 1).call();
+                            console.log(game0[0]);
+                            console.log(game1[0]);
                             if (game0[1].includes(window.dexon
                                     .defaultAccount)) {
                                 if (game0[0] > game1[0]) {
