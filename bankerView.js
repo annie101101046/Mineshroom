@@ -417,7 +417,7 @@
                     location.href = "login.html";
                 }
             })
-            let p = document.getElementById("playeID");
+            let ply = document.getElementById("playeID");
             ply.innerHTML = e;
             //去拿 gameID，拿到後就跳轉
             myContract.methods.getBankerGame(window.dexon
@@ -439,8 +439,9 @@
                             console.log(playtime);
                             let p = document.getElementById("blockT");
                             p.innerHTML = playtime;
-                            if (playtime === 500) {
+                            if (playtime === 501) {
                                 alert("Time's up!");
+                                location.href = "bankerClaim.html";
                             }
                         })
                     }, 100);

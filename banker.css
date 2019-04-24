@@ -8,6 +8,9 @@ body {
 
 #playeID {
     margin-bottom: 10px;
+    font-size: 12px;
+    margin-top: -15px;
+    font-weight: 300;
 }
 
 #space {

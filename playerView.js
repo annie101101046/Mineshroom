@@ -288,8 +288,9 @@ if (window.dexon && window.dexon.enable) {
                 location.href = "login.html";
             }
         })
-        let p = document.getElementById("playeID");
+        let ply = document.getElementById("playeID");
         ply.innerHTML = e;
+
         //拿菇幣數量
         myContract.methods.getGuCoin(window.dexon.defaultAccount).call()
             .then(e => {
@@ -376,8 +377,30 @@ if (window.dexon && window.dexon.enable) {
                         console.log(playtime);
                         let p = document.getElementById("blockT");
                         p.innerHTML = playtime;
-                        if (playtime === 500) {
+                        if (playtime === 501) {
                             alert("Time's up!");
+                            //如果我大於他隊 轉到 winnerclaim
+                            let game0 = await myContract.methods.gameWithTeam(a, 0).call();
+                            let game1 = await myContract.methods.gameWithTeam(a, 1).call();
+                            if (game0[1].includes(window.dexon
+                                    .defaultAccount)) {
+                                if (game0[0] > game1[0]) {
+                                    location.href = "winnerClaim.html";
+                                } else {
+                                    location.href = "loserClaim.html";
+                                }
+                            }
+
+                            if (game1[1].includes(window.dexon
+                                    .defaultAccount)) {
+                                if (game1[0] > game0[0]) {
+                                    location.href = "winnerClaim.html";
+                                } else {
+                                    location.href = "loserClaim.html";
+                                }
+                            }
+
+                            //平手的狀況還要寫，share 獎金... @cliff
                         }
                     })
                 })
