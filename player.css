@@ -10,6 +10,17 @@
     top: 50px;
 }
 
+#space2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: -webkit-fill-available;
+    max-height: -webkit-fill-available;
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+    top: 50px;
+}
 
 .mushAddd {
     width: 40px;
