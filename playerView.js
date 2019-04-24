@@ -397,7 +397,7 @@ if (window.dexon && window.dexon.enable) {
                         // console.log(playtime);
                         let p = document.getElementById("blockT");
                         p.innerHTML = playtime;
-                        if (playtime === 500) {
+                        if (playtime >= 500) {
                             alert("Time's up!");
                             //如果我大於他隊 轉到 winnerclaim
                             let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
@@ -422,7 +422,7 @@ if (window.dexon && window.dexon.enable) {
                                     location.href = "loserClaim.html";
                                 }
                             } else {
-                                alert = "there's no team here!"
+                                alert = "there's no team here!";
                                 //平手的狀況還要寫，share 獎金... @cliff
                             }
                         }
@@ -464,6 +464,7 @@ if (window.dexon && window.dexon.enable) {
                 }, 100);
             }
         })
+
         myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
             console.log(e);
             if (!e) {
