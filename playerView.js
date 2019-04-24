@@ -377,8 +377,11 @@ if (window.dexon && window.dexon.enable) {
                         let addM = numberM / 100;
                         for (; addMushroom1 < addM; addMushroom1++) {
                             let image = document.createElement("img");
+                            let mushroomDIV = document.createElement("div");
                             image.setAttribute("src", "image/crazymushroom.gif");
-                            document.querySelector("#mushAdd").appendChild(image);
+                            mushroomDIV.setAttribute("class", "mushAddd");
+                            mushroomDIV.appendChild(image);
+                            document.querySelector("#space").appendChild(mushroomDIV);
                         }
                     })
                 }, 100);
@@ -391,8 +394,11 @@ if (window.dexon && window.dexon.enable) {
                         let addM = numberM / 100;
                         for (; addMushroom2 < addM; addMushroom2++) {
                             let image = document.createElement("img");
+                            let mushroomDIV = document.createElement("div");
                             image.setAttribute("src", "image/crazymushroom.gif");
-                            document.querySelector("#mushAdd2").appendChild(image);
+                            mushroomDIV.setAttribute("class", "mushAddd");
+                            mushroomDIV.appendChild(image);
+                            document.querySelector("#space2").appendChild(mushroomDIV);
                         }
                     })
                 }, 100);
