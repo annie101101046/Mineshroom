@@ -366,6 +366,7 @@ if (window.dexon && window.dexon.enable) {
             a = parseInt(a, 10);
             if (data[0] === true) {
                 myContract.methods.getGameInfo(a).call().then(async e => {
+                    console.log(e);
                     let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
                     let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
                     console.log(gam0);
@@ -374,13 +375,9 @@ if (window.dexon && window.dexon.enable) {
                             .defaultAccount)) {
                         let teamText = document.getElementById("yourTeam1");
                         teamText.innerHTML = "Your Score";
-                    } else if (gam1[1].includes(window.dexon
-                            .defaultAccount)) {
+                    } else {
                         let teamText = document.getElementById("yourTeam2");
                         teamText.innerHTML = "Your Score";
-
-                    } else {
-                        alert("No team here!");
                     }
                 })
 
@@ -395,7 +392,7 @@ if (window.dexon && window.dexon.enable) {
                         let startAt = e[4];
                         let playtime = blocknumber - parseInt(startAt, 10);
                         //把 playtime 畫出來，然後 500 block 就結束了
-                        console.log(playtime);
+                        // console.log(playtime);
                         let p = document.getElementById("blockT");
                         p.innerHTML = playtime;
                         if (playtime === 501) {
