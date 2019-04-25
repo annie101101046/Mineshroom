@@ -300,6 +300,7 @@ abi = [{
 let addMushroom1 = 0;
 let addMushroom2 = 0;
 let gameid = undefined;
+let bankerDXN;
 
 if (window.dexon && window.dexon.enable) {
     window.dexon.enable().then(e => {
@@ -334,6 +335,7 @@ if (window.dexon && window.dexon.enable) {
             }
             myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 0).send({
                 from: window.dexon.defaultAccount,
+                value: 0.0001 * 1e18,
             }).then(e => {
                 console.log("success!");
             })
@@ -345,6 +347,7 @@ if (window.dexon && window.dexon.enable) {
             }
             myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 1).send({
                 from: window.dexon.defaultAccount,
+                value: 0.0001 * 1e18,
             }).then(e => {
                 console.log("success!");
             })
@@ -380,6 +383,7 @@ if (window.dexon && window.dexon.enable) {
             }
             myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 2).send({
                 from: window.dexon.defaultAccount,
+                value: bankerDXN * 2,
             }).then(e => {
                 console.log("success!");
             })
@@ -396,6 +400,7 @@ if (window.dexon && window.dexon.enable) {
             if (data[0] === true) {
                 myContract.methods.getGameInfo(a).call().then(async e => {
                     console.log(e);
+                    bankerDXN = e[5];
                     let g0 = await myContract.methods.gameWithTeam(a, 0).call();
                     let g1 = await myContract.methods.gameWithTeam(a, 1).call();
                     console.log(g0[1]);
@@ -422,11 +427,11 @@ if (window.dexon && window.dexon.enable) {
                         //console.log(blocknumber);
                         //把 banker 投了多少錢畫出來
                         let bnakerdep = document.getElementById("bankerDXN");
-                        bnakerdep.innerHTML = e[5];
+                        bnakerdep.innerHTML = e[5] / 1e18;;
 
                         //把玩家投了多少畫出來
                         let playerdep = document.getElementById("playerDXN");
-                        playerdep.innerHTML = e[6];
+                        playerdep.innerHTML = e[6] / 1e18;
 
 
                         let startAt = e[4];

@@ -467,11 +467,11 @@
 
                             //把 banker 投了多少錢畫出來
                             let bnakerdep = document.getElementById("bankerDXN");
-                            bnakerdep.innerHTML = e[5];
+                            bnakerdep.innerHTML = e[5] / 1e18;
 
                             //把玩家投了多少畫出來
                             let playerdep = document.getElementById("playerDXN");
-                            playerdep.innerHTML = e[6];
+                            playerdep.innerHTML = e[6] / 1e18;
 
                             //把 playtime 畫出來，然後 500 block 就結束了
                             console.log(playtime);
