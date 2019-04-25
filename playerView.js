@@ -420,6 +420,15 @@ if (window.dexon && window.dexon.enable) {
                         //用了 await 就不用 then 了，把 promise 值直接拿出來
                         let blocknumber = await web3.eth.getBlockNumber();
                         //console.log(blocknumber);
+                        //把 banker 投了多少錢畫出來
+                        let bnakerdep = document.getElementById("bankerDXN");
+                        bnakerdep.innerHTML = e[5];
+
+                        //把玩家投了多少畫出來
+                        let playerdep = document.getElementById("playerDXN");
+                        playerdep.innerHTML = e[6];
+
+
                         let startAt = e[4];
                         let playtime = blocknumber - parseInt(startAt, 10);
                         //把 playtime 畫出來，然後 500 block 就結束了
@@ -456,7 +465,8 @@ if (window.dexon && window.dexon.enable) {
                             }
                         }
                     })
-                })
+                }, 100);
+
                 gameid = a;
                 let downloadTimer = setInterval(function () {
                     myContract.methods.gameWithTeam(a, 0).call().then(e => {
