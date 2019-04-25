@@ -326,6 +326,19 @@ if (window.dexon && window.dexon.enable) {
                 let myContract = new web3.eth.Contract(abi,
                     "0xf031b368ca5a5ad5c9399b72a595e445d65027fb");
                 console.log(myContract);
+                //拿game的狀況
+                let gameTime = setInterval(function () {
+                    myContract.methods.getNowGame().call().then(
+                        e => {
+                            console.log(e);
+                            let banker = document.getElementById("bankerWaiting");
+                            banker.innerHTML = e[0];
+                            let player = document.getElementById("playerWaiting");
+                            player.innerHTML = e[1];
+                            let block = document.getElementById("blockWaiting");
+                            block.innerHTML = e[2];
+                        })
+                }, 100);
                 //拿菇幣數量
                 myContract.methods.getGuCoin(window.dexon.defaultAccount).call()
                     .then(e => {
