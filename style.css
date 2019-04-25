@@ -248,6 +248,7 @@ header {
   border-radius: 20px;
   border: 0px;
   transition: all .5s;
+  font-weight: bolder;
 }
 
 .login:hover {

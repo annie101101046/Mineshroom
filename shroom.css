@@ -159,6 +159,7 @@ body {
     padding: 3px 10px;
     transition: all .5s;
     margin-top: 5px;
+    font-weight: bolder;
 }
 
 .buy:hover {
