@@ -172,6 +172,14 @@ abi = [{
             },
             {
                 "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
                 "type": "uint8"
             },
             {
@@ -194,6 +202,27 @@ abi = [{
             "name": "",
             "type": "uint256"
         }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "getNowGame",
+        "outputs": [{
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
         "payable": false,
         "stateMutability": "view",
         "type": "function"

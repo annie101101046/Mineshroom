@@ -179,6 +179,14 @@ abi = [{
             },
             {
                 "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
                 "type": "uint8"
             },
             {
@@ -201,6 +209,27 @@ abi = [{
             "name": "",
             "type": "uint256"
         }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "getNowGame",
+        "outputs": [{
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
         "payable": false,
         "stateMutability": "view",
         "type": "function"
@@ -277,7 +306,7 @@ if (window.dexon && window.dexon.enable) {
             web3.eth.getBalance(window.dexon.defaultAccount).then(e => {
                 console.log(e);
                 let myContract = new web3.eth.Contract(abi,
-                    "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72");
+                    "0xf031b368ca5a5ad5c9399b72a595e445d65027fb");
                 console.log(myContract);
                 //拿菇幣數量
                 myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {
@@ -286,7 +315,7 @@ if (window.dexon && window.dexon.enable) {
             })
         })
         document.getElementById("register").onclick = function () {
-            let myContract = new web3.eth.Contract(abi, "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72");
+            let myContract = new web3.eth.Contract(abi, "0xf031b368ca5a5ad5c9399b72a595e445d65027fb");
             console.log(myContract);
             //myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {console.log(e)})
 
@@ -299,7 +328,7 @@ if (window.dexon && window.dexon.enable) {
                 if (!e) {
                     let response = myContract.methods.registerUser().send({
                         from: window.dexon.defaultAccount,
-                        to: "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72"
+                        to: "0xf031b368ca5a5ad5c9399b72a595e445d65027fb"
                     });
                 } else {
                     location.href = "loginSuccess.html";

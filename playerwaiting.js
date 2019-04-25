@@ -1,5 +1,4 @@
-abi = [
-	{
+abi = [{
 		"constant": false,
 		"inputs": [],
 		"name": "buyGuCoin",
@@ -10,8 +9,7 @@ abi = [
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
+		"inputs": [{
 				"name": "_addr",
 				"type": "address"
 			},
@@ -32,19 +30,15 @@ abi = [
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
-				"name": "game_id",
-				"type": "uint256"
-			}
-		],
+		"inputs": [{
+			"name": "game_id",
+			"type": "uint256"
+		}],
 		"name": "joinGame",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "bool"
+		}],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -53,12 +47,10 @@ abi = [
 		"constant": false,
 		"inputs": [],
 		"name": "newGame",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "uint256"
+		}],
 		"payable": true,
 		"stateMutability": "payable",
 		"type": "function"
@@ -80,8 +72,7 @@ abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
+		"inputs": [{
 				"name": "game_index",
 				"type": "uint256"
 			},
@@ -91,8 +82,7 @@ abi = [
 			}
 		],
 		"name": "gameWithTeam",
-		"outputs": [
-			{
+		"outputs": [{
 				"name": "",
 				"type": "uint256"
 			},
@@ -113,27 +103,22 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "getAllUsers",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address[]"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "address[]"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "_addr",
-				"type": "address"
-			}
-		],
+		"inputs": [{
+			"name": "_addr",
+			"type": "address"
+		}],
 		"name": "getBankerGame",
-		"outputs": [
-			{
+		"outputs": [{
 				"name": "",
 				"type": "bool"
 			},
@@ -150,27 +135,22 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "getGameId",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256[]"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "uint256[]"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "game_index",
-				"type": "uint256"
-			}
-		],
+		"inputs": [{
+			"name": "game_index",
+			"type": "uint256"
+		}],
 		"name": "getGameInfo",
-		"outputs": [
-			{
+		"outputs": [{
 				"name": "",
 				"type": "string"
 			},
@@ -192,6 +172,14 @@ abi = [
 			},
 			{
 				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
 				"type": "uint8"
 			},
 			{
@@ -205,14 +193,31 @@ abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "_user",
-				"type": "address"
-			}
-		],
+		"inputs": [{
+			"name": "_user",
+			"type": "address"
+		}],
 		"name": "getGuCoin",
-		"outputs": [
+		"outputs": [{
+			"name": "",
+			"type": "uint256"
+		}],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getNowGame",
+		"outputs": [{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
 			{
 				"name": "",
 				"type": "uint256"
@@ -224,15 +229,12 @@ abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "_addr",
-				"type": "address"
-			}
-		],
+		"inputs": [{
+			"name": "_addr",
+			"type": "address"
+		}],
 		"name": "getPlayerGame",
-		"outputs": [
-			{
+		"outputs": [{
 				"name": "",
 				"type": "bool"
 			},
@@ -247,19 +249,15 @@ abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "_addr",
-				"type": "address"
-			}
-		],
+		"inputs": [{
+			"name": "_addr",
+			"type": "address"
+		}],
 		"name": "isRegister",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "bool"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
@@ -268,12 +266,10 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "mushroom_eth_rate",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "uint256"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
@@ -282,12 +278,10 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "owner",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "address"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
@@ -295,55 +289,55 @@ abi = [
 ]
 
 if (window.dexon && window.dexon.enable) {
-    window.dexon.enable().then(e => {
-        console.log(e);
-        web3 = new Web3(window.dexon);
-        //在這裡以下做事才有用ㄚ web3 連到了
-        let myContract = new web3.eth.Contract(abi,
-            "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72");
-        console.log(myContract);
-        web3.eth.net.getId().then(e => {
-            console.log(e);
-            //去拿 gameID，拿到後就跳轉
-            myContract.methods.getPlayerGame(window.dexon
-                .defaultAccount).call().then((data) => {
-                console.log(data);
-                console.log(data[1]);
-                let a = data[1];
-                if (data[0] === true) {
-                    a = parseInt(a, 10);
-                    return myContract.methods.getGameInfo(a).call();
-                } else {
-                    location.href = "shroomAgain.html";
-                }
-            }).then((a) => {
-                console.log(a);
-                if (a[0] === "started") {
-                    location.href = "playerView.html";
-                } else if (a[0] === "pending") {
+	window.dexon.enable().then(e => {
+		console.log(e);
+		web3 = new Web3(window.dexon);
+		//在這裡以下做事才有用ㄚ web3 連到了
+		let myContract = new web3.eth.Contract(abi,
+			"0xf031b368ca5a5ad5c9399b72a595e445d65027fb");
+		console.log(myContract);
+		web3.eth.net.getId().then(e => {
+			console.log(e);
+			//去拿 gameID，拿到後就跳轉
+			myContract.methods.getPlayerGame(window.dexon
+				.defaultAccount).call().then((data) => {
+				console.log(data);
+				console.log(data[1]);
+				let a = data[1];
+				if (data[0] === true) {
+					a = parseInt(a, 10);
+					return myContract.methods.getGameInfo(a).call();
+				} else {
+					location.href = "shroomAgain.html";
+				}
+			}).then((a) => {
+				console.log(a);
+				if (a[0] === "started") {
+					location.href = "playerView.html";
+				} else if (a[0] === "pending") {
 
-                } else {
-                    location.href = "shroomAgain.html";
-                }
-            })
-        })
-    })
+				} else {
+					location.href = "shroomAgain.html";
+				}
+			})
+		})
+	})
 } else {
-    window.open('https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj',
-        '_blank');
+	window.open('https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj',
+		'_blank');
 }
 
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+	document.getElementById("mySidenav").style.width = "250px";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+	document.getElementById("mySidenav").style.width = "0";
 }
 document.getElementById("LogoText").onclick = function () {
-    location.href = "index.html";
+	location.href = "index.html";
 }
 
 document.getElementById("FixedLogo").onclick = function () {
-    location.href = "index.html";
+	location.href = "index.html";
 }

@@ -181,6 +181,14 @@ abi = [{
             },
             {
                 "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
                 "type": "uint8"
             },
             {
@@ -203,6 +211,27 @@ abi = [{
             "name": "",
             "type": "uint256"
         }],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "getNowGame",
+        "outputs": [{
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
         "payable": false,
         "stateMutability": "view",
         "type": "function"
@@ -279,7 +308,7 @@ if (window.dexon && window.dexon.enable) {
         console.log(web3);
         //在這裡以下做事才有用ㄚ web3 連到了
         let myContract = new web3.eth.Contract(abi,
-            "0x0b2e249006289438fa938cb5d2cbdb4e18e98e72");
+            "0xf031b368ca5a5ad5c9399b72a595e445d65027fb");
 
         //userID
         myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
