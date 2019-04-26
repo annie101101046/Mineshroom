@@ -288,6 +288,7 @@
 //     }
 // ]
 
+alert("gameid = " + localStorage.getItem("gameid"));
 
 
 document.getElementById("LogoText").onclick = function () {

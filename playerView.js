@@ -398,10 +398,10 @@ if (window.dexon && window.dexon.enable) {
             let a = data[1];
             a = parseInt(a, 10);
             // Save data to the current local store
-            localStorage.setItem("username", a);
+            localStorage.setItem("gameid", a);
 
             // Access some stored data
-            alert("username = " + localStorage.getItem("username"));
+            alert("gameid = " + localStorage.getItem("gameid"));
 
             if (data[0] === true) {
                 myContract.methods.getGameInfo(a).call().then(async e => {
