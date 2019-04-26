@@ -397,6 +397,12 @@ if (window.dexon && window.dexon.enable) {
             console.log(data[1]);
             let a = data[1];
             a = parseInt(a, 10);
+            // Save data to the current local store
+            localStorage.setItem("username", a);
+
+            // Access some stored data
+            alert("username = " + localStorage.getItem("username"));
+
             if (data[0] === true) {
                 myContract.methods.getGameInfo(a).call().then(async e => {
                     console.log(e);
@@ -539,9 +545,3 @@ if (window.dexon && window.dexon.enable) {
             })
     })
 }
-
-// Save data to the current local store
-localStorage.setItem("username", gameid);
-
-// Access some stored data
-alert("username = " + localStorage.getItem("username"));
