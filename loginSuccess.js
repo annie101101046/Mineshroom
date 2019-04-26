@@ -330,7 +330,7 @@ if (window.dexon && window.dexon.enable) {
                 let gameTime = setInterval(function () {
                     myContract.methods.getNowGame().call().then(
                         e => {
-                            console.log(e);
+                            // console.log(e);
                             let banker = document.getElementById("bankerWaiting");
                             banker.innerHTML = e[0];
                             let player = document.getElementById("playerWaiting");
@@ -434,9 +434,9 @@ if (window.dexon && window.dexon.enable) {
                     }).then((a) => {
                         console.log(a);
                         if (a) {
-                            location.href = "playerwaiting.html";
+                            // location.href = "playerwaiting.html";
                         } else {
-                            location.href = "shroomAgain.html";
+                            // location.href = "shroomAgain.html";
                         }
                     })
                 };
