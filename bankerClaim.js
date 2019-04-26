@@ -314,10 +314,11 @@ if (window.dexon && window.dexon.enable) {
                 location.href = "login.html";
             }
         })
+
         document.getElementById("cl").onclick = function () {
             //去拿 gameID，拿到後就跳轉
-            myContract.methods.getPlayerGame(window.dexon
-                .defaultAccount).call().then((data) => {
+            console.log(window.dexon.defaultAccount);
+            myContract.methods.getPlayerGame(window.dexon.defaultAccount).call().then((data) => {
                 console.log(data);
                 console.log(data[1]);
                 let a = data[1];
@@ -331,3 +332,6 @@ if (window.dexon && window.dexon.enable) {
         }
     })
 }
+
+// Access some stored data
+alert("GameID = " + localStorage.getItem("GameID"));

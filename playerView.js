@@ -539,3 +539,9 @@ if (window.dexon && window.dexon.enable) {
             })
     })
 }
+
+// Save data to the current local store
+localStorage.setItem("username", gameid);
+
+// Access some stored data
+alert("username = " + localStorage.getItem("username"));

@@ -303,7 +303,7 @@ if (window.dexon && window.dexon.enable) {
         console.log(web3);
         //在這裡以下做事才有用ㄚ web3 連到了
         let myContract = new web3.eth.Contract(abi,
-            "0x867d88ccc6faf2a7b7982b2b1a349164c6ac4dce");
+            "0xf132f2f5b4a6c2edf01433566ae6dcac1e0ac61e");
         console.log(myContract);
         myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
             console.log(e);
@@ -324,13 +324,13 @@ if (window.dexon && window.dexon.enable) {
                 let v = document.getElementById("DXNcoin");
                 v.innerHTML = balance;
                 let myContract = new web3.eth.Contract(abi,
-                    "0x867d88ccc6faf2a7b7982b2b1a349164c6ac4dce");
+                    "0xf132f2f5b4a6c2edf01433566ae6dcac1e0ac61e");
                 console.log(myContract);
                 //拿game的狀況
                 let gameTime = setInterval(function () {
                     myContract.methods.getNowGame().call().then(
                         e => {
-                            // console.log(e);
+                            console.log(e);
                             let banker = document.getElementById("bankerWaiting");
                             banker.innerHTML = e[0];
                             let player = document.getElementById("playerWaiting");
@@ -430,13 +430,12 @@ if (window.dexon && window.dexon.enable) {
                                 }
                             }
                         }
-                        //location.href = "loginSuccess.html";
                     }).then((a) => {
                         console.log(a);
                         if (a) {
-                            // location.href = "playerwaiting.html";
+                            location.href = "playerwaiting.html";
                         } else {
-                            // location.href = "shroomAgain.html";
+                            location.href = "shroomAgain.html";
                         }
                     })
                 };
