@@ -299,7 +299,7 @@ if (window.dexon && window.dexon.enable) {
         console.log(e);
         web3 = new Web3(window.dexon);
         console.log(web3);
-        //在這裡以下做事才有用ㄚ web3 連到了
+        // web3 連到了
         web3.eth.net.getId().then(e => {
             console.log(e);
             //拿 DXN 數量

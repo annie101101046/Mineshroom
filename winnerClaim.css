@@ -82,9 +82,7 @@ body {
     margin: 0;
 }
 
-.container {
-    margin-left: 100px;
-}
+.container {}
 
 .login {
     transition: all 0.5s;
@@ -105,7 +103,7 @@ footer {
 }
 
 .fixedHeader {
-    width: -webkit-fill-available;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -220,7 +218,6 @@ header {
     position: relative;
     border-radius: 15px;
     transition: box-shadow .1s ease, transform .1s ease;
-    box-shadow: 0 0 0 0.5px #d4d4d5, 0 0.1px 0.1px 0 rgba(34, 36, 38, .12), 0 0.1px 0.2px 0 rgba(34, 36, 38, .15);
 }
 
 .card-header {
@@ -397,4 +394,20 @@ header {
 
 
     font-size: 16px;
+}
+
+@media only screen and (max-width: 500px) {
+
+    .grandmaImg {
+        width: 300px;
+    }
+
+    .header {
+        font-size: 1.5em;
+    }
+
+    .hightlight {
+        font-size: 1.5em;
+    }
+
 }
