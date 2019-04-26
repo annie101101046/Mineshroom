@@ -333,5 +333,5 @@ if (window.dexon && window.dexon.enable) {
     })
 }
 
-// Access some stored data
-alert("GameID = " + localStorage.getItem("GameID"));
+// // Access some stored data
+// alert("GameID = " + localStorage.getItem("GameID"));
