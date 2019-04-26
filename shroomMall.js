@@ -342,7 +342,7 @@
             console.log(web3);
             //在這裡以下做事才有用ㄚ web3 連到了
             let myContract = new web3.eth.Contract(abi,
-                "0xf132f2f5b4a6c2edf01433566ae6dcac1e0ac61e");
+                "0x867d88ccc6faf2a7b7982b2b1a349164c6ac4dce");
             console.log(myContract);
             myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
                 console.log(e);
@@ -361,7 +361,7 @@
                     v.innerHTML = balance + 'DXN';
 
                     let myContract = new web3.eth.Contract(abi,
-                        "0xf132f2f5b4a6c2edf01433566ae6dcac1e0ac61e");
+                        "0x867d88ccc6faf2a7b7982b2b1a349164c6ac4dce");
                     console.log(myContract);
                     //拿菇幣數量
                     myContract.methods.getGuCoin(window.dexon.defaultAccount).call()
