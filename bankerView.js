@@ -457,9 +457,6 @@
                 a = parseInt(a, 10);
                 // Save data to the current local store
                 localStorage.setItem("gameid", a);
-
-                // Access some stored data
-                alert("gameid = " + localStorage.getItem("gameid"));
                 if (data[0] === true) {
                     let gameTime = setInterval(function () {
                         myContract.methods.getGameInfo(a).call().then(async e => {

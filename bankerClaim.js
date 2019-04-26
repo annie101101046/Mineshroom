@@ -288,9 +288,6 @@
 //     }
 // ]
 
-alert("gameid = " + localStorage.getItem("gameid"));
-
-
 document.getElementById("LogoText").onclick = function () {
     location.href = "index.html";
 }
@@ -319,20 +316,12 @@ if (window.dexon && window.dexon.enable) {
         document.getElementById("cl").onclick = function () {
             //去拿 gameID，拿到後就跳轉
             console.log(window.dexon.defaultAccount);
-            myContract.methods.getPlayerGame(window.dexon.defaultAccount).call().then((data) => {
+            let a = localStorage.getItem("gameid");
+            myContract.methods.bankerClaim(a).send({
+                from: window.dexon.defaultAccount,
+            }).then(data => {
                 console.log(data);
-                console.log(data[1]);
-                let a = data[1];
-                a = parseInt(a, 10);
-                myContract.methods.bankerClaim(a).send({
-                    from: window.dexon.defaultAccount,
-                }).then(data => {
-                    console.log(data);
-                })
             })
         }
     })
 }
-
-// // Access some stored data
-// alert("GameID = " + localStorage.getItem("GameID"));
