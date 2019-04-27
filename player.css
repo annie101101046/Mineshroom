@@ -1,3 +1,9 @@
+.closeup {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 #space {
     display: flex;
     flex-wrap: wrap;
