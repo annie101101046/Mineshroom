@@ -329,30 +329,6 @@ if (window.dexon && window.dexon.enable) {
                 k.innerHTML = e;
             })
 
-        document.getElementById("aunt").onclick = function () {
-            if (gameid === undefined) {
-                return;
-            }
-            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 0).send({
-                from: window.dexon.defaultAccount,
-                value: 0.0001 * 1e18,
-            }).then(e => {
-                console.log("success!");
-            })
-        }
-
-        document.getElementById("grandmaa").onclick = function () {
-            if (gameid === undefined) {
-                return;
-            }
-            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 1).send({
-                from: window.dexon.defaultAccount,
-                value: 0.0001 * 1e18,
-            }).then(e => {
-                console.log("success!");
-            })
-        }
-
         document.getElementById("Muscoin").onclick = function BuyGu() {
             myContract.methods.mushroom_eth_rate().call()
                 .then(e => {
@@ -384,6 +360,30 @@ if (window.dexon && window.dexon.enable) {
             myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 2).send({
                 from: window.dexon.defaultAccount,
                 value: bankerDXN * 2,
+            }).then(e => {
+                console.log("success!");
+            })
+        }
+
+        document.getElementById("aunt").onclick = function () {
+            if (gameid === undefined) {
+                return;
+            }
+            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 0).send({
+                from: window.dexon.defaultAccount,
+                value: 0.0001 * 1e18,
+            }).then(e => {
+                console.log("success!");
+            })
+        }
+
+        document.getElementById("grandmaa").onclick = function () {
+            if (gameid === undefined) {
+                return;
+            }
+            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 1).send({
+                from: window.dexon.defaultAccount,
+                value: 0.0001 * 1e18,
             }).then(e => {
                 console.log("success!");
             })
