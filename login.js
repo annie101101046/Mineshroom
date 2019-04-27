@@ -315,7 +315,7 @@ if (window.dexon && window.dexon.enable) {
             })
         })
         document.getElementById("register").onclick = function () {
-            let myContract = new web3.eth.Contract(abi, "0x867d88ccc6faf2a7b7982b2b1a349164c6ac4dce");
+            let myContract = new web3.eth.Contract(abi, "0x80efe9bfaaa22aa86f52de3ceea3225bfcf4fb47");
             console.log(myContract);
             //myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {console.log(e)})
 
@@ -328,7 +328,7 @@ if (window.dexon && window.dexon.enable) {
                 if (!e) {
                     let response = myContract.methods.registerUser().send({
                         from: window.dexon.defaultAccount,
-                        to: "0x867d88ccc6faf2a7b7982b2b1a349164c6ac4dce"
+                        to: "0x80efe9bfaaa22aa86f52de3ceea3225bfcf4fb47"
                     });
                 } else {
                     location.href = "loginSuccess.html";
