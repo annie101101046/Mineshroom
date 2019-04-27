@@ -317,6 +317,7 @@ if (window.dexon && window.dexon.enable) {
             //去拿 gameID，拿到後就跳轉
             console.log(window.dexon.defaultAccount);
             let a = localStorage.getItem("gameid");
+            console.log(a);
             myContract.methods.bankerClaim(a).send({
                 from: window.dexon.defaultAccount,
             }).then(data => {
