@@ -306,7 +306,7 @@ if (window.dexon && window.dexon.enable) {
             web3.eth.getBalance(window.dexon.defaultAccount).then(e => {
                 console.log(e);
                 let myContract = new web3.eth.Contract(abi,
-                    "0x867d88ccc6faf2a7b7982b2b1a349164c6ac4dce");
+                    "0xbdde51e262744b6662f821a82a69f388dd05c6f2");
                 console.log(myContract);
                 //拿菇幣數量
                 myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {
@@ -315,7 +315,7 @@ if (window.dexon && window.dexon.enable) {
             })
         })
         document.getElementById("register").onclick = function () {
-            let myContract = new web3.eth.Contract(abi, "0x867d88ccc6faf2a7b7982b2b1a349164c6ac4dce");
+            let myContract = new web3.eth.Contract(abi, "0xbdde51e262744b6662f821a82a69f388dd05c6f2");
             console.log(myContract);
             //myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {console.log(e)})
 
@@ -328,7 +328,7 @@ if (window.dexon && window.dexon.enable) {
                 if (!e) {
                     let response = myContract.methods.registerUser().send({
                         from: window.dexon.defaultAccount,
-                        to: "0x867d88ccc6faf2a7b7982b2b1a349164c6ac4dce"
+                        to: "0xbdde51e262744b6662f821a82a69f388dd05c6f2"
                     });
                 } else {
                     location.href = "loginSuccess.html";
