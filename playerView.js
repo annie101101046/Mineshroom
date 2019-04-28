@@ -335,7 +335,7 @@ if (window.dexon && window.dexon.enable) {
             }
             myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 0).send({
                 from: window.dexon.defaultAccount,
-                value: 0.0001 * 1e18,
+                value: 0.001 * 1e18,
             }).then(e => {
                 console.log("success!");
             })
@@ -347,7 +347,7 @@ if (window.dexon && window.dexon.enable) {
             }
             myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 1).send({
                 from: window.dexon.defaultAccount,
-                value: 0.0001 * 1e18,
+                value: 0.001 * 1e18,
             }).then(e => {
                 console.log("success!");
             })
