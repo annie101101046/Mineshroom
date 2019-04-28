@@ -322,6 +322,9 @@ if (window.dexon && window.dexon.enable) {
                 from: window.dexon.defaultAccount,
             }).then(data => {
                 console.log(data);
+                if (data) {
+                    alert("The prize has sent!");
+                }
             })
         }
     })
