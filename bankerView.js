@@ -480,7 +480,6 @@
                             let p = document.getElementById("blockT");
                             p.innerHTML = playtime;
                             if (playtime === 500) {
-                                alert("Time's up!");
                                 location.href = "bankerClaim.html";
                             }
                         })

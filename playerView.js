@@ -441,7 +441,6 @@ if (window.dexon && window.dexon.enable) {
                         let p = document.getElementById("blockT");
                         p.innerHTML = playtime;
                         if (playtime >= 500) {
-                            alert("Time's up!");
                             //如果我大於他隊 轉到 winnerclaim
                             let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
                             let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
