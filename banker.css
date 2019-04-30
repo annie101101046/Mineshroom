@@ -142,8 +142,8 @@ body {
     font-size: 14px;
     font-weight: bolder;
     color: white;
-    margin: 20px auto;
     padding: 20px;
+    width: 80%;
 }
 
 .ET {
@@ -609,17 +609,6 @@ header {
         border-radius: 10px;
     }
 
-    .banker_section {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-        align-content: center;
-        font-family: monospace;
-        font-size: 10px;
-        font-weight: bolder;
-        color: white;
-    }
 
     .bankerInfo {
         display: flex;
