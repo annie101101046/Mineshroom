@@ -89,6 +89,7 @@ footer {
 }
 
 .Yo {
+    text-align: center;
     line-height: 1.5em;
     font-size: 40px;
     font-weight: bolder;
@@ -107,6 +108,7 @@ footer {
 }
 
 .faqImg {
+    align-self: center;
     width: 200px;
 }
 
