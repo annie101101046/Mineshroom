@@ -153,6 +153,7 @@ body {
 }
 
 .buy {
+    border: 0px;
     background-color: #FF789B;
     color: white;
     border-radius: 20px;

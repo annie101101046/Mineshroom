@@ -212,9 +212,10 @@ body {
     font-weight: 400;
     cursor: pointer;
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: -2px;
+    bottom: -2px;
     transition: all .5s;
+    border: 0px;
 }
 
 .ask_me:hover {
