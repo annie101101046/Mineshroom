@@ -376,8 +376,8 @@ header {
 
 .content {
     display: flex;
-    margin-inline-start: 15%;
-    margin-top: 100px;
+    margin-inline-start: 3%;
+    margin-top: 20px;
     flex-direction: column;
     width: fit-content;
     align-items: center;
