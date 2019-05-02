@@ -9,7 +9,7 @@ footer {
 }
 
 .wordding {
-    font-size: 20px;
+    font-size: 16px;
     color: white;
     line-height: 1.2em;
     margin-top: 10px;
@@ -63,10 +63,10 @@ footer {
 
 .realtext {
     margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bolder;
     color: #89f4bc;
-    line-height: 2em;
+    line-height: 1.5em;
 }
 
 .Yo {
@@ -589,6 +589,14 @@ header {
 
 
 @media only screen and (max-width: 578px) {
+
+    .ggr {
+        font-size: 12px;
+    }
+
+    .wordding {
+        font-size: 12px;
+    }
 
     .content {
         padding: 20px;
