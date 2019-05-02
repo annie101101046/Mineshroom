@@ -52,7 +52,19 @@ body {
 }
 
 .login {
-  transition: all 0.5s;
+  background-color: #FF789B;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: bolder;
+  border-radius: 20px;
+  border: 0px;
 }
 
 .login:hover {
@@ -222,6 +234,8 @@ header {
 
 .crossmark {
   align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -234,7 +248,8 @@ header {
 
 }
 
-.login {
+.login,
+  {
   background-color: #FF789B;
   color: white;
   padding: 10px 20px;
@@ -251,7 +266,27 @@ header {
   font-weight: bolder;
 }
 
-.login:hover {
+
+.intro {
+  background-color: whitesmoke;
+  color: grey;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-family: monospace;
+  border-radius: 20px;
+  border: 0px;
+  transition: all .5s;
+  font-weight: bolder;
+}
+
+
+
+.login:hover,
+.intro:hover {
   opacity: 0.7;
 }
 

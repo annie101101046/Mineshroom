@@ -1,15 +1,320 @@
+footer {
+    display: none;
+}
+
+
+.ggr {
+    font-size: 16px;
+    color: #89f4bc;
+}
+
+.wordding {
+    font-size: 14px;
+    color: white;
+    line-height: 1.2em;
+    margin-top: 10px;
+    font-weight: lighter;
+}
+
+.grandmaplace {
+    display: flex;
+    flex-direction: row;
+    line-height: 1.5em;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.askgg {
+    font-size: 22px;
+    position: absolute;
+    bottom: 40px;
+    left: -260px;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+.gr {
+    font-size: 35px;
+    color: #89f4bc;
+}
+
+.grface {
+    width: 200px;
+    position: relative;
+    top: 50px;
+    right: 100px;
+}
+
+.grface img {
+    width: 100%;
+
+}
+
+.top-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.realtext {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #89f4bc;
+    line-height: 2em;
+    font-weight: 800;
+}
+
+.tip {
+    background-color: pink;
+    color: white;
+    padding: 2px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: monospace;
+    border-radius: 20px;
+    border: 0px;
+    transition: all .5s;
+    font-weight: bolder;
+}
+
+.tip:hover {
+    opacity: 0.8;
+}
+
+.Yo {
+    line-height: 1.5em;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    height: fit-content;
+    border-block-end: 1px solid;
+}
+
+.mush {
+    width: 100px;
+    align-self: flex-end;
+}
+
+.mush img {
+    width: 100%;
+}
+
+.faqImg {
+    width: 200px;
+}
+
+.faqImg img {
+    width: 100%;
+}
+
+
+
+.sidenav {
+    height: -webkit-fill-available;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: pink;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-top: 40px;
+}
+
+.sidenav a {
+    font-size: 18px;
+    font-family: monospace;
+    font-weight: bolder;
+    color: white;
+    padding: 8px 19px 8px 32px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+.sidenav a:hover {
+    color: #FF789B;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
 body {
-    background-image: url("image/background.png");
+    background-color: #FF789B;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
-    margin: 0;
+    margin: 0 auto;
+}
+
+.container {
+    height: -webkit-fill-available;
+}
+
+.note {
+    width: 400px;
+}
+
+.note img {
+    width: 100%;
+}
+
+.coin_img {
+    width: 200px;
+}
+
+.coin_img img {
+    width: 100%;
+}
+
+.coin_mush {
+    font-size: 14px;
+    font-weight: 500;
+    font-family: monospace;
+    display: flex;
+    flex-direction: row;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ETH_place {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.GG_amount {
+    font-size: 20px;
+}
+
+.ETH_img {
+    width: 20px;
+}
+
+.ETH_img img {
+    width: 100%;
+}
+
+.ETH_amount img {
+    width: 100%;
+}
+
+.ask_me {
+    background-color: #89f4bc;
+    color: white;
+    border-radius: 2px;
+    padding: 3px 12px;
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transition: all .5s;
+}
+
+.ask_me:hover {
+    opacity: 0.7;
+}
+
+.buy {
+    background-color: #FF789B;
+    color: white;
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
+.pink_button {
+    background-color: #FF789B;
+    color: white;
+    box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
+    border-radius: 20px;
+    padding: 3px 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.card_content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin-right: -100px;
+}
+
+.card_mush {
+    background-color: #1A1760;
+    border-radius: 40px;
+    width: 200px;
+    height: 350px;
+    margin: 10px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.card_mush img {
+    width: 100%;
+    margin-top: 10%;
+}
+
+.coin_mush {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+
+.coin_mush img {
+    width: 100%;
+}
+
+.babyface {
+    width: 400px;
+    position: fixed;
+    top: 400px;
+    right: 100px;
+}
+
+.babyface img {
+    width: 100%;
 }
 
 footer {
-    margin-left: 4%;
+    width: 80vw;
+    margin-left: 1%;
     position: absolute;
-    bottom: 1%;
+    bottom: -50px;
     font-size: 12px;
     font-family: monospace;
     color: #8080807d;
@@ -24,15 +329,18 @@ footer {
     top: 0;
     z-index: 1000;
     transform: translateZ(0);
-    height: 40px;
+    height: 50px;
+    align-items: center;
+    justify-items: center;
     background-color: #FF789B;
     box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5);
 }
 
 .fixed_logo {
-    width: 40px;
+    width: 50px;
     margin-left: 5px;
     position: fixed;
+    cursor: pointer;
 }
 
 .fixed_logo img {
@@ -40,10 +348,11 @@ footer {
 }
 
 .fixedLogoText {
-    width: 150px;
-    top: -55%;
-    left: 40px;
+    width: 200px;
+    margin-top: 2px;
+    left: 45px;
     position: fixed;
+    cursor: pointer;
 }
 
 .fixedLogoText img {
@@ -106,20 +415,27 @@ header {
 .main-nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bolder;
     font-family: monospace;
+    transition: all .5s;
+}
+
+
+.main-nav ul li a:hover {
+    color: white;
 }
 
 
 .card {
-    background-color: #ECC1CA;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 5vw;
+    background-color: #FF789B;
+    font-family: monospace;
+    margin-top: 30px;
     height: 100vh;
     width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     position: relative;
     border-radius: 15px;
     transition: box-shadow .1s ease, transform .1s ease;
@@ -127,12 +443,12 @@ header {
 }
 
 .card-header {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin-top: 10px;
 }
 
 .header-img {
@@ -141,50 +457,28 @@ header {
 }
 
 .content {
+    margin-top: 60px;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    align-items: baseline;
-    line-height: 0.4;
-    left: 100px;
-    top: 0;
-    margin-top: -10px;
 }
 
 .checkmark,
 .crossmark {
-    font-size: 40px;
-    font-weight: 500;
-    color: palevioletred;
+    font-size: 20px;
+    color: gray;
+    line-height: 2em;
     font-family: monospace;
+    text-align: center;
 }
 
-.crossmark {}
+.crossmark {
+    align-self: center;
+}
 
 .header {
     font-family: monospace;
     font-size: 50px;
-    color: white;
-}
-
-.person {
-    display: flex;
-    flex-direction: row;
-    margin-left: 15%;
-    margin-top: 20vh;
-    flex-wrap: wrap;
-    flex: 1;
-}
-
-.photoPerson {
-    width: 200px;
-    border-radius: 100%;
-    padding: 20px;
-}
-
-.photoPerson img {
-    width: 100%;
-    border-radius: 100%;
 }
 
 .header>img {
@@ -310,4 +604,89 @@ header {
 
 
     font-size: 16px;
+}
+
+
+
+@media only screen and (max-width: 578px) {
+
+    .content {
+        padding: 20px;
+    }
+
+    .Yo {
+        font-size: xx-large;
+    }
+
+    .gr {
+        font-size: 20px;
+    }
+
+    .grface {
+        width: 150px;
+        position: relative;
+        top: 50px;
+        right: 100px;
+    }
+
+    .realtext {
+        font-size: 14px;
+    }
+
+    .askgg {
+        font-size: 14px;
+        position: absolute;
+        left: -200px;
+        bottom: 10px;
+        line-height: 1.3em;
+        text-align: center;
+    }
+
+    .ask_me {
+        background-color: #89f4bc;
+        color: white;
+        border-radius: 2px;
+        padding: 3px 12px;
+        font-family: monospace;
+        font-size: 14px;
+        font-weight: 400;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transition: all .5s;
+    }
+
+    .grandmaplace {
+        display: flex;
+        flex-direction: row;
+        line-height: 1.5em;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: fit-content;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .card_logo {
+        margin-left: 0;
+    }
+
+    .card-header {
+        justify-content: flex-start;
+    }
+
+
+
+
 }

@@ -315,6 +315,11 @@ document.getElementById("FixedLogo").onclick = function () {
     location.href = "index.html";
 }
 
+
+document.getElementById("int").onclick = function () {
+    location.href = "aboutus.html";
+}
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
