@@ -345,14 +345,13 @@ header {
 
 
 .card {
-
-    margin-block-start: 50px;
+    margin-block-start: 80px;
     height: 80vh;
     width: 80vw;
     background-image: url(image/coincoin_page.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-position: right;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     position: relative;
     border-radius: 15px;
     transition: box-shadow .1s ease, transform .1s ease;
