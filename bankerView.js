@@ -437,7 +437,7 @@
             console.log(web3);
             //在這裡以下做事才有用ㄚ web3 連到了
             let myContract = new web3.eth.Contract(abi,
-                "0xbdde51e262744b6662f821a82a69f388dd05c6f2");
+                "0xebb88dd9fbff10fac7fbeb8cf24cda617c683ae4");
             console.log(myContract);
             //userID
             myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
