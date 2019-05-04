@@ -289,7 +289,7 @@
 // ]
 
 document.getElementById("ask").onclick = function () {
-    location.href = "/Pusher-Anonymous-Chat-App/src/public/message.html";
+    location.href = "public/message.html";
 }
 
 
