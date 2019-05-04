@@ -294,7 +294,7 @@ if (window.dexon && window.dexon.enable) {
 		web3 = new Web3(window.dexon);
 		//在這裡以下做事才有用ㄚ web3 連到了
 		let myContract = new web3.eth.Contract(abi,
-			"0xbdde51e262744b6662f821a82a69f388dd05c6f2");
+			"0xebb88dd9fbff10fac7fbeb8cf24cda617c683ae4");
 		console.log(myContract);
 		web3.eth.net.getId().then(e => {
 			console.log(e);
