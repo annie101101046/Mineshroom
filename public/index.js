@@ -1,33 +1,43 @@
-$(document).ready(function () {
-    // Enable pusher logging - don't include this in production
-    Pusher.logToConsole = true;
+if (window.dexon && window.dexon.enable) {
+    window.dexon.enable().then(e => {
+        console.log(e);
+        web3 = new Web3(window.dexon);
+        console.log(web3);
+        // web3 連到了
+        web3.eth.net.getId().then(e => {
+            console.log(e);
+            //看event
+            let myContract = new web3.eth.Contract(abi,
+                MushroomAddress);
+            console.log(myContract);
+            myContract.events.SendMsg({}, (err, event) => {
+                let talk = document.getElementsByClassName("chat");
+                console.log(talk[0]);
+                console.log(event);
+                console.log(event.returnValues[0]);
+                console.log(event.returnValues[1]);
+                talk.innerHTML = event.returnValues[0] + ": " + event.returnValues[1] + '<br>';
+                console.log(talk.innerHTML);
+            })
 
-    var pusher = new Pusher('a7743519329696527756', {
-        cluster: 'ap1',
-        forceTLS: true
-    });
+            document.getElementById("btn-chat").onclick = function () {
+                let messageText = document.getElementById("message");
+                console.log(messageText.value);
+                myContract.methods.chat(messageText.value).send({
+                    from: window.dexon.defaultAccount,
+                }).then(e => {
+                    let talk = document.getElementsByClassName("chat");
+                    talk[0].innerHTML += e.events['SendMsg'].returnValues[0] + ": " + e.events['SendMsg'].returnValues[1] + '<br>';
+                    console.log(talk);
+                    console.log(talk[0].innerHTML);
+                    alert("10 GUGU COIN sent");
+                    messageText.value = '';
+                })
+            }
+        })
+    })
+}
 
-    var channel = pusher.subscribe('public-chat');
-    channel.bind('message-added', onMessageAdded);
-
-    $('#btn-chat').click(function () {
-        const message = $("#message").val();
-        $("#message").val("");
-
-        //send message
-        $.post("http://localhost:5000/message", {
-            message
-        });
-    });
-
-    function onMessageAdded(data) {
-        let template = $("#new-message").html();
-        template = template.replace("{{body}}", data.message);
-
-        $(".chat").append(template);
-    }
-
-    document.getElementById("back").onclick = function () {
-        location.href = "/FAQ.html";
-    }
-});
+document.getElementById("back").onclick = function () {
+    location.href = "/FAQ.html";
+}

@@ -1,12 +1,9 @@
-abi = [
-	{
+abi = [{
 		"constant": false,
-		"inputs": [
-			{
-				"name": "game_index",
-				"type": "uint256"
-			}
-		],
+		"inputs": [{
+			"name": "game_index",
+			"type": "uint256"
+		}],
 		"name": "bankerClaim",
 		"outputs": [],
 		"payable": false,
@@ -24,8 +21,7 @@ abi = [
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
+		"inputs": [{
 				"name": "_addr",
 				"type": "address"
 			},
@@ -46,12 +42,10 @@ abi = [
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
-				"name": "message",
-				"type": "string"
-			}
-		],
+		"inputs": [{
+			"name": "message",
+			"type": "string"
+		}],
 		"name": "chat",
 		"outputs": [],
 		"payable": false,
@@ -60,38 +54,30 @@ abi = [
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
-				"name": "game_id",
-				"type": "uint256"
-			}
-		],
+		"inputs": [{
+			"name": "game_id",
+			"type": "uint256"
+		}],
 		"name": "joinGame",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "bool"
+		}],
 		"payable": false,
 		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
-				"name": "game_block",
-				"type": "uint256"
-			}
-		],
+		"inputs": [{
+			"name": "game_block",
+			"type": "uint256"
+		}],
 		"name": "newGame",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "uint256"
+		}],
 		"payable": true,
 		"stateMutability": "payable",
 		"type": "function"
@@ -116,12 +102,10 @@ abi = [
 	},
 	{
 		"constant": false,
-		"inputs": [
-			{
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
+		"inputs": [{
+			"name": "newOwner",
+			"type": "address"
+		}],
 		"name": "transferOwnership",
 		"outputs": [],
 		"payable": false,
@@ -136,8 +120,7 @@ abi = [
 	},
 	{
 		"anonymous": false,
-		"inputs": [
-			{
+		"inputs": [{
 				"indexed": false,
 				"name": "",
 				"type": "address"
@@ -153,8 +136,7 @@ abi = [
 	},
 	{
 		"anonymous": false,
-		"inputs": [
-			{
+		"inputs": [{
 				"indexed": true,
 				"name": "previousOwner",
 				"type": "address"
@@ -170,8 +152,7 @@ abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
+		"inputs": [{
 				"name": "game_index",
 				"type": "uint256"
 			},
@@ -181,8 +162,7 @@ abi = [
 			}
 		],
 		"name": "gameWithTeam",
-		"outputs": [
-			{
+		"outputs": [{
 				"name": "",
 				"type": "uint256"
 			},
@@ -203,27 +183,22 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "getAllUsers",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address[]"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "address[]"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "_addr",
-				"type": "address"
-			}
-		],
+		"inputs": [{
+			"name": "_addr",
+			"type": "address"
+		}],
 		"name": "getBankerGame",
-		"outputs": [
-			{
+		"outputs": [{
 				"name": "",
 				"type": "bool"
 			},
@@ -240,27 +215,22 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "getGameId",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256[]"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "uint256[]"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "game_index",
-				"type": "uint256"
-			}
-		],
+		"inputs": [{
+			"name": "game_index",
+			"type": "uint256"
+		}],
 		"name": "getGameInfo",
-		"outputs": [
-			{
+		"outputs": [{
 				"name": "",
 				"type": "string"
 			},
@@ -303,19 +273,15 @@ abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "_user",
-				"type": "address"
-			}
-		],
+		"inputs": [{
+			"name": "_user",
+			"type": "address"
+		}],
 		"name": "getGuCoin",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "uint256"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
@@ -324,8 +290,7 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "getNowGame",
-		"outputs": [
-			{
+		"outputs": [{
 				"name": "",
 				"type": "uint256"
 			},
@@ -344,15 +309,12 @@ abi = [
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "_addr",
-				"type": "address"
-			}
-		],
+		"inputs": [{
+			"name": "_addr",
+			"type": "address"
+		}],
 		"name": "getPlayerGame",
-		"outputs": [
-			{
+		"outputs": [{
 				"name": "",
 				"type": "bool"
 			},
@@ -369,31 +331,25 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "isOwner",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "bool"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "_addr",
-				"type": "address"
-			}
-		],
+		"inputs": [{
+			"name": "_addr",
+			"type": "address"
+		}],
 		"name": "isRegister",
-		"outputs": [
-			{
-				"name": "",
-				"type": "bool"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "bool"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
@@ -402,12 +358,10 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "mushroom_eth_rate",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "uint256"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
@@ -416,14 +370,34 @@ abi = [
 		"constant": true,
 		"inputs": [],
 		"name": "owner",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
+		"outputs": [{
+			"name": "",
+			"type": "address"
+		}],
 		"payable": false,
 		"stateMutability": "view",
 		"type": "function"
 	}
 ]
+
+
+chatAbi = [{
+	"anonymous": false,
+	"inputs": [{
+			"indexed": false,
+			"name": "",
+			"type": "address"
+		},
+		{
+			"indexed": false,
+			"name": "",
+			"type": "string"
+		}
+	],
+	"name": "SendMsg",
+	"type": "event"
+}]
+
+chatAddress = "0x5b0f3080a75fA95bf5d118714935EC9a1a2A67f4";
+
+MushroomAddress = "0xebb88dd9fbff10fac7fbeb8cf24cda617c683ae4";

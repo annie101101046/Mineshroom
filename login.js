@@ -306,7 +306,7 @@ if (window.dexon && window.dexon.enable) {
             web3.eth.getBalance(window.dexon.defaultAccount).then(e => {
                 console.log(e);
                 let myContract = new web3.eth.Contract(abi,
-                    "0xebb88dd9fbff10fac7fbeb8cf24cda617c683ae4");
+                    MushroomAddress);
                 console.log(myContract);
                 //拿菇幣數量
                 myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {
@@ -315,7 +315,7 @@ if (window.dexon && window.dexon.enable) {
             })
         })
         document.getElementById("register").onclick = function () {
-            let myContract = new web3.eth.Contract(abi, "0xebb88dd9fbff10fac7fbeb8cf24cda617c683ae4");
+            let myContract = new web3.eth.Contract(abi, MushroomAddress);
             console.log(myContract);
             //myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {console.log(e)})
 
@@ -328,7 +328,7 @@ if (window.dexon && window.dexon.enable) {
                 if (!e) {
                     let response = myContract.methods.registerUser().send({
                         from: window.dexon.defaultAccount,
-                        to: "0xebb88dd9fbff10fac7fbeb8cf24cda617c683ae4"
+                        to: MushroomAddress
                     });
                 } else {
                     location.href = "loginSuccess.html";

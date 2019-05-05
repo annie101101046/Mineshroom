@@ -288,6 +288,8 @@
 //     }
 // ]
 
+
+
 document.getElementById("ask").onclick = function () {
     location.href = "public/message.html";
 }
