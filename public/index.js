@@ -55,5 +55,5 @@ if (window.dexon && window.dexon.enable) {
 }
 
 document.getElementById("back").onclick = function () {
-    location.href = "./FAQ.html";
+    location.href = "/Mineshroom/FAQ.html";
 }
