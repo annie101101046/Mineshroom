@@ -1,7 +1,27 @@
-.MyClass {
+.guguplace {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
 
-    display: none;
+.gu {
+    width: 50px;
+}
 
+.gu img {
+    width: 100%;
+}
+
+#Gucoin {
+    color: #89f4bc;
+    font-size: 22px;
 }
 
 body {
@@ -22,7 +42,7 @@ body {
 }
 
 .form-group {
-    margin-top: 200px;
+    margin-top: 30px;
 }
 
 .imgMush {

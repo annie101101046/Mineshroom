@@ -6,10 +6,18 @@ if (window.dexon && window.dexon.enable) {
         // web3 連到了
         web3.eth.net.getId().then(e => {
             console.log(e);
-            //看event
             let myContract = new web3.eth.Contract(abi,
                 MushroomAddress);
             console.log(myContract);
+            //拿菇幣數量
+            myContract.methods.getGuCoin(window.dexon
+                    .defaultAccount).call()
+                .then(e => {
+                    console.log(e);
+                    let k = document.getElementById("Gucoin");
+                    k.innerHTML = e;
+                })
+            //看event
             myContract.events.SendMsg({}, (err, event) => {
                 let talk = document.getElementsByClassName("chat");
                 console.log(talk[0]);
@@ -31,6 +39,14 @@ if (window.dexon && window.dexon.enable) {
                     console.log(talk);
                     console.log(talk[0].innerHTML);
                     alert("10 GUGU COIN sent");
+                    //拿菇幣數量
+                    myContract.methods.getGuCoin(window.dexon
+                            .defaultAccount).call()
+                        .then(e => {
+                            console.log(e);
+                            let k = document.getElementById("Gucoin");
+                            k.innerHTML = e;
+                        })
                     messageText.value = '';
                 })
             }
