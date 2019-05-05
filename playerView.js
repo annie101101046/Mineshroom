@@ -443,7 +443,7 @@ if (window.dexon && window.dexon.enable) {
                         // console.log(playtime);
                         let p = document.getElementById("blockT");
                         p.innerHTML = playtime;
-                        if (playtime >= 200) {
+                        if (playtime >= 250) {
                             //如果我大於他隊 轉到 winnerclaim
                             let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
                             let gam1 = await myContract.methods.gameWithTeam(a, 1).call();
