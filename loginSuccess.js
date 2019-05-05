@@ -40,7 +40,7 @@ if (window.dexon && window.dexon.enable) {
                 let gameTime = setInterval(function () {
                     myContract.methods.getNowGame().call().then(
                         e => {
-                            console.log(e);
+                            // console.log(e);
                             let banker = document.getElementById("bankerWaiting");
                             banker.innerHTML = e[0];
                             let player = document.getElementById("playerWaiting");
@@ -102,7 +102,7 @@ if (window.dexon && window.dexon.enable) {
 
                     let a = prompt('value');
 
-                    myContract.methods.newGame().send({
+                    myContract.methods.newGame(250).send({
                         from: window.dexon.defaultAccount,
                         value: web3.utils.toWei(a)
                     }).then(() => {
