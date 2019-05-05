@@ -337,6 +337,7 @@ if (window.dexon && window.dexon.enable) {
                 from: window.dexon.defaultAccount,
                 value: 0.001 * 1e18,
             }).then(e => {
+                alert("3x speed!");
                 console.log("success!");
             })
         }
@@ -349,6 +350,7 @@ if (window.dexon && window.dexon.enable) {
                 from: window.dexon.defaultAccount,
                 value: 0.001 * 1e18,
             }).then(e => {
+                alert("2x speed!");
                 console.log("success!");
             })
         }
@@ -385,6 +387,7 @@ if (window.dexon && window.dexon.enable) {
                 from: window.dexon.defaultAccount,
                 value: bankerDXN * 2,
             }).then(e => {
+                alert("Double Amount!");
                 console.log("success!");
             })
         }
