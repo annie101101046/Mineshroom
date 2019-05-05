@@ -439,11 +439,11 @@ if (window.dexon && window.dexon.enable) {
 
                         let startAt = e[4];
                         let playtime = blocknumber - parseInt(startAt, 10);
-                        //把 playtime 畫出來，然後 500 block 就結束了
+                        //把 playtime 畫出來，然後 250 block 就結束了
                         // console.log(playtime);
                         let p = document.getElementById("blockT");
                         p.innerHTML = playtime;
-                        if (playtime >= 500) {
+                        if (playtime >= 200) {
                             //如果我大於他隊 轉到 winnerclaim
                             let gam0 = await myContract.methods.gameWithTeam(a, 0).call();
                             let gam1 = await myContract.methods.gameWithTeam(a, 1).call();

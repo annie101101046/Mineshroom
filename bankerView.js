@@ -475,11 +475,11 @@
                             let playerdep = document.getElementById("playerDXN");
                             playerdep.innerHTML = e[6] / 1e18;
 
-                            //把 playtime 畫出來，然後 500 block 就結束了
+                            //把 playtime 畫出來，然後 250 block 就結束了
                             console.log(playtime);
                             let p = document.getElementById("blockT");
                             p.innerHTML = playtime;
-                            if (playtime === 500) {
+                            if (playtime === 250) {
                                 location.href = "bankerClaim.html";
                             }
                         })
