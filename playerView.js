@@ -337,10 +337,15 @@ if (window.dexon && window.dexon.enable) {
                 from: window.dexon.defaultAccount,
                 value: 0.001 * 1e18,
             }).then(e => {
+                let like = document.querySelector('.like-btn');
+                like.classList.toggle('is-active');
                 alert("3x speed!");
                 console.log("success!");
             })
         }
+
+
+
 
         document.getElementById("grandmaa").onclick = function () {
             if (gameid === undefined) {

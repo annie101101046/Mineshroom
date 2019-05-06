@@ -1,3 +1,41 @@
+.like-btn {
+    border-style: none;
+    position: relative;
+    top: 0vh;
+    right: 20px;
+    background: url('https://designmodo.com/demo/shopping-cart/twitter-heart.png');
+    width: 60px;
+    height: 60px;
+    background-size: 2900%;
+    background-repeat: no-repeat;
+}
+
+.is-active {
+    border-style: none;
+    animation-name: animate;
+    animation-duration: .8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+    0% {
+        background-position: left;
+    }
+
+    50% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+
+
+
 .closeup {
     display: flex;
     flex-direction: column;
@@ -255,14 +293,12 @@ footer {
 }
 
 .itemset button {
-    background-color: gray;
     color: white;
-    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
+    font-size: 14px;
+    margin-left: 20px;
     cursor: pointer;
     font-family: monospace;
     border-radius: 20px;
