@@ -355,6 +355,8 @@ if (window.dexon && window.dexon.enable) {
                 from: window.dexon.defaultAccount,
                 value: 0.001 * 1e18,
             }).then(e => {
+                let like = document.querySelector('.like-btn1');
+                like.classList.toggle('is-active');
                 alert("2x speed!");
                 console.log("success!");
             })
@@ -376,6 +378,8 @@ if (window.dexon && window.dexon.enable) {
                 myContract.methods.getGuCoin(window.dexon
                         .defaultAccount).call()
                     .then(e => {
+                        let like = document.querySelector('.like-btn2');
+                        like.classList.toggle('is-active');
                         console.log(e);
                         let k = document.getElementById("gu");
                         k.innerHTML = e;
@@ -392,6 +396,8 @@ if (window.dexon && window.dexon.enable) {
                 from: window.dexon.defaultAccount,
                 value: bankerDXN * 2,
             }).then(e => {
+                let like = document.querySelector('.like-btn3');
+                like.classList.toggle('is-active');
                 alert("Double Amount!");
                 console.log("success!");
             })

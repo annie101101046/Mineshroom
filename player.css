@@ -1,4 +1,7 @@
-.like-btn {
+.like-btn,
+.like-btn1,
+.like-btn2,
+.like-btn3 {
     border-style: none;
     position: relative;
     top: 0vh;
@@ -9,6 +12,7 @@
     background-size: 2900%;
     background-repeat: no-repeat;
 }
+
 
 .is-active {
     border-style: none;
