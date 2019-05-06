@@ -38,7 +38,7 @@ if (window.dexon && window.dexon.enable) {
                     talk[0].innerHTML += e.events['SendMsg'].returnValues[0] + ": " + e.events['SendMsg'].returnValues[1] + '<br>';
                     console.log(talk);
                     console.log(talk[0].innerHTML);
-                    alert("10 GUGU COIN sent");
+                    alert("Gugu coin has sent");
                     //拿菇幣數量
                     myContract.methods.getGuCoin(window.dexon
                             .defaultAccount).call()
