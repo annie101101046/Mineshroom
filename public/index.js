@@ -18,13 +18,16 @@ if (window.dexon && window.dexon.enable) {
                     k.innerHTML = e;
                 })
             //看event
-            myContract.events.SendMsg({}, (err, event) => {
+            myContract.events.SendMsg({
+                fromBlock: 0
+            }, (err, event) => {
                 let talk = document.getElementsByClassName("chat");
+                talk[0].innerHTML += event.returnValues[0] + ": " + event.returnValues[1] + '<br>';
+                //去分析 returnValues[1]的話，在+=回回來
                 console.log(talk[0]);
                 console.log(event);
                 console.log(event.returnValues[0]);
                 console.log(event.returnValues[1]);
-                talk.innerHTML = event.returnValues[0] + ": " + event.returnValues[1] + '<br>';
                 console.log(talk.innerHTML);
             })
 
