@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MineShroom</title>
+    <link rel="icon" href="image/logo.png" type="image/x-icon" />
+    <meta name="description" content="DApp Game">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="history.css">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.37/dist/web3.min.js"></script>
+    <meta property="og:image" content="image/loginSuccess.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+
+</head>
+
+<body>
+    <div class="fixedHeader">
+        <div class="fixed_logo" id="FixedLogo">
+            <img src="image/logo.png" alt="logo of MineShroom" />
+        </div>
+        <div class="fixedLogoText" id="LogoText">
+            <img src="image/cryptoMushroomLogo.png" alt="text of MineShroom" />
+        </div>
+        <div class="fixed_amount">
+            <div class="eth">
+            </div>
+            <div class="Mushroom_balance">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <header>
+            <!-- phone only -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="shroomMall.html">ShroomMall</a>
+                <a href="MushroomCoin.html">MushroomCoin</a>
+                <a href="FAQ.html">FAQ</a>
+            </div>
+            <main>
+                <div class="card">
+                    <!-- <div class="card-header">
+                        <div class="card_logo" onclick="openNav()">
+                            <img src="image/logo.png" alt="logo of MineShroom" />
+                        </div>
+                        <nav class="main-nav">
+                            <ul>
+                                <li class="Home"><a href="index.html">Home</a></li>
+                                <li class="ShroomMall"><a href="shroomMall.html">ShroomMall</a></li>
+                                <li class="MushroomCoin"><a href="MushroomCoin.html">MushroomCoin</a></li>
+                                <li class="FAQ"><a href="FAQ.html">FAQ</a></li>
+                            </ul>
+                        </nav>
+                    </div> -->
+                    <!-- <button class="his" id="history">history</button>
+                    <div class="loadingIMG" id="loadimg">
+                        <img src="image/waiting.png">
+                    </div>
+                    <div class="content">
+                        <div class="img_circle">
+                            <div class="prof_face">
+                                <img src="image/profile_face.png" />
+                            </div>
+                        </div>
+                        <div class="info_text">
+                            <div id="ply"></div>
+                            <div class="playsec">
+                                <div class="playerImg"><img src="image/ETH.png"> </div>
+                                <div id="DXNcoin"></div>
+                                <button class="info_but">Withdraw / Deposit</button>
+                            </div>
+                            <div class="playsec">
+                                <div class="playerImg"> <img src="image/coin.png"></div>
+                                <div id="Gucoin"></div>
+                                <button class="info_but" id="buyGu">Buy More</button>
+                            </div>
+                            <div class="start_container">
+                                <div class="start_be">Banker
+                                    <div> <input type="text" maxlength="10" placeholder="At least 100 USD" value=""> -->
+                    <!-- </div> -->
+                    <!-- <button id="bankerStart">START</button>
+                </div>
+                <div class="start_be">Player
+                    <button id="playerStart">START</button>
+                </div> -->
+                </div>
+                <!-- </div>
+    </div>
+    </div> -->
+                <div class="log_container">
+                    <h1>Latest History</h1>
+                    <div><span class="log" id="bankerWaiting"></span> Game id</div>
+                    <div><span class="log" id="playerWaiting"></span> Mushroom Coin Get</div>
+                    <div>You've claim <span class="log" id="blockWaiting"></span> DXN</div>
+                    <div class="logimg">
+                        <img src="image/mush.png">
+                    </div>
+                </div>
+    </div>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-nav-links">
+                <nav class="footer-nav">
+                    <a href="#"><img scr=""></a>
+                    <a href="#"><img src=""></a>
+                    <a href="#"><img src=""></a>
+                    <a href="#"><img src=""></a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    </main>
+    </div>
+</body>
+<script type="text/javascript" src="abi.js"></script>
+<script type="text/javascript" src="history.js"></script>
+
+
+</html>

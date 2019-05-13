@@ -6,10 +6,6 @@ document.getElementById("FixedLogo").onclick = function () {
     location.href = "index.html";
 }
 
-document.getElementById("history").onclick = function () {
-    location.href = "history.html";
-}
-
 if (window.dexon && window.dexon.enable) {
     window.dexon.enable().then(e => {
         console.log(e[0]);
