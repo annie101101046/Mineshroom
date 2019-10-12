@@ -302,17 +302,17 @@ let addMushroom2 = 0;
 let gameid = undefined;
 let bankerDXN;
 
-if (window.dexon && window.dexon.enable) {
-    window.dexon.enable().then(e => {
+if (window.ethereum && window.ethereum.enable) {
+    window.ethereum.enable().then(e => {
         console.log(e[0]);
-        web3 = new Web3(window.dexon);
+        web3 = new Web3(window.ethereum);
         console.log(web3);
         //在這裡以下做事才有用ㄚ web3 連到了
         let myContract = new web3.eth.Contract(abi,
             MushroomAddress);
 
         //userID
-        myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+        myContract.methods.isRegister(window.ethereum.defaultAccount).call().then(e => {
             console.log(e);
             if (!e) {
                 location.href = "login.html";
@@ -322,7 +322,7 @@ if (window.dexon && window.dexon.enable) {
         ply.innerHTML = e;
 
         //拿菇幣數量
-        myContract.methods.getGuCoin(window.dexon.defaultAccount).call()
+        myContract.methods.getGuCoin(window.ethereum.defaultAccount).call()
             .then(e => {
                 console.log(e);
                 let k = document.getElementById("gu");
@@ -333,8 +333,8 @@ if (window.dexon && window.dexon.enable) {
             if (gameid === undefined) {
                 return;
             }
-            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 0).send({
-                from: window.dexon.defaultAccount,
+            myContract.methods.buyItem(window.ethereum.defaultAccount, gameid, 0).send({
+                from: window.ethereum.defaultAccount,
                 value: 0.001 * 1e18,
             }).then(e => {
                 let like = document.querySelector('.like-btn');
@@ -351,8 +351,8 @@ if (window.dexon && window.dexon.enable) {
             if (gameid === undefined) {
                 return;
             }
-            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 1).send({
-                from: window.dexon.defaultAccount,
+            myContract.methods.buyItem(window.ethereum.defaultAccount, gameid, 1).send({
+                from: window.ethereum.defaultAccount,
                 value: 0.001 * 1e18,
             }).then(e => {
                 let like = document.querySelector('.like-btn1');
@@ -369,13 +369,13 @@ if (window.dexon && window.dexon.enable) {
                 })
             const amount = prompt('buy');
             myContract.methods.buyGuCoin().send({
-                from: window.dexon.defaultAccount,
+                from: window.ethereum.defaultAccount,
                 value: web3.utils.toWei(amount),
             }).then(data => {
                 console.log('event', data);
 
                 //拿菇幣數量
-                myContract.methods.getGuCoin(window.dexon
+                myContract.methods.getGuCoin(window.ethereum
                         .defaultAccount).call()
                     .then(e => {
                         let like = document.querySelector('.like-btn2');
@@ -392,8 +392,8 @@ if (window.dexon && window.dexon.enable) {
             if (gameid === undefined) {
                 return;
             }
-            myContract.methods.buyItem(window.dexon.defaultAccount, gameid, 2).send({
-                from: window.dexon.defaultAccount,
+            myContract.methods.buyItem(window.ethereum.defaultAccount, gameid, 2).send({
+                from: window.ethereum.defaultAccount,
                 value: bankerDXN * 2,
             }).then(e => {
                 let like = document.querySelector('.like-btn3');
@@ -405,7 +405,7 @@ if (window.dexon && window.dexon.enable) {
 
         console.log(myContract);
         //去拿 gameID，拿到後就跳轉
-        myContract.methods.getPlayerGame(window.dexon
+        myContract.methods.getPlayerGame(window.ethereum
             .defaultAccount).call().then((data) => {
             console.log(data);
             console.log(data[1]);
@@ -420,10 +420,10 @@ if (window.dexon && window.dexon.enable) {
                     console.log(g0[1]);
                     g0[1] = g0[1].map(x => x.toLowerCase());
                     g1[1] = g1[1].map(x => x.toLowerCase());
-                    if (g0[1].includes(window.dexon.defaultAccount)) {
+                    if (g0[1].includes(window.ethereum.defaultAccount)) {
                         let teamText = document.getElementById("yourTeam1");
                         teamText.innerHTML = "Your Score";
-                    } else if (g1[1].includes(window.dexon.defaultAccount)) {
+                    } else if (g1[1].includes(window.ethereum.defaultAccount)) {
                         let teamText = document.getElementById("yourTeam2");
                         teamText.innerHTML = "Your Score";
                     } else {
@@ -463,14 +463,14 @@ if (window.dexon && window.dexon.enable) {
                             gam0[1] = gam0[1].map(x => x.toLowerCase());
                             gam1[1] = gam1[1].map(x => x.toLowerCase());
 
-                            if (gam0[1].includes(window.dexon
+                            if (gam0[1].includes(window.ethereum
                                     .defaultAccount)) {
                                 if (gam0[0] > gam1[0]) {
                                     location.href = "winnerClaim.html";
                                 } else {
                                     location.href = "loserClaim.html";
                                 }
-                            } else if (gam1[1].includes(window.dexon
+                            } else if (gam1[1].includes(window.ethereum
                                     .defaultAccount)) {
                                 if (gam1[0] > gam0[0]) {
                                     location.href = "winnerClaim.html";
@@ -522,7 +522,7 @@ if (window.dexon && window.dexon.enable) {
             }
         })
 
-        myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+        myContract.methods.isRegister(window.ethereum.defaultAccount).call().then(e => {
             console.log(e);
             if (!e) {
                 location.href = "login.html";
@@ -530,7 +530,7 @@ if (window.dexon && window.dexon.enable) {
         })
 
         //拿菇幣數量
-        myContract.methods.getGuCoin(window.dexon
+        myContract.methods.getGuCoin(window.ethereum
                 .defaultAccount).call()
             .then(e => {
                 console.log(e);

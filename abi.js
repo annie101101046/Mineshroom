@@ -398,6 +398,6 @@ chatAbi = [{
 	"type": "event"
 }]
 
-chatAddress = "0x5dbcc8210df72b0c47a66cfa3567cc21a8777d66";
+chatAddress = "0x1Adc17AC0B001b893979Db1337A9D7283bE08D2d";
 
-MushroomAddress = "0xa80d32370b21c6b9997b057616191df9de79de85";
+MushroomAddress = "0x1c1c7355D4eAe919756c7C7A4653985a931F2c78";

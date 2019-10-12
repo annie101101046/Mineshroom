@@ -294,22 +294,22 @@ document.getElementById("FixedLogo").onclick = function () {
 //         "type": "function"
 //     }
 // ]
-if (window.dexon && window.dexon.enable) {
-    window.dexon.enable().then(e => {
+if (window.ethereum && window.ethereum.enable) {
+    window.ethereum.enable().then(e => {
         console.log(e);
-        web3 = new Web3(window.dexon);
+        web3 = new Web3(window.ethereum);
         console.log(web3);
         // web3 連到了
         web3.eth.net.getId().then(e => {
             console.log(e);
             //拿 DXN 數量
-            web3.eth.getBalance(window.dexon.defaultAccount).then(e => {
+            web3.eth.getBalance(window.ethereum.defaultAccount).then(e => {
                 console.log(e);
                 let myContract = new web3.eth.Contract(abi,
                     MushroomAddress);
                 console.log(myContract);
                 //拿菇幣數量
-                myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {
+                myContract.methods.getGuCoin(window.ethereum.defaultAccount).call().then(e => {
                     console.log(e);
                 })
             })
@@ -317,17 +317,17 @@ if (window.dexon && window.dexon.enable) {
         document.getElementById("register").onclick = function () {
             let myContract = new web3.eth.Contract(abi, MushroomAddress);
             console.log(myContract);
-            //myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {console.log(e)})
+            //myContract.methods.getGuCoin(window.ethereum.defaultAccount).call().then(e => {console.log(e)})
 
-            myContract.methods.getGuCoin(window.dexon.defaultAccount).call().then(e => {
+            myContract.methods.getGuCoin(window.ethereum.defaultAccount).call().then(e => {
                 console.log(e);
             })
 
-            myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+            myContract.methods.isRegister(window.ethereum.defaultAccount).call().then(e => {
                 console.log(e);
                 if (!e) {
                     let response = myContract.methods.registerUser().send({
-                        from: window.dexon.defaultAccount,
+                        from: window.ethereum.defaultAccount,
                         to: MushroomAddress
                     });
                 } else {
@@ -337,7 +337,7 @@ if (window.dexon && window.dexon.enable) {
         };
     })
 } else {
-    window.open('https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj',
+    window.open('https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en',
         '_blank');
 }
 

@@ -430,17 +430,17 @@
     let addMushroom1 = 0;
     let addMushroom2 = 0;
 
-    if (window.dexon && window.dexon.enable) {
-        window.dexon.enable().then(e => {
+    if (window.ethereum && window.ethereum.enable) {
+        window.ethereum.enable().then(e => {
             console.log(e[0]);
-            web3 = new Web3(window.dexon);
+            web3 = new Web3(window.ethereum);
             console.log(web3);
             //在這裡以下做事才有用ㄚ web3 連到了
             let myContract = new web3.eth.Contract(abi,
                 MushroomAddress);
             console.log(myContract);
             //userID
-            myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+            myContract.methods.isRegister(window.ethereum.defaultAccount).call().then(e => {
                 console.log(e);
                 if (!e) {
                     location.href = "login.html";
@@ -449,7 +449,7 @@
             let ply = document.getElementById("playeID");
             ply.innerHTML = e;
             //去拿 gameID，拿到後就跳轉
-            myContract.methods.getBankerGame(window.dexon
+            myContract.methods.getBankerGame(window.ethereum
                 .defaultAccount).call().then((data) => {
                 console.log(data);
                 console.log(data[1]);
@@ -519,14 +519,14 @@
                     }, 100);
                 }
             })
-            myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+            myContract.methods.isRegister(window.ethereum.defaultAccount).call().then(e => {
                 console.log(e);
                 if (!e) {
                     location.href = "login.html";
                 }
 
                 //拿菇幣數量
-                myContract.methods.getGuCoin(window.dexon
+                myContract.methods.getGuCoin(window.ethereum
                         .defaultAccount).call()
                     .then(e => {
                         console.log(e);

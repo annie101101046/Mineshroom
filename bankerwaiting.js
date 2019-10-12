@@ -297,10 +297,10 @@ document.getElementById("FixedLogo").onclick = function () {
 //     }
 // ]
 
-if (window.dexon && window.dexon.enable) {
-    window.dexon.enable().then(e => {
+if (window.ethereum && window.ethereum.enable) {
+    window.ethereum.enable().then(e => {
         console.log(e);
-        web3 = new Web3(window.dexon);
+        web3 = new Web3(window.ethereum);
         console.log(web3.eth);
         //在這裡以下做事才有用ㄚ web3 連到了
         web3.eth.net.getId().then(e => {
@@ -309,7 +309,7 @@ if (window.dexon && window.dexon.enable) {
                 MushroomAddress);
             console.log(myContract);
             //去拿 gameID，拿到後就跳轉
-            myContract.methods.getBankerGame(window.dexon
+            myContract.methods.getBankerGame(window.ethereum
                 .defaultAccount).call().then((data) => {
                 console.log(data);
                 console.log(data[1]);
@@ -333,7 +333,7 @@ if (window.dexon && window.dexon.enable) {
         })
     })
 } else {
-    window.open('https://chrome.google.com/webstore/detail/dekusan/anlicggbddjeebblaidciapponbpegoj',
+    window.open('https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en',
         '_blank');
 }
 

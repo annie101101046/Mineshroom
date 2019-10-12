@@ -1,7 +1,7 @@
-if (window.dexon && window.dexon.enable) {
-    window.dexon.enable().then(e => {
+if (window.ethereum && window.ethereum.enable) {
+    window.ethereum.enable().then(e => {
         console.log(e);
-        web3 = new Web3(window.dexon);
+        web3 = new Web3(window.ethereum);
         console.log(web3);
         // web3 連到了
         web3.eth.net.getId().then(e => {
@@ -10,7 +10,7 @@ if (window.dexon && window.dexon.enable) {
                 MushroomAddress);
             console.log(myContract);
             //拿菇幣數量
-            myContract.methods.getGuCoin(window.dexon
+            myContract.methods.getGuCoin(window.ethereum
                     .defaultAccount).call()
                 .then(e => {
                     console.log(e);
@@ -35,7 +35,7 @@ if (window.dexon && window.dexon.enable) {
                 let messageText = document.getElementById("message");
                 console.log(messageText.value);
                 myContract.methods.chat(messageText.value).send({
-                    from: window.dexon.defaultAccount,
+                    from: window.ethereum.defaultAccount,
                 }).then(e => {
                     let talk = document.getElementsByClassName("chat");
                     talk[0].innerHTML += e.events['SendMsg'].returnValues[0] + ": " + e.events['SendMsg'].returnValues[1] + '<br>';
@@ -43,7 +43,7 @@ if (window.dexon && window.dexon.enable) {
                     console.log(talk[0].innerHTML);
                     alert("Gugu coin has sent");
                     //拿菇幣數量
-                    myContract.methods.getGuCoin(window.dexon
+                    myContract.methods.getGuCoin(window.ethereum
                             .defaultAccount).call()
                         .then(e => {
                             console.log(e);

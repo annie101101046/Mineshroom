@@ -304,16 +304,16 @@ document.getElementById("FixedLogo").onclick = function () {
 //     }
 // ]
 
-if (window.dexon && window.dexon.enable) {
-    window.dexon.enable().then(e => {
+if (window.ethereum && window.ethereum.enable) {
+    window.ethereum.enable().then(e => {
         console.log(e[0]);
-        web3 = new Web3(window.dexon);
+        web3 = new Web3(window.ethereum);
         console.log(web3);
         //在這裡以下做事才有用ㄚ web3 連到了
         let myContract = new web3.eth.Contract(abi,
             MushroomAddress);
         console.log(myContract);
-        myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+        myContract.methods.isRegister(window.ethereum.defaultAccount).call().then(e => {
             console.log(e);
             if (!e) {
                 location.href = "login.html";
@@ -323,13 +323,13 @@ if (window.dexon && window.dexon.enable) {
         web3.eth.net.getId().then(e => {
             console.log(e);
             //拿 DXN 數量
-            web3.eth.getBalance(window.dexon.defaultAccount).then(e => {
+            web3.eth.getBalance(window.ethereum.defaultAccount).then(e => {
                 console.log(e);
                 let myContract = new web3.eth.Contract(abi,
                     MushroomAddress);
                 console.log(myContract);
                 //拿菇幣數量
-                myContract.methods.getGuCoin(window.dexon.defaultAccount).call()
+                myContract.methods.getGuCoin(window.ethereum.defaultAccount).call()
                     .then(e => {
                         console.log(e);
                         let k = document.getElementById("G_amount");
@@ -344,12 +344,12 @@ if (window.dexon && window.dexon.enable) {
                         })
                     const amount = prompt('Accept DXN');
                     myContract.methods.buyGuCoin().send({
-                        from: window.dexon.defaultAccount,
+                        from: window.ethereum.defaultAccount,
                         value: web3.utils.toWei(amount),
                     }).then(data => {
                         console.log('event', data);
                         //拿菇幣數量
-                        myContract.methods.getGuCoin(window.dexon
+                        myContract.methods.getGuCoin(window.ethereum
                                 .defaultAccount).call()
                             .then(e => {
                                 console.log(e);

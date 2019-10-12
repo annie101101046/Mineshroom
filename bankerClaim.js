@@ -297,16 +297,16 @@ document.getElementById("FixedLogo").onclick = function () {
 }
 
 
-if (window.dexon && window.dexon.enable) {
-    window.dexon.enable().then(e => {
+if (window.ethereum && window.ethereum.enable) {
+    window.ethereum.enable().then(e => {
         console.log(e[0]);
-        web3 = new Web3(window.dexon);
+        web3 = new Web3(window.ethereum);
         console.log(web3);
         //在這裡以下做事才有用ㄚ web3 連到了
         let myContract = new web3.eth.Contract(abi,
             MushroomAddress);
         console.log(myContract);
-        myContract.methods.isRegister(window.dexon.defaultAccount).call().then(e => {
+        myContract.methods.isRegister(window.ethereum.defaultAccount).call().then(e => {
             console.log(e);
             if (!e) {
                 location.href = "login.html";
@@ -315,11 +315,11 @@ if (window.dexon && window.dexon.enable) {
 
         document.getElementById("cl").onclick = function () {
             //去拿 gameID，拿到後就跳轉
-            console.log(window.dexon.defaultAccount);
+            console.log(window.ethereum.defaultAccount);
             let a = localStorage.getItem("gameid");
             console.log(a);
             myContract.methods.bankerClaim(a).send({
-                from: window.dexon.defaultAccount,
+                from: window.ethereum.defaultAccount,
             }).then(data => {
                 console.log(data);
                 if (data) {
